@@ -1,0 +1,45 @@
+#!/usr/bin/expect
+set timeout 30
+
+# Get server credentials
+set server_ip "185.70.196.214"
+set server_user "admin"
+
+# Prompt for passwords
+puts "🔍 Checking Trading Bot service status..."
+puts "Enter SSH password for admin@185.70.196.214:"
+stty -echo
+gets stdin ssh_pass
+stty echo
+puts ""
+
+puts "Enter sudo password:"
+stty -echo  
+gets stdin sudo_pass
+stty echo
+puts ""
+
+# Connect and check status
+spawn ssh -o StrictHostKeyChecking=no $server_user@$server_ip
+expect "password:"
+send "$ssh_pass\r"
+expect "$ "
+
+# Check service status
+send "echo '$sudo_pass' | sudo -S systemctl status trading-bot --no-pager\r"
+expect "$ "
+
+# Check if service is listening on port 8009
+send "echo '$sudo_pass' | sudo -S netstat -tlnp | grep 8009\r"
+expect "$ "
+
+# Check logs
+send "echo '$sudo_pass' | sudo -S journalctl -u trading-bot --no-pager -n 20\r"
+expect "$ "
+
+# Test local connection
+send "curl -s -w 'Local test: %{http_code}\\n' http://localhost:8009/healthz\r"
+expect "$ "
+
+send "exit\r"
+expect eof

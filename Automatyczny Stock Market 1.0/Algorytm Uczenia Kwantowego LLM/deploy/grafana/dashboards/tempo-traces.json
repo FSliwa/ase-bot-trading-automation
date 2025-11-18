@@ -1,0 +1,42 @@
+{
+    "annotations": {
+        "list": []
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": null,
+    "links": [],
+    "panels": [
+        {
+            "datasource": {
+                "type": "tempo",
+                "uid": "Tempo" 
+            },
+            "gridPos": { "h": 24, "w": 24, "x": 0, "y": 0 },
+            "options": {
+                "search": {
+                    "query": "{.service.name=\"trading-backend\"}"
+                }
+            },
+            "title": "Traces",
+            "type": "traces"
+        }
+    ],
+    "schemaVersion": 36,
+    "style": "dark",
+    "tags": ["ase-bot", "tempo"],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-1h",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "Tempo Traces",
+    "uid": "ase-tempo-traces",
+    "version": 1
+}
+

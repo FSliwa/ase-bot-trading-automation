@@ -1,0 +1,171 @@
+# 🚀 VNC Commands: PostgreSQL + Email Integration
+
+## Complete deployment commands for VNC terminal
+
+### 1. Connect to server and deploy
+```bash
+ssh admin@185.70.196.214
+
+# Run the complete deployment script (NOT with sudo!)
+chmod +x deploy_postgresql_email.sh
+./deploy_postgresql_email.sh
+```
+
+### 2. Configure SMTP Email (Gmail example)
+```bash
+# Edit environment file
+sudo nano /opt/trading-bot/.env.db
+
+# Update these lines:
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your_gmail@gmail.com
+SMTP_PASSWORD=your_gmail_app_password
+SMTP_FROM_NAME=Trading Panel
+SMTP_FROM_EMAIL=noreply@tradingpanel.com
+
+# Save and exit (Ctrl+X, Y, Enter)
+```
+
+### 3. Restart service with new configuration
+```bash
+sudo systemctl restart trading-bot
+sudo systemctl status trading-bot
+```
+
+### 4. Test the system
+```bash
+# Test registration
+curl -X POST http://localhost:8009/api/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "test_user",
+    "password": "test_password_123",
+    "email": "test@example.com",
+    "first_name": "Test",
+    "last_name": "User"
+  }'
+
+# Check database stats
+cd /opt/trading-bot
+python3 -c "
+import os
+for line in open('.env.db'):
+    if line.strip() and not line.startswith('#'):
+        key, value = line.strip().split('=', 1)
+        os.environ[key] = value
+
+from postgresql_database import PostgreSQLDatabase
+db = PostgreSQLDatabase()
+print('Database stats:', db.get_user_stats())
+"
+```
+
+### 5. Check logs and status
+```bash
+# Service logs
+sudo journalctl -u trading-bot -f
+
+# Database status
+sudo systemctl status postgresql
+
+# Check if email is working
+tail -f /opt/trading-bot/logs/server.log
+```
+
+---
+
+## 🎯 Quick Test URLs
+
+After deployment, test these URLs:
+
+- **Registration**: http://185.70.196.214:8009/register
+- **Login**: http://185.70.196.214:8009/login  
+- **Dashboard**: http://185.70.196.214:8009/
+- **Email Verification**: http://185.70.196.214:8009/verify-email?token=TEST
+
+---
+
+## ✅ Success Indicators
+
+The system is working correctly when you see:
+- `🐘 Using PostgreSQL database` in startup logs
+- `✅ User registered: username (email) - Database: postgresql`
+- `📧 Welcome email sent to email@example.com`
+- PostgreSQL stats showing user counts
+
+---
+
+## 🛠️ Troubleshooting
+
+### PostgreSQL Issues
+```bash
+# Check PostgreSQL status
+sudo systemctl status postgresql
+
+# Check connection
+export PGPASSWORD='trading_password_2024!'
+psql -h localhost -U trading_user -d trading_bot -c "SELECT version();"
+
+# Restart if needed
+sudo systemctl restart postgresql
+```
+
+### Email Issues
+```bash
+# Test SMTP manually
+python3 -c "
+import smtplib
+from email.mime.text import MIMEText
+
+msg = MIMEText('Test message')
+msg['Subject'] = 'Test from Trading Panel'
+msg['From'] = 'your_email@gmail.com'
+msg['To'] = 'test@example.com'
+
+try:
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login('your_email@gmail.com', 'your_app_password')
+    server.send_message(msg)
+    server.quit()
+    print('✅ Email test successful')
+except Exception as e:
+    print(f'❌ Email test failed: {e}')
+"
+```
+
+### Service Issues
+```bash
+# Restart trading bot
+sudo systemctl restart trading-bot
+
+# Check detailed logs
+sudo journalctl -u trading-bot --no-pager -n 50
+
+# Check file permissions
+sudo chown -R trading-bot:trading-bot /opt/trading-bot/
+```
+
+---
+
+## 📊 System Features
+
+**Database**: PostgreSQL with tables:
+- `users` - user accounts with OAuth support
+- `user_sessions` - active login sessions  
+- `audit_log` - security audit trail
+
+**Email**: HTML welcome emails with:
+- Beautiful gradient design
+- Email verification links
+- Responsive mobile support
+
+**Security**: Enhanced with:
+- Password hashing (SHA-256 + salt)
+- Session tokens (32-byte secure)
+- IP address logging
+- User-Agent tracking
+- Email verification
+
+**The system is production-ready! 🎉**

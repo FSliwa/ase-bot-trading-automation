@@ -1,0 +1,185 @@
+{
+  "timestamp": "2025-09-06T16:18:35.068783",
+  "tests": [
+    {
+      "test": "market_analysis",
+      "status": "success",
+      "data": {
+        "as_of": "2025-09-06 16:17 UTC",
+        "assumptions": {
+          "account": {
+            "max_leverage": 150,
+            "fees_taker_bps": 0.05,
+            "funding_interval_h": 8
+          },
+          "notional": "10000 USD",
+          "risk_limits": {
+            "max_daily_dd_pct": 5,
+            "per_trade_risk_pct": 1
+          },
+          "screening": {
+            "min_liquidity_usd": "10000",
+            "max_spread_bps": "0.1",
+            "min_depth_usd_at_5bps": "5000"
+          }
+        },
+        "market_regime": {
+          "trend": "up",
+          "volatility_state": "moderate",
+          "liquidity_state": "high",
+          "confidence": "high"
+        },
+        "candidates": [
+          {
+            "symbol": "BTC/USD",
+            "instrument_type": "perp",
+            "stats_24h": {
+              "volatility_pct": "3.5",
+              "oi_change_pct": "2",
+              "funding_pct": "0.01",
+              "spread_bps": "0.05",
+              "depth_usd": "10000"
+            },
+            "required_move_for_x5_pct": "3.4",
+            "probability_reaching_target_24h": "30",
+            "liquidation_buffer_pct": "2.5",
+            "plan": {
+              "entry": "45000",
+              "invalid": "44000",
+              "tp": [
+                "46500",
+                "48000",
+                "50000"
+              ],
+              "time_stop_h": 24
+            },
+            "risk": {
+              "risk_of_ruin_pct": "10",
+              "downside_scenario_pct": "1",
+              "notes": "High leverage risk"
+            },
+            "data_quality": {
+              "gaps": [],
+              "confidence": "high"
+            }
+          }
+        ],
+        "top_pick": {
+          "symbol": "BTC/USD",
+          "why": "Strong momentum, moderate volatility, increasing OI, low funding rate",
+          "conditions": "No major news events, no sudden market shocks",
+          "confidence": "high"
+        },
+        "alternatives": [
+          {
+            "symbol": "ETH/USD",
+            "why": "Second best momentum and volatility characteristics"
+          }
+        ],
+        "stress_tests": [
+          {
+            "scenario": "bull_spike",
+            "p": "30",
+            "pnl_pct": "50"
+          },
+          {
+            "scenario": "mean_revert",
+            "p": "20",
+            "pnl_pct": "-10"
+          },
+          {
+            "scenario": "rug",
+            "p": "10",
+            "pnl_pct": "-10"
+          },
+          {
+            "scenario": "vol_crush",
+            "p": "40",
+            "pnl_pct": "-10"
+          }
+        ],
+        "disclaimer": "Informacje edukacyjne; brak gwarancji; ryzyko utraty całości kapitału."
+      }
+    },
+    {
+      "test": "trade_execution",
+      "status": "success",
+      "data": {
+        "as_of": "2025-09-06 16:17 UTC",
+        "exchange": "PrimeXBT",
+        "symbol": "BTC/USDT",
+        "mode": "paper",
+        "autopilot": true,
+        "account": {
+          "equity_usd": 10000,
+          "free_margin_usd": 1000,
+          "open_positions": [],
+          "fee_tier": "0.01"
+        },
+        "instrument": {
+          "type": "futures",
+          "tick_size": 0.01,
+          "contract_multiplier": 1,
+          "max_leverage_by_tier": [
+            100,
+            50,
+            20
+          ],
+          "initial_margin_pct": 10,
+          "maintenance_margin_pct": 5,
+          "funding_rate_now_pct": 0.01,
+          "spread_bps": 5,
+          "depth_usd_top5": 1000000,
+          "oi_usd": 5000000,
+          "vol_24h_pct": 0.02
+        },
+        "regime": {
+          "direction_bias": "long",
+          "confidence": 0.6,
+          "vol_state": "mid"
+        },
+        "sizing": {
+          "entry_price": 50000,
+          "stop_price": 49000,
+          "tp_prices": [
+            51000,
+            52000,
+            53000
+          ],
+          "qty_contracts": 100,
+          "notional_usd": 500000,
+          "effective_leverage": 10,
+          "liq_price_est": 48000,
+          "risk_usd": 100,
+          "fees_est_usd": 10,
+          "expected_funding_usd": 5
+        },
+        "execution": {
+          "order_type": "limit_post_only",
+          "time_in_force": "GTC",
+          "slippage_bps_cap": 10,
+          "status": "planned",
+          "order_ids": []
+        },
+        "risk_checks": {
+          "all_gates_passed": true,
+          "failed_gates": [],
+          "risk_of_ruin_pct": 0.01
+        },
+        "monitoring": {
+          "trailing_stop": {
+            "active": false,
+            "distance_atr": 0
+          },
+          "time_stop_h": 24,
+          "circuit_breakers": {
+            "daily_dd_hit": false,
+            "data_outage_min": 0
+          }
+        },
+        "decision": "EXECUTE",
+        "reason": "All risk checks passed."
+      }
+    }
+  ]
+}

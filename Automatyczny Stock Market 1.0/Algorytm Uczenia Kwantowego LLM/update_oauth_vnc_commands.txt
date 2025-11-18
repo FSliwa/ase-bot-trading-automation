@@ -1,0 +1,46 @@
+# 🚀 KOMENDY VNC - AKTUALIZACJA OAUTH LOGIN PANEL
+# Skopiuj i wklej każdą komendę w VNC (Command+V)
+
+# 1. Skopiuj zaktualizowane pliki do katalogu produkcyjnego:
+sudo cp ~/login.html ~/enhanced_server_gpt5.py ~/user_database.py /opt/trading-bot/
+
+# 2. Ustaw właściwe uprawnienia:
+sudo chown www-data:www-data /opt/trading-bot/login.html /opt/trading-bot/enhanced_server_gpt5.py /opt/trading-bot/user_database.py
+sudo chmod +x /opt/trading-bot/enhanced_server_gpt5.py
+
+# 3. Zainstaluj wymagane pakiety Python:
+sudo python3 -m pip install requests
+
+# 4. Restart serwisu trading-bot:
+sudo systemctl restart trading-bot
+
+# 5. Sprawdź status serwisu:
+sudo systemctl status trading-bot
+
+# 6. Test nowego designu lokalnie:
+curl -s http://localhost:8009/login | grep "bg-gradient-to-r from-blue-600"
+
+# 7. Test OAuth endpoints:
+curl -I http://localhost:8009/auth/google
+curl -I http://localhost:8009/auth/github
+
+# 8. Wyświetl logi w czasie rzeczywistym (opcjonalnie):
+# sudo journalctl -u trading-bot -f
+
+# ===== OPCJONALNE - USTAWIENIE OAUTH CREDENTIALS =====
+# Jeśli masz już Client ID i Secret z Google/GitHub:
+
+# export GOOGLE_CLIENT_ID="your-google-client-id.apps.googleusercontent.com"
+# export GOOGLE_CLIENT_SECRET="your-google-client-secret"
+# export GITHUB_CLIENT_ID="your-github-client-id"
+# export GITHUB_CLIENT_SECRET="your-github-client-secret"
+# sudo systemctl restart trading-bot
+
+# ===== OCZEKIWANY REZULTAT =====
+# ✅ Nowy nowoczesny design logowania
+# ✅ Przyciski Google i GitHub OAuth
+# ✅ Naprawiony link "Zarejestruj się" (wskazuje na /register)
+# ✅ Responsywny design
+# ✅ Obsługa OAuth endpoints w backend
+
+# 🌐 Test w przeglądarce: http://185.70.196.214/login

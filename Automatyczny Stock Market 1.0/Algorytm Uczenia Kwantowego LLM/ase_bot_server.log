@@ -1,0 +1,59 @@
+{"timestamp": "2025-09-27 14:51:47,299", "level": "WARNING", "module": "ase_bot_server", "message": "Unauthorized access attempt from 127.0.0.1"}
+{"timestamp": "2025-09-27 14:51:47,368", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:51:47,368", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:51:47,368", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:51:47,374", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:51:47,374", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:51:47,374", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:51:47,376", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:51:47,376", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:51:47,376", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:51:47,379", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:51:47,379", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:51:47,379", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:51:47,387", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:51:47,387", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:51:47,387", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:53:34,366", "level": "WARNING", "module": "ase_bot_server", "message": "Unauthorized access attempt from 127.0.0.1"}
+{"timestamp": "2025-09-27 14:53:34,379", "level": "ERROR", "module": "ase_bot_server", "message": "Proxy error: 'ImprovedASEBotHandler' object has no attribute 'path'"}
+{"timestamp": "2025-09-27 14:53:34,379", "level": "ERROR", "module": "ase_bot_server", "message": "Proxy error: 'ImprovedASEBotHandler' object has no attribute 'path'"}
+{"timestamp": "2025-09-27 14:53:34,770", "level": "INFO", "module": "ase_bot_server", "message": "Health check completed successfully"}
+{"timestamp": "2025-09-27 14:53:34,770", "level": "INFO", "module": "ase_bot_server", "message": "Health check completed successfully"}
+{"timestamp": "2025-09-27 14:53:34,782", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:53:34,782", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:53:34,782", "level": "INFO", "module": "ase_bot_server", "message": "Test message"}
+{"timestamp": "2025-09-27 14:53:34,788", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:53:34,788", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:53:34,788", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: ../etc/passwd"}
+{"timestamp": "2025-09-27 14:53:34,790", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:53:34,790", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:53:34,790", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: /proc/version"}
+{"timestamp": "2025-09-27 14:53:34,791", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:53:34,791", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:53:34,791", "level": "WARNING", "module": "ase_bot_server", "message": "Blocked dangerous path: path\with\backslashes"}
+{"timestamp": "2025-09-27 14:53:34,794", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:53:34,794", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:53:34,794", "level": "WARNING", "module": "ase_bot_server", "message": "Rate limit exceeded for IP: 127.0.0.1"}
+{"timestamp": "2025-09-27 14:54:52,079", "level": "INFO", "module": "ase_bot_server", "message": "🚀 ASE-Bot Improved Web Server starting..."}
+{"timestamp": "2025-09-27 14:54:52,080", "level": "INFO", "module": "ase_bot_server", "message": "Configuration: PORT=4000, BACKEND=8012, FRONTEND=8081"}
+{"timestamp": "2025-09-27 14:54:52,080", "level": "INFO", "module": "ase_bot_server", "message": "✅ Server running on http://0.0.0.0:4000"}
+{"timestamp": "2025-09-27 14:54:52,081", "level": "INFO", "module": "ase_bot_server", "message": "🌐 External access: http://185.70.198.201:4000"}
+{"timestamp": "2025-09-27 14:54:52,081", "level": "INFO", "module": "ase_bot_server", "message": "🔍 Admin dashboard: http://185.70.198.201:4000/admin/"}
+{"timestamp": "2025-09-27 14:54:52,082", "level": "INFO", "module": "ase_bot_server", "message": "🔒 Security: API Key required for /api/* and /admin/*"}
+{"timestamp": "2025-09-27 14:55:29,984", "level": "INFO", "module": "ase_bot_server", "message": "🚀 ASE-Bot Improved Web Server starting..."}
+{"timestamp": "2025-09-27 14:55:29,985", "level": "INFO", "module": "ase_bot_server", "message": "Configuration: PORT=4000, BACKEND=8012, FRONTEND=8081"}
+{"timestamp": "2025-09-27 14:55:29,986", "level": "INFO", "module": "ase_bot_server", "message": "✅ Server running on http://0.0.0.0:4000"}
+{"timestamp": "2025-09-27 14:55:29,987", "level": "INFO", "module": "ase_bot_server", "message": "🌐 External access: http://185.70.198.201:4000"}
+{"timestamp": "2025-09-27 14:55:29,987", "level": "INFO", "module": "ase_bot_server", "message": "🔍 Admin dashboard: http://185.70.198.201:4000/admin/"}
+{"timestamp": "2025-09-27 14:55:29,987", "level": "INFO", "module": "ase_bot_server", "message": "🔒 Security: API Key required for /api/* and /admin/*"}
+{"timestamp": "2025-09-27 14:56:06,623", "level": "INFO", "module": "ase_bot_server", "message": "Request received: method=GET, path=/health, client=127.0.0.1, user_agent=curl/8.5.0"}
+{"timestamp": "2025-09-27 14:56:06,939", "level": "INFO", "module": "ase_bot_server", "message": "HTTP: "GET /health HTTP/1.1" 200 -"}
+{"timestamp": "2025-09-27 14:56:06,940", "level": "INFO", "module": "ase_bot_server", "message": "Health check completed successfully"}
+{"timestamp": "2025-09-27 14:56:47,683", "level": "INFO", "module": "ase_bot_server", "message": "Request received: method=GET, path=/health, client=127.0.0.1, user_agent=curl/8.5.0"}
+{"timestamp": "2025-09-27 14:56:47,690", "level": "INFO", "module": "ase_bot_server", "message": "HTTP: "GET /health HTTP/1.1" 200 -"}
+{"timestamp": "2025-09-27 14:56:47,692", "level": "INFO", "module": "ase_bot_server", "message": "Health check completed successfully"}
+{"timestamp": "2025-09-27 14:58:49,312", "level": "INFO", "module": "ase_bot_server", "message": "Request received: method=GET, path=/api/health, client=127.0.0.1, user_agent=curl/8.5.0"}
+{"timestamp": "2025-09-27 14:58:49,314", "level": "ERROR", "module": "ase_bot_server", "message": "Backend connection error: <urlopen error [Errno 111] Connection refused>"}
+{"timestamp": "2025-09-27 14:58:49,315", "level": "INFO", "module": "ase_bot_server", "message": "HTTP: "GET /api/health HTTP/1.1" 503 -"}
+{"timestamp": "2025-09-27 14:59:21,474", "level": "INFO", "module": "ase_bot_server", "message": "Request received: method=GET, path=/admin/, client=127.0.0.1, user_agent=curl/8.5.0"}
+{"timestamp": "2025-09-27 14:59:21,475", "level": "INFO", "module": "ase_bot_server", "message": "HTTP: "GET /admin/ HTTP/1.1" 200 -"}

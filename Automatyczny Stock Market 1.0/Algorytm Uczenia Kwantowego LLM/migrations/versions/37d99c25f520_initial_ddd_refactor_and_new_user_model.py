@@ -1,0 +1,626 @@
+"""Initial DDD refactor and new user model
+
+Revision ID: 37d99c25f520
+Revises: 2382f8496c1c
+Create Date: 2025-09-17 16:52:46.230849
+
+"""
+from typing import Sequence, Union
+
+from alembic import op
+import sqlalchemy as sa
+from sqlalchemy.dialects import postgresql
+
+# revision identifiers, used by Alembic.
+revision: str = '37d99c25f520'
+down_revision: Union[str, Sequence[str], None] = '2382f8496c1c'
+branch_labels: Union[str, Sequence[str], None] = None
+depends_on: Union[str, Sequence[str], None] = None
+
+
+def upgrade() -> None:
+    """Upgrade schema."""
+    # ### SAFE MIGRATION - Manually adjusted ###
+    op.rename_table('auth_users', 'users')
+    op.alter_column('users', 'hashed_password', new_column_name='password_hash', existing_type=sa.String(length=255))
+    op.add_column('users', sa.Column('role', sa.String(length=50), nullable=False, server_default='user'))
+    op.add_column('users', sa.Column('is_active', sa.Boolean(), nullable=False, server_default=sa.true()))
+    op.add_column('users', sa.Column('last_login', sa.DateTime(), nullable=True))
+    op.create_table('sessions',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('token', sa.String(length=255), nullable=False),
+    sa.Column('ip_address', sa.String(length=45), nullable=True),
+    sa.Column('user_agent', sa.Text(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('expires_at', sa.DateTime(), nullable=False),
+    sa.Column('is_active', sa.Boolean(), nullable=False),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_sessions_id'), 'sessions', ['id'], unique=False)
+    op.create_index(op.f('ix_sessions_token'), 'sessions', ['token'], unique=True)
+    op.create_index(op.f('ix_sessions_user_id'), 'sessions', ['user_id'], unique=False)
+    op.create_table('trading_bots',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=100), nullable=False),
+    sa.Column('strategy_type', sa.String(length=50), nullable=False),
+    sa.Column('status', sa.String(length=20), nullable=False),
+    sa.Column('config', sa.Text(), nullable=False),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
+    sa.Column('last_run_at', sa.DateTime(), nullable=True),
+    sa.Column('total_profit', sa.Float(), nullable=False),
+    sa.Column('win_rate', sa.Float(), nullable=False),
+    sa.Column('total_trades', sa.Integer(), nullable=False),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('user_id', 'name', name='uq_user_bot_name')
+    )
+    op.create_index(op.f('ix_trading_bots_id'), 'trading_bots', ['id'], unique=False)
+    op.create_index(op.f('ix_trading_bots_user_id'), 'trading_bots', ['user_id'], unique=False)
+    op.create_table('transactions',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('bot_id', sa.Integer(), nullable=True),
+    sa.Column('symbol', sa.String(length=20), nullable=False),
+    sa.Column('side', sa.String(length=10), nullable=False),
+    sa.Column('quantity', sa.Float(), nullable=False),
+    sa.Column('price', sa.Float(), nullable=False),
+    sa.Column('total', sa.Float(), nullable=False),
+    sa.Column('fee', sa.Float(), nullable=False),
+    sa.Column('profit_loss', sa.Float(), nullable=True),
+    sa.Column('status', sa.String(length=20), nullable=False),
+    sa.Column('executed_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.ForeignKeyConstraint(['bot_id'], ['trading_bots.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_transactions_bot_id'), 'transactions', ['bot_id'], unique=False)
+    op.create_index(op.f('ix_transactions_id'), 'transactions', ['id'], unique=False)
+    op.create_index(op.f('ix_transactions_symbol'), 'transactions', ['symbol'], unique=False)
+    op.create_index(op.f('ix_transactions_user_id'), 'transactions', ['user_id'], unique=False)
+    # ### end Alembic commands ###
+
+
+def downgrade() -> None:
+    """Downgrade schema."""
+    # ### SAFE MIGRATION - Manually adjusted ###
+    op.rename_table('users', 'auth_users')
+    op.alter_column('auth_users', 'password_hash', new_column_name='hashed_password', existing_type=sa.String(length=255))
+    op.drop_column('auth_users', 'role')
+    op.drop_column('auth_users', 'is_active')
+    op.drop_column('auth_users', 'last_login')
+    op.drop_table('transactions')
+    op.drop_table('trading_bots')
+    op.drop_table('sessions')
+
+    # ### commands auto generated by Alembic - please adjust! ###
+    # op.create_table('orders',
+    # sa.Column('id', sa.INTEGER(), server_default=sa.text("nextval('orders_id_seq'::regclass)"), autoincrement=True, nullable=False),
+    # sa.Column('client_order_id', sa.VARCHAR(length=50), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('side', sa.VARCHAR(length=10), autoincrement=False, nullable=False),
+    # sa.Column('order_type', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('quantity', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('price', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('stop_price', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('filled_quantity', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('remaining_quantity', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('status', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('time_in_force', sa.VARCHAR(length=10), autoincrement=False, nullable=True),
+    # sa.Column('reduce_only', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('leverage', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('position_id', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['position_id'], ['positions.id'], name='orders_position_id_fkey'),
+    # sa.PrimaryKeyConstraint('id', name='orders_pkey'),
+    # sa.UniqueConstraint('client_order_id', name='orders_client_order_id_key', postgresql_include=[], postgresql_nulls_not_distinct=False),
+    # postgresql_ignore_search_path=False
+    # )
+    # op.create_index(op.f('ix_orders_symbol'), 'orders', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_orders_id'), 'orders', ['id'], unique=False)
+    # op.create_table('strategy_signals',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('strategy', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('ts', postgresql.TIMESTAMP(), server_default=sa.text('now()'), autoincrement=False, nullable=False),
+    # sa.Column('signal', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('confidence_score', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('horizon_s', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('meta_data', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('strategy_signals_pkey'))
+    # )
+    # op.create_index(op.f('ix_strategy_signals_ts'), 'strategy_signals', ['ts'], unique=False)
+    # op.create_index(op.f('ix_strategy_signals_symbol'), 'strategy_signals', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_strategy_signals_strategy'), 'strategy_signals', ['strategy'], unique=False)
+    # op.create_table('economic_events',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('name', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('country', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('impact', sa.VARCHAR(length=16), autoincrement=False, nullable=True),
+    # sa.Column('category', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('scheduled_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('published_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('forecast', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('previous', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('actual', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('surprise', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('notes', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('economic_events_pkey'))
+    # )
+    # op.create_index(op.f('ix_economic_events_symbol'), 'economic_events', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_economic_events_scheduled_at'), 'economic_events', ['scheduled_at'], unique=False)
+    # op.create_index(op.f('ix_economic_events_published_at'), 'economic_events', ['published_at'], unique=False)
+    # op.create_index(op.f('ix_economic_events_name'), 'economic_events', ['name'], unique=False)
+    # op.create_index(op.f('ix_economic_events_impact'), 'economic_events', ['impact'], unique=False)
+    # op.create_index(op.f('ix_economic_events_country'), 'economic_events', ['country'], unique=False)
+    # op.create_index(op.f('ix_economic_events_category'), 'economic_events', ['category'], unique=False)
+    # op.create_table('regime_performance',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('regime', sa.VARCHAR(length=32), autoincrement=False, nullable=False),
+    # sa.Column('strategy', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('window_label', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('computed_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('win_rate', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('sharpe', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('sortino', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('regime_performance_pkey'))
+    # )
+    # op.create_index(op.f('ix_regime_performance_symbol'), 'regime_performance', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_regime_performance_strategy'), 'regime_performance', ['strategy'], unique=False)
+    # op.create_index(op.f('ix_regime_performance_regime'), 'regime_performance', ['regime'], unique=False)
+    # op.create_index(op.f('ix_regime_performance_computed_at'), 'regime_performance', ['computed_at'], unique=False)
+    # op.create_table('magic_login_tokens',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('token', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('expires_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('used', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('magic_login_tokens_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('magic_login_tokens_pkey'))
+    # )
+    # op.create_index(op.f('ix_magic_login_tokens_user_id'), 'magic_login_tokens', ['user_id'], unique=False)
+    # op.create_index(op.f('ix_magic_login_tokens_token'), 'magic_login_tokens', ['token'], unique=True)
+    # op.create_table('exchange_microstructure',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('timestamp', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('exchange', sa.VARCHAR(length=50), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('best_bid', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('best_ask', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('spread_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('depth_bid_usd', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('depth_ask_usd', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('volatility_1s', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('volatility_5s', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('taker_fee_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('maker_fee_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('funding_rate', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('exchange_microstructure_pkey'))
+    # )
+    # op.create_index(op.f('ix_exchange_microstructure_timestamp'), 'exchange_microstructure', ['timestamp'], unique=False)
+    # op.create_index(op.f('ix_exchange_microstructure_symbol'), 'exchange_microstructure', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_exchange_microstructure_exchange'), 'exchange_microstructure', ['exchange'], unique=False)
+    # op.create_table('strategy_daily_performance',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('date', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('strategy', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('win_trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('loss_trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('win_rate', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('avg_win', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('avg_loss', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('expectancy', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('profit_factor', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('sharpe', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('sortino', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('max_drawdown', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('avg_slippage_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('avg_latency_ms', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('avg_holding_seconds', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('commission_cost', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('slippage_cost', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('var_95', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('strategy_daily_performance_pkey')),
+    # sa.UniqueConstraint('date', 'strategy', 'symbol', name=op.f('_udp_date_strategy_symbol_uc'), postgresql_include=[], postgresql_nulls_not_distinct=False)
+    # )
+    # op.create_index(op.f('ix_strategy_daily_performance_symbol'), 'strategy_daily_performance', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_strategy_daily_performance_strategy'), 'strategy_daily_performance', ['strategy'], unique=False)
+    # op.create_index(op.f('ix_strategy_daily_performance_date'), 'strategy_daily_performance', ['date'], unique=False)
+    # op.create_index(op.f('ix_strategy_daily_performance_created_at'), 'strategy_daily_performance', ['created_at'], unique=False)
+    # op.create_table('risk_events',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('event_type', sa.VARCHAR(length=50), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('severity', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('message', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('data', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('resolved', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('risk_events_pkey'))
+    # )
+    # op.create_index(op.f('ix_risk_events_id'), 'risk_events', ['id'], unique=False)
+    # op.create_table('order_lifecycle',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('client_order_id', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('exchange_order_id', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('venue', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('route', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('submit_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('ack_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('partial_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('fill_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('cancel_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('latency_ms', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('slippage_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('reason_code', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('order_lifecycle_pkey'))
+    # )
+    # op.create_index(op.f('ix_order_lifecycle_exchange_order_id'), 'order_lifecycle', ['exchange_order_id'], unique=False)
+    # op.create_index(op.f('ix_order_lifecycle_client_order_id'), 'order_lifecycle', ['client_order_id'], unique=False)
+    # op.create_table('auth_users',
+    # sa.Column('id', sa.INTEGER(), server_default=sa.text("nextval('auth_users_id_seq'::regclass)"), autoincrement=True, nullable=False),
+    # sa.Column('username', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('email', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('hashed_password', sa.VARCHAR(length=255), autoincrement=False, nullable=False),
+    # sa.Column('first_name', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('last_name', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('phone', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('country', sa.VARCHAR(length=8), autoincrement=False, nullable=True),
+    # sa.Column('marketing_opt_in', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('newsletter_opt_in', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('terms_accepted', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('mfa_enabled', sa.BOOLEAN(), server_default=sa.text('false'), autoincrement=False, nullable=True),
+    # sa.Column('mfa_secret_encrypted', sa.VARCHAR(length=255), autoincrement=False, nullable=True),
+    # sa.Column('mfa_backup_codes_encrypted', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name='auth_users_pkey'),
+    # postgresql_ignore_search_path=False
+    # )
+    # op.create_index(op.f('ix_auth_users_username'), 'auth_users', ['username'], unique=True)
+    # op.create_index(op.f('ix_auth_users_email'), 'auth_users', ['email'], unique=True)
+    # op.create_index(op.f('ix_auth_users_created_at'), 'auth_users', ['created_at'], unique=False)
+    # op.create_table('email_verification_tokens',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('token', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('expires_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('used', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('email_verification_tokens_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('email_verification_tokens_pkey'))
+    # )
+    # op.create_index(op.f('ix_email_verification_tokens_user_id'), 'email_verification_tokens', ['user_id'], unique=False)
+    # op.create_index(op.f('ix_email_verification_tokens_token'), 'email_verification_tokens', ['token'], unique=True)
+    # op.create_table('latency_logs',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('component', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('operation', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('start_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('end_ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('duration_ms', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('status', sa.VARCHAR(length=10), autoincrement=False, nullable=False),
+    # sa.Column('retry_count', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('latency_logs_pkey'))
+    # )
+    # op.create_index(op.f('ix_latency_logs_operation'), 'latency_logs', ['operation'], unique=False)
+    # op.create_index(op.f('ix_latency_logs_component'), 'latency_logs', ['component'], unique=False)
+    # op.create_table('trading_stats',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('date', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('starting_balance', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('ending_balance', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('total_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('realized_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('unrealized_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('total_trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('winning_trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('losing_trades', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('max_drawdown', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('sharpe_ratio', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('profit_factor', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('trading_stats_pkey'))
+    # )
+    # op.create_index(op.f('ix_trading_stats_id'), 'trading_stats', ['id'], unique=False)
+    # op.create_index(op.f('ix_trading_stats_date'), 'trading_stats', ['date'], unique=False)
+    # op.create_table('auth_security_state',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('email_verified', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('failed_login_count', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('locked_until', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('auth_security_state_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('auth_security_state_pkey'))
+    # )
+    # op.create_index(op.f('ix_auth_security_state_user_id'), 'auth_security_state', ['user_id'], unique=True)
+    # op.create_table('active_sessions',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('token_identifier', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('user_agent', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('ip_address', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('last_used_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('active_sessions_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('active_sessions_pkey'))
+    # )
+    # op.create_index(op.f('ix_active_sessions_user_id'), 'active_sessions', ['user_id'], unique=False)
+    # op.create_index(op.f('ix_active_sessions_token_identifier'), 'active_sessions', ['token_identifier'], unique=True)
+    # op.create_index(op.f('ix_active_sessions_created_at'), 'active_sessions', ['created_at'], unique=False)
+    # op.create_table('positions',
+    # sa.Column('id', sa.INTEGER(), server_default=sa.text("nextval('positions_id_seq'::regclass)"), autoincrement=True, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('side', sa.VARCHAR(length=10), autoincrement=False, nullable=False),
+    # sa.Column('quantity', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('entry_price', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('current_price', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('leverage', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('margin_used', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('unrealized_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('realized_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('entry_time', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('exit_time', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('status', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('stop_loss', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('take_profit', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name='positions_pkey'),
+    # postgresql_ignore_search_path=False
+    # )
+    # op.create_index(op.f('ix_positions_symbol'), 'positions', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_positions_id'), 'positions', ['id'], unique=False)
+    # op.create_table('settings_audit',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('key', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('scope', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('old_value', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('new_value', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('changed_by', sa.VARCHAR(length=128), autoincrement=False, nullable=True),
+    # sa.Column('ip_address', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('changed_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('settings_audit_pkey'))
+    # )
+    # op.create_index(op.f('ix_settings_audit_scope'), 'settings_audit', ['scope'], unique=False)
+    # op.create_index(op.f('ix_settings_audit_key'), 'settings_audit', ['key'], unique=False)
+    # op.create_index(op.f('ix_settings_audit_changed_at'), 'settings_audit', ['changed_at'], unique=False)
+    # op.create_table('ai_analysis',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('analysis_type', sa.VARCHAR(length=50), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('prompt_used', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('response_data', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('confidence_score', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('decision', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('execution_time_ms', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('ai_analysis_pkey'))
+    # )
+    # op.create_index(op.f('ix_ai_analysis_id'), 'ai_analysis', ['id'], unique=False)
+    # op.create_table('web_indicator_snapshots',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('indicator', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('value', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('source', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('horizon_s', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('meta', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('web_indicator_snapshots_pkey'))
+    # )
+    # op.create_index(op.f('ix_web_indicator_snapshots_ts'), 'web_indicator_snapshots', ['ts'], unique=False)
+    # op.create_index(op.f('ix_web_indicator_snapshots_symbol'), 'web_indicator_snapshots', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_web_indicator_snapshots_indicator'), 'web_indicator_snapshots', ['indicator'], unique=False)
+    # op.create_table('error_logs',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('module', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('exception_type', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('message', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('stack', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('exchange', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('severity', sa.VARCHAR(length=16), autoincrement=False, nullable=True),
+    # sa.Column('is_transient', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('error_logs_pkey'))
+    # )
+    # op.create_index(op.f('ix_error_logs_module'), 'error_logs', ['module'], unique=False)
+    # op.create_index(op.f('ix_error_logs_created_at'), 'error_logs', ['created_at'], unique=False)
+    # op.create_table('fills',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('side', sa.VARCHAR(length=10), autoincrement=False, nullable=False),
+    # sa.Column('quantity', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('price', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=False),
+    # sa.Column('fee', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('fee_asset', sa.VARCHAR(length=10), autoincrement=False, nullable=True),
+    # sa.Column('realized_pnl', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('timestamp', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('order_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('position_id', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['order_id'], ['orders.id'], name=op.f('fills_order_id_fkey')),
+    # sa.ForeignKeyConstraint(['position_id'], ['positions.id'], name=op.f('fills_position_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('fills_pkey'))
+    # )
+    # op.create_index(op.f('ix_fills_symbol'), 'fills', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_fills_id'), 'fills', ['id'], unique=False)
+    # op.create_table('signal_quality',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('strategy', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('horizon_s', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('auc', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('precision_at_k', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('recall_at_k', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('brier_score', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('calibration_mse', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('signal_quality_pkey'))
+    # )
+    # op.create_index(op.f('ix_signal_quality_ts'), 'signal_quality', ['ts'], unique=False)
+    # op.create_index(op.f('ix_signal_quality_symbol'), 'signal_quality', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_signal_quality_strategy'), 'signal_quality', ['strategy'], unique=False)
+    # op.create_index(op.f('ix_signal_quality_horizon_s'), 'signal_quality', ['horizon_s'], unique=False)
+    # op.create_index(op.f('ix_signal_quality_created_at'), 'signal_quality', ['created_at'], unique=False)
+    # op.create_table('push_subscriptions',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('endpoint', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('p256dh', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('auth', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('push_subscriptions_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('push_subscriptions_pkey'))
+    # )
+    # op.create_index(op.f('ix_push_subscriptions_user_id'), 'push_subscriptions', ['user_id'], unique=False)
+    # op.create_index(op.f('ix_push_subscriptions_created_at'), 'push_subscriptions', ['created_at'], unique=False)
+    # op.create_table('app_settings',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('key', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('scope', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('value_json', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('env_locked', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('version', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.Column('updated_by', sa.VARCHAR(length=128), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('app_settings_pkey')),
+    # sa.UniqueConstraint('key', 'scope', name=op.f('_key_scope_uc'), postgresql_include=[], postgresql_nulls_not_distinct=False)
+    # )
+    # op.create_index(op.f('ix_app_settings_updated_at'), 'app_settings', ['updated_at'], unique=False)
+    # op.create_index(op.f('ix_app_settings_scope'), 'app_settings', ['scope'], unique=False)
+    # op.create_index(op.f('ix_app_settings_key'), 'app_settings', ['key'], unique=False)
+    # op.create_table('regime_labels',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('regime', sa.VARCHAR(length=32), autoincrement=False, nullable=False),
+    # sa.Column('method', sa.VARCHAR(length=32), autoincrement=False, nullable=True),
+    # sa.Column('features_summary', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('regime_labels_pkey'))
+    # )
+    # op.create_index(op.f('ix_regime_labels_ts'), 'regime_labels', ['ts'], unique=False)
+    # op.create_index(op.f('ix_regime_labels_regime'), 'regime_labels', ['regime'], unique=False)
+    # op.create_table('exchange_credentials',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.VARCHAR(), autoincrement=False, nullable=False),
+    # sa.Column('exchange', sa.VARCHAR(), autoincrement=False, nullable=False),
+    # sa.Column('api_key', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('api_key_encrypted', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('api_secret_encrypted', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('access_token_encrypted', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('refresh_token_encrypted', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('token_expires_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('passphrase_encrypted', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.Column('testnet', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('updated_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('last_used_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('is_active', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('permissions', sa.VARCHAR(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('exchange_credentials_pkey')),
+    # sa.UniqueConstraint('user_id', 'exchange', name=op.f('_user_exchange_uc'), postgresql_include=[], postgresql_nulls_not_distinct=False)
+    # )
+    # op.create_table('slippage_samples',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('side', sa.VARCHAR(length=10), autoincrement=False, nullable=False),
+    # sa.Column('notional', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('expected_px', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('fill_px', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('mid_at_submit', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('slippage_bps', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('market_state_snapshot_id', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('slippage_samples_pkey'))
+    # )
+    # op.create_index(op.f('ix_slippage_samples_symbol'), 'slippage_samples', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_slippage_samples_created_at'), 'slippage_samples', ['created_at'], unique=False)
+    # op.create_table('research_articles',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('source', sa.VARCHAR(length=64), autoincrement=False, nullable=False),
+    # sa.Column('source_url', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('title', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('summary', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('topic', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=True),
+    # sa.Column('published_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.Column('scraped_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('sentiment_score', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('relevance', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('credibility', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('raw_json', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.Column('features_json', sa.TEXT(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('research_articles_pkey'))
+    # )
+    # op.create_index(op.f('ix_research_articles_topic'), 'research_articles', ['topic'], unique=False)
+    # op.create_index(op.f('ix_research_articles_symbol'), 'research_articles', ['symbol'], unique=False)
+    # op.create_index(op.f('ix_research_articles_source'), 'research_articles', ['source'], unique=False)
+    # op.create_index(op.f('ix_research_articles_scraped_at'), 'research_articles', ['scraped_at'], unique=False)
+    # op.create_index(op.f('ix_research_articles_published_at'), 'research_articles', ['published_at'], unique=False)
+    # op.create_table('feature_store',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('symbol', sa.VARCHAR(length=20), autoincrement=False, nullable=False),
+    # sa.Column('ts', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('features_json', sa.TEXT(), autoincrement=False, nullable=False),
+    # sa.Column('label', sa.VARCHAR(length=64), autoincrement=False, nullable=True),
+    # sa.Column('label_value', sa.DOUBLE_PRECISION(precision=53), autoincrement=False, nullable=True),
+    # sa.Column('horizon_s', sa.INTEGER(), autoincrement=False, nullable=True),
+    # sa.PrimaryKeyConstraint('id', name=op.f('feature_store_pkey'))
+    # )
+    # op.create_index(op.f('ix_feature_store_ts'), 'feature_store', ['ts'], unique=False)
+    # op.create_index(op.f('ix_feature_store_symbol'), 'feature_store', ['symbol'], unique=False)
+    # op.create_table('password_reset_tokens',
+    # sa.Column('id', sa.INTEGER(), autoincrement=True, nullable=False),
+    # sa.Column('user_id', sa.INTEGER(), autoincrement=False, nullable=False),
+    # sa.Column('token', sa.VARCHAR(length=128), autoincrement=False, nullable=False),
+    # sa.Column('expires_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=False),
+    # sa.Column('used', sa.BOOLEAN(), autoincrement=False, nullable=True),
+    # sa.Column('created_at', postgresql.TIMESTAMP(), autoincrement=False, nullable=True),
+    # sa.ForeignKeyConstraint(['user_id'], ['auth_users.id'], name=op.f('password_reset_tokens_user_id_fkey')),
+    # sa.PrimaryKeyConstraint('id', name=op.f('password_reset_tokens_pkey'))
+    # )
+    # op.create_index(op.f('ix_password_reset_tokens_user_id'), 'password_reset_tokens', ['user_id'], unique=False)
+    # op.create_index(op.f('ix_password_reset_tokens_token'), 'password_reset_tokens', ['token'], unique=True)
+    op.drop_index(op.f('ix_transactions_user_id'), table_name='transactions')
+    op.drop_index(op.f('ix_transactions_symbol'), table_name='transactions')
+    op.drop_index(op.f('ix_transactions_id'), table_name='transactions')
+    op.drop_index(op.f('ix_transactions_bot_id'), table_name='transactions')
+    op.drop_index('idx_transaction_user_created', table_name='transactions')
+    op.drop_index('idx_transaction_symbol_created', table_name='transactions')
+    op.drop_index('idx_transaction_status', table_name='transactions')
+    op.drop_table('transactions')
+    op.drop_index(op.f('ix_trading_bots_user_id'), table_name='trading_bots')
+    op.drop_index(op.f('ix_trading_bots_id'), table_name='trading_bots')
+    op.drop_index('idx_bot_user_status', table_name='trading_bots')
+    op.drop_index('idx_bot_created_at', table_name='trading_bots')
+    op.drop_table('trading_bots')
+    op.drop_index(op.f('ix_sessions_user_id'), table_name='sessions')
+    op.drop_index(op.f('ix_sessions_token'), table_name='sessions')
+    op.drop_index(op.f('ix_sessions_id'), table_name='sessions')
+    op.drop_index('idx_session_user_active', table_name='sessions')
+    op.drop_index('idx_session_token_active', table_name='sessions')
+    op.drop_index('idx_session_expires', table_name='sessions')
+    op.drop_table('sessions')
+    op.drop_index(op.f('ix_users_username'), table_name='users')
+    op.drop_index(op.f('ix_users_id'), table_name='users')
+    op.drop_index(op.f('ix_users_email'), table_name='users')
+    op.drop_index('idx_user_email_active', table_name='users')
+    op.drop_index('idx_user_created_at', table_name='users')
+    op.drop_table('users')
+    # ### end Alembic commands ###

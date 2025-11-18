@@ -1,0 +1,688 @@
+{
+  "executive_summary": {
+    "overall_score": 62.6,
+    "total_tests": 41,
+    "passed": 20,
+    "warnings": 7,
+    "failed": 3,
+    "analysis_duration_seconds": 23.717599,
+    "timestamp": "2025-09-27T15:54:31.299277"
+  },
+  "category_scores": {
+    "Infrastructure": 47.5,
+    "External Connections": 90.0,
+    "User Journey": 61.42857142857143,
+    "Technical Performance": 87.5,
+    "Security": 36.0,
+    "UX/Conversion": 58.0,
+    "AI Trading": 30.0,
+    "Monitoring": 90.0
+  },
+  "detailed_results": [
+    {
+      "category": "Infrastructure",
+      "test_name": "Local Application Availability",
+      "status": "PASS",
+      "score": 100,
+      "details": "Application running on http://localhost:8080",
+      "metrics": {
+        "uptime_seconds": 0
+      },
+      "recommendations": []
+    },
+    {
+      "category": "Infrastructure",
+      "test_name": "Production Server HTTP",
+      "status": "FAIL",
+      "score": 0,
+      "details": "Connection failed: HTTPConnectionPool(host='ase-bot.live', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x725f931aa420>, 'Connection to ase-bot.live timed out. (connect timeout=10)'))",
+      "metrics": {},
+      "recommendations": [
+        "Check server status and firewall configuration",
+        "Verify DNS settings",
+        "Ensure web server is running",
+        "Check SSL certificate configuration"
+      ]
+    },
+    {
+      "category": "Infrastructure",
+      "test_name": "Production Server HTTPS/SSL",
+      "status": "FAIL",
+      "score": 0,
+      "details": "SSL/HTTPS failed: HTTPSConnectionPool(host='ase-bot.live', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x725f931aac00>, 'Connection to ase-bot.live timed out. (connect timeout=10)'))",
+      "metrics": {},
+      "recommendations": [
+        "Configure SSL certificate (Let's Encrypt recommended)",
+        "Set up HTTPS redirect",
+        "Verify certificate chain",
+        "Check firewall port 443"
+      ]
+    },
+    {
+      "category": "Infrastructure",
+      "test_name": "Database Connectivity & Structure",
+      "status": "PASS",
+      "score": 90,
+      "details": "SQLite database with 27 tables",
+      "metrics": {
+        "table_count": 27,
+        "db_size_kb": 436,
+        "key_tables": {
+          "users": 5,
+          "positions": 0,
+          "trading_stats": 0,
+          "orders": 0
+        }
+      },
+      "recommendations": []
+    },
+    {
+      "category": "External Connections",
+      "test_name": "Binance API Connectivity",
+      "status": "PASS",
+      "score": 100,
+      "details": "Binance API accessible",
+      "metrics": {
+        "response_time": 0.494431
+      },
+      "recommendations": []
+    },
+    {
+      "category": "External Connections",
+      "test_name": "Coinbase API Connectivity",
+      "status": "PASS",
+      "score": 100,
+      "details": "Coinbase API accessible",
+      "metrics": {
+        "response_time": 0.382484
+      },
+      "recommendations": []
+    },
+    {
+      "category": "External Connections",
+      "test_name": "Kraken API Connectivity",
+      "status": "PASS",
+      "score": 100,
+      "details": "Kraken API accessible",
+      "metrics": {
+        "response_time": 0.291856
+      },
+      "recommendations": []
+    },
+    {
+      "category": "External Connections",
+      "test_name": "Stripe API API Connectivity",
+      "status": "WARNING",
+      "score": 60,
+      "details": "Stripe API API returned 404",
+      "metrics": {
+        "response_time": 0.30443
+      },
+      "recommendations": [
+        "Set up API keys and test integration"
+      ]
+    },
+    {
+      "category": "External Connections",
+      "test_name": "PayPal API API Connectivity",
+      "status": "PASS",
+      "score": 90,
+      "details": "PayPal API API accessible (auth required as expected)",
+      "metrics": {
+        "response_time": 0.535781
+      },
+      "recommendations": [
+        "Set up API keys and test integration"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Registration Flow - Landing Page",
+      "status": "WARNING",
+      "score": 40,
+      "details": "Page loaded in 0.01s, signup elements: False",
+      "metrics": {
+        "load_time": 0.00974130630493164,
+        "has_signup_elements": false,
+        "response_size": 1561
+      },
+      "recommendations": [
+        "Optimize page load time to <2s",
+        "Add clear call-to-action for registration"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Login Flow - Login API Endpoint",
+      "status": "WARNING",
+      "score": 40,
+      "details": "Endpoint /api/auth/login returned 501",
+      "metrics": {
+        "status_code": 501
+      },
+      "recommendations": [
+        "Implement /api/auth/login endpoint",
+        "Add proper authentication middleware"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Login Flow - Session Management",
+      "status": "WARNING",
+      "score": 40,
+      "details": "Endpoint /api/auth/me returned 200",
+      "metrics": {
+        "status_code": 200
+      },
+      "recommendations": [
+        "Implement /api/auth/me endpoint",
+        "Add proper authentication middleware"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Login Flow - Password Recovery",
+      "status": "WARNING",
+      "score": 40,
+      "details": "Endpoint /api/auth/forgot-password returned 501",
+      "metrics": {
+        "status_code": 501
+      },
+      "recommendations": [
+        "Implement /api/auth/forgot-password endpoint",
+        "Add proper authentication middleware"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Dashboard API - /api/portfolio",
+      "status": "PASS",
+      "score": 100,
+      "details": "Response in 0.014s, data quality: True",
+      "metrics": {
+        "response_time": 0.014024734497070312,
+        "data_size": 159,
+        "has_data": true
+      },
+      "recommendations": []
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Dashboard API - /api/trades",
+      "status": "PASS",
+      "score": 100,
+      "details": "Response in 0.015s, data quality: True",
+      "metrics": {
+        "response_time": 0.014857292175292969,
+        "data_size": 94,
+        "has_data": true
+      },
+      "recommendations": []
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Dashboard API - /api/stats",
+      "status": "PASS",
+      "score": 100,
+      "details": "Response in 0.013s, data quality: True",
+      "metrics": {
+        "response_time": 0.013080596923828125,
+        "data_size": 63,
+        "has_data": true
+      },
+      "recommendations": []
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Dashboard API - /api/database/status",
+      "status": "PASS",
+      "score": 100,
+      "details": "Response in 0.016s, data quality: True",
+      "metrics": {
+        "response_time": 0.01643085479736328,
+        "data_size": 714,
+        "has_data": true
+      },
+      "recommendations": []
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Dashboard Overall Performance",
+      "status": "PASS",
+      "score": 100,
+      "details": "Average API performance score: 100.0/100",
+      "metrics": {
+        "average_score": 100.0
+      },
+      "recommendations": []
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Trading Interface - Bot Creation API",
+      "status": "SKIP",
+      "score": 40,
+      "details": "Trading interface not fully implemented in current version",
+      "metrics": {},
+      "recommendations": [
+        "Implement Bot Creation API functionality",
+        "Add comprehensive trading API",
+        "Integrate with exchange APIs",
+        "Add risk management controls"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Trading Interface - Strategy Selection",
+      "status": "SKIP",
+      "score": 40,
+      "details": "Trading interface not fully implemented in current version",
+      "metrics": {},
+      "recommendations": [
+        "Implement Strategy Selection functionality",
+        "Add comprehensive trading API",
+        "Integrate with exchange APIs",
+        "Add risk management controls"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Trading Interface - Risk Management Settings",
+      "status": "SKIP",
+      "score": 40,
+      "details": "Trading interface not fully implemented in current version",
+      "metrics": {},
+      "recommendations": [
+        "Implement Risk Management Settings functionality",
+        "Add comprehensive trading API",
+        "Integrate with exchange APIs",
+        "Add risk management controls"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Trading Interface - Real-time Market Data",
+      "status": "SKIP",
+      "score": 40,
+      "details": "Trading interface not fully implemented in current version",
+      "metrics": {},
+      "recommendations": [
+        "Implement Real-time Market Data functionality",
+        "Add comprehensive trading API",
+        "Integrate with exchange APIs",
+        "Add risk management controls"
+      ]
+    },
+    {
+      "category": "User Journey",
+      "test_name": "Trading Interface - Order Placement Simulation",
+      "status": "SKIP",
+      "score": 40,
+      "details": "Trading interface not fully implemented in current version",
+      "metrics": {},
+      "recommendations": [
+        "Implement Order Placement Simulation functionality",
+        "Add comprehensive trading API",
+        "Integrate with exchange APIs",
+        "Add risk management controls"
+      ]
+    },
+    {
+      "category": "Technical Performance",
+      "test_name": "Concurrent Request Handling",
+      "status": "PASS",
+      "score": 90,
+      "details": "Success rate: 100.0%, Avg response: 0.170s",
+      "metrics": {
+        "success_rate": 100.0,
+        "avg_response_time": 0.17038266658782958,
+        "concurrent_requests": 10
+      },
+      "recommendations": []
+    },
+    {
+      "category": "Technical Performance",
+      "test_name": "Load Performance Testing",
+      "status": "PASS",
+      "score": 100,
+      "details": "Avg: 0.014s, P95: 0.019s",
+      "metrics": {
+        "avg_response_time": 0.013872969150543212,
+        "p95_response_time": 0.01861095428466797,
+        "total_requests": 20
+      },
+      "recommendations": []
+    },
+    {
+      "category": "Technical Performance",
+      "test_name": "Error Handling - Non-existent Endpoint",
+      "status": "WARNING",
+      "score": 60,
+      "details": "Expected 404, got 200",
+      "metrics": {
+        "status_code": 200
+      },
+      "recommendations": [
+        "Implement proper HTTP status codes",
+        "Add structured error responses"
+      ]
+    },
+    {
+      "category": "Technical Performance",
+      "test_name": "Error Handling - Invalid Parameters",
+      "status": "PASS",
+      "score": 100,
+      "details": "Correctly returned 200",
+      "metrics": {
+        "status_code": 200
+      },
+      "recommendations": []
+    },
+    {
+      "category": "Security",
+      "test_name": "SSL/TLS Configuration",
+      "status": "SKIP",
+      "score": 0,
+      "details": "Production server not accessible for SSL testing",
+      "metrics": {},
+      "recommendations": [
+        "Implement SSL certificate for production",
+        "Use Let's Encrypt for free SSL",
+        "Configure HSTS headers",
+        "Disable weak TLS versions"
+      ]
+    },
+    {
+      "category": "Security",
+      "test_name": "Security Headers",
+      "status": "FAIL",
+      "score": 0,
+      "details": "0/5 security headers present",
+      "metrics": {
+        "present_headers": 0,
+        "total_headers": 5
+      },
+      "recommendations": [
+        "Add missing security header: X-Content-Type-Options",
+        "Add missing security header: X-Frame-Options",
+        "Add missing security header: X-XSS-Protection",
+        "Add missing security header: Strict-Transport-Security",
+        "Add missing security header: Content-Security-Policy"
+      ]
+    },
+    {
+      "category": "Security",
+      "test_name": "Input Validation - SQL Injection",
+      "status": "PASS",
+      "score": 60,
+      "details": "Payload reflected: False",
+      "metrics": {
+        "payload_reflected": false
+      },
+      "recommendations": [
+        "Implement input validation and sanitization",
+        "Use parameterized queries for database",
+        "Add CSRF protection"
+      ]
+    },
+    {
+      "category": "Security",
+      "test_name": "Input Validation - XSS",
+      "status": "PASS",
+      "score": 60,
+      "details": "Payload reflected: False",
+      "metrics": {
+        "payload_reflected": false
+      },
+      "recommendations": [
+        "Implement input validation and sanitization",
+        "Use parameterized queries for database",
+        "Add CSRF protection"
+      ]
+    },
+    {
+      "category": "Security",
+      "test_name": "Input Validation - Path Traversal",
+      "status": "PASS",
+      "score": 60,
+      "details": "Payload reflected: False",
+      "metrics": {
+        "payload_reflected": false
+      },
+      "recommendations": [
+        "Implement input validation and sanitization",
+        "Use parameterized queries for database",
+        "Add CSRF protection"
+      ]
+    },
+    {
+      "category": "UX/Conversion",
+      "test_name": "Page Load Performance (FCP simulation)",
+      "status": "PASS",
+      "score": 100,
+      "details": "Load time: 0.01s, Content size: 1.5KB",
+      "metrics": {
+        "load_time": 0.009805440902709961,
+        "content_size_kb": 1.5244140625,
+        "fcp_score": 100
+      },
+      "recommendations": []
+    },
+    {
+      "category": "UX/Conversion",
+      "test_name": "Mobile Responsiveness",
+      "status": "WARNING",
+      "score": 16,
+      "details": "Mobile indicators found: 1/6",
+      "metrics": {
+        "mobile_indicators": 1
+      },
+      "recommendations": [
+        "Add responsive CSS media queries",
+        "Implement mobile-first design",
+        "Test on various mobile devices",
+        "Optimize touch interactions"
+      ]
+    },
+    {
+      "category": "AI Trading",
+      "test_name": "AI Component - Machine Learning Models",
+      "status": "SKIP",
+      "score": 30,
+      "details": "AI trading components not fully implemented",
+      "metrics": {},
+      "recommendations": [
+        "Implement Machine Learning Models functionality",
+        "Integrate with ML frameworks (TensorFlow, PyTorch)",
+        "Add comprehensive backtesting engine",
+        "Implement real-time market data feeds",
+        "Add risk management algorithms"
+      ]
+    },
+    {
+      "category": "AI Trading",
+      "test_name": "AI Component - Strategy Backtesting",
+      "status": "SKIP",
+      "score": 30,
+      "details": "AI trading components not fully implemented",
+      "metrics": {},
+      "recommendations": [
+        "Implement Strategy Backtesting functionality",
+        "Integrate with ML frameworks (TensorFlow, PyTorch)",
+        "Add comprehensive backtesting engine",
+        "Implement real-time market data feeds",
+        "Add risk management algorithms"
+      ]
+    },
+    {
+      "category": "AI Trading",
+      "test_name": "AI Component - Risk Management",
+      "status": "SKIP",
+      "score": 30,
+      "details": "AI trading components not fully implemented",
+      "metrics": {},
+      "recommendations": [
+        "Implement Risk Management functionality",
+        "Integrate with ML frameworks (TensorFlow, PyTorch)",
+        "Add comprehensive backtesting engine",
+        "Implement real-time market data feeds",
+        "Add risk management algorithms"
+      ]
+    },
+    {
+      "category": "AI Trading",
+      "test_name": "AI Component - Market Data Integration",
+      "status": "SKIP",
+      "score": 30,
+      "details": "AI trading components not fully implemented",
+      "metrics": {},
+      "recommendations": [
+        "Implement Market Data Integration functionality",
+        "Integrate with ML frameworks (TensorFlow, PyTorch)",
+        "Add comprehensive backtesting engine",
+        "Implement real-time market data feeds",
+        "Add risk management algorithms"
+      ]
+    },
+    {
+      "category": "AI Trading",
+      "test_name": "AI Component - Automated Trading Logic",
+      "status": "SKIP",
+      "score": 30,
+      "details": "AI trading components not fully implemented",
+      "metrics": {},
+      "recommendations": [
+        "Implement Automated Trading Logic functionality",
+        "Integrate with ML frameworks (TensorFlow, PyTorch)",
+        "Add comprehensive backtesting engine",
+        "Implement real-time market data feeds",
+        "Add risk management algorithms"
+      ]
+    },
+    {
+      "category": "Monitoring",
+      "test_name": "Health Check Endpoint",
+      "status": "PASS",
+      "score": 100,
+      "details": "Health data completeness: 4/4",
+      "metrics": {
+        "response_time": 0.012273,
+        "data_completeness": 4
+      },
+      "recommendations": []
+    },
+    {
+      "category": "Monitoring",
+      "test_name": "Logging System",
+      "status": "PASS",
+      "score": 80,
+      "details": "Log files found: 2/3",
+      "metrics": {
+        "log_files_found": 2
+      },
+      "recommendations": [
+        "Implement comprehensive logging system",
+        "Add log rotation",
+        "Use structured logging (JSON)",
+        "Implement centralized log aggregation"
+      ]
+    }
+  ],
+  "critical_issues": [
+    {
+      "test": "Production Server HTTP",
+      "category": "Infrastructure",
+      "details": "Connection failed: HTTPConnectionPool(host='ase-bot.live', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x725f931aa420>, 'Connection to ase-bot.live timed out. (connect timeout=10)'))",
+      "recommendations": [
+        "Check server status and firewall configuration",
+        "Verify DNS settings",
+        "Ensure web server is running",
+        "Check SSL certificate configuration"
+      ]
+    },
+    {
+      "test": "Production Server HTTPS/SSL",
+      "category": "Infrastructure",
+      "details": "SSL/HTTPS failed: HTTPSConnectionPool(host='ase-bot.live', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x725f931aac00>, 'Connection to ase-bot.live timed out. (connect timeout=10)'))",
+      "recommendations": [
+        "Configure SSL certificate (Let's Encrypt recommended)",
+        "Set up HTTPS redirect",
+        "Verify certificate chain",
+        "Check firewall port 443"
+      ]
+    },
+    {
+      "test": "Security Headers",
+      "category": "Security",
+      "details": "0/5 security headers present",
+      "recommendations": [
+        "Add missing security header: X-Content-Type-Options",
+        "Add missing security header: X-Frame-Options",
+        "Add missing security header: X-XSS-Protection",
+        "Add missing security header: Strict-Transport-Security",
+        "Add missing security header: Content-Security-Policy"
+      ]
+    }
+  ],
+  "recommendations": {
+    "immediate": [
+      "Add missing security header: X-Frame-Options",
+      "Add missing security header: X-Content-Type-Options",
+      "Add missing security header: Content-Security-Policy",
+      "Add missing security header: Strict-Transport-Security",
+      "Check SSL certificate configuration",
+      "Add missing security header: X-XSS-Protection",
+      "Configure SSL certificate (Let's Encrypt recommended)",
+      "Implement SSL certificate for production",
+      "Use Let's Encrypt for free SSL"
+    ],
+    "short_term": [
+      "Add CSRF protection",
+      "Implement Risk Management functionality",
+      "Add comprehensive trading API",
+      "Implement Strategy Selection functionality",
+      "Implement Strategy Backtesting functionality",
+      "Add log rotation",
+      "Implement comprehensive logging system",
+      "Add clear call-to-action for registration",
+      "Add proper authentication middleware",
+      "Implement Market Data Integration functionality",
+      "Implement mobile-first design",
+      "Add risk management controls",
+      "Implement Bot Creation API functionality",
+      "Implement centralized log aggregation",
+      "Implement /api/auth/forgot-password endpoint",
+      "Implement Order Placement Simulation functionality",
+      "Add structured error responses",
+      "Implement input validation and sanitization",
+      "Implement Automated Trading Logic functionality",
+      "Optimize page load time to <2s",
+      "Optimize touch interactions",
+      "Implement real-time market data feeds",
+      "Implement /api/auth/login endpoint",
+      "Implement Risk Management Settings functionality",
+      "Implement /api/auth/me endpoint",
+      "Add comprehensive backtesting engine",
+      "Add risk management algorithms",
+      "Implement Machine Learning Models functionality",
+      "Add responsive CSS media queries",
+      "Implement proper HTTP status codes",
+      "Implement Real-time Market Data functionality"
+    ],
+    "long_term": [
+      "Verify DNS settings",
+      "Use parameterized queries for database",
+      "Check server status and firewall configuration",
+      "Integrate with exchange APIs",
+      "Set up HTTPS redirect",
+      "Test on various mobile devices",
+      "Ensure web server is running",
+      "Configure HSTS headers",
+      "Integrate with ML frameworks (TensorFlow, PyTorch)",
+      "Set up API keys and test integration",
+      "Check firewall port 443",
+      "Verify certificate chain",
+      "Use structured logging (JSON)",
+      "Disable weak TLS versions"
+    ]
+  }
+}

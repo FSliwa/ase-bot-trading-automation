@@ -1,0 +1,1 @@
+DATABASE_URL=postgresql+psycopg2://upadmin:AVNS_ynqNx-mSYLQXZiCgbhi@public-automatic-stock-exchange-bot-hhiyptsoiomb.db.upclouddatabases.com:11569/defaultdb?sslmode=require

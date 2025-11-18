@@ -1,0 +1,150 @@
+Sep 11 14:16:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.918s CPU time.
+Sep 11 14:16:17 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10555.
+Sep 11 14:16:17 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.933s CPU time.
+Sep 11 14:16:22 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10556.
+Sep 11 14:16:22 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.896s CPU time.
+Sep 11 14:16:27 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10557.
+Sep 11 14:16:27 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.855s CPU time.
+Sep 11 14:16:32 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10558.
+Sep 11 14:16:32 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.861s CPU time.
+Sep 11 14:16:37 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10559.
+Sep 11 14:16:37 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.801s CPU time.
+Sep 11 14:16:42 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10560.
+Sep 11 14:16:42 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.854s CPU time.
+Sep 11 14:16:47 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10561.
+Sep 11 14:16:47 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.863s CPU time.
+Sep 11 14:16:52 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10562.
+Sep 11 14:16:52 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:54 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:54 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:54 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.855s CPU time.
+Sep 11 14:16:57 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10563.
+Sep 11 14:16:57 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:16:59 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:16:59 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:16:59 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.854s CPU time.
+Sep 11 14:17:02 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10564.
+Sep 11 14:17:02 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:04 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:04 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:04 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.900s CPU time.
+Sep 11 14:17:07 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10565.
+Sep 11 14:17:07 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:09 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:09 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:09 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.893s CPU time.
+Sep 11 14:17:12 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10566.
+Sep 11 14:17:12 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:14 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.944s CPU time.
+Sep 11 14:17:17 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10567.
+Sep 11 14:17:17 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:19 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.885s CPU time.
+Sep 11 14:17:22 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10568.
+Sep 11 14:17:22 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:24 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.887s CPU time.
+Sep 11 14:17:27 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10569.
+Sep 11 14:17:27 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:29 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.888s CPU time.
+Sep 11 14:17:32 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10570.
+Sep 11 14:17:32 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:34 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.839s CPU time.
+Sep 11 14:17:37 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10571.
+Sep 11 14:17:37 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.855s CPU time.
+Sep 11 14:17:42 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10572.
+Sep 11 14:17:42 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:44 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.845s CPU time.
+Sep 11 14:17:47 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10573.
+Sep 11 14:17:47 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:49 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.906s CPU time.
+Sep 11 14:17:53 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10574.
+Sep 11 14:17:53 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:17:55 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:17:55 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:17:55 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.847s CPU time.
+Sep 11 14:17:58 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10575.
+Sep 11 14:17:58 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:00 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:00 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:00 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.867s CPU time.
+Sep 11 14:18:03 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10576.
+Sep 11 14:18:03 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:05 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:05 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:05 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.836s CPU time.
+Sep 11 14:18:08 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10577.
+Sep 11 14:18:08 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:10 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:10 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:10 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.924s CPU time.
+Sep 11 14:18:13 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10578.
+Sep 11 14:18:13 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:15 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:15 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:15 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.967s CPU time.
+Sep 11 14:18:18 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10579.
+Sep 11 14:18:18 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:20 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:20 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:20 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.842s CPU time.
+Sep 11 14:18:23 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10580.
+Sep 11 14:18:23 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:25 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:25 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:25 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.838s CPU time.
+Sep 11 14:18:28 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10581.
+Sep 11 14:18:28 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:30 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:30 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:30 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.802s CPU time.
+Sep 11 14:18:33 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10582.
+Sep 11 14:18:33 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:35 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:35 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:35 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.868s CPU time.
+Sep 11 14:18:38 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Scheduled restart job, restart counter is at 10583.
+Sep 11 14:18:38 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Started trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:39 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Stopping trading-bot.service - Trading Bot FastAPI Server...
+Sep 11 14:18:41 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Main process exited, code=exited, status=1/FAILURE
+Sep 11 14:18:41 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Failed with result 'exit-code'.
+Sep 11 14:18:41 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: Stopped trading-bot.service - Trading Bot FastAPI Server.
+Sep 11 14:18:41 ubuntu-1cpu-2gb-pl-waw1 systemd[1]: trading-bot.service: Consumed 1.877s CPU time.

@@ -1,0 +1,56 @@
+# 🚀 VNC Quick Commands - PostgreSQL + Email
+
+## ⚠️ WAŻNE: Uruchamiaj jako user 'admin' (NIE sudo!)
+
+### 1. Podstawowe wdrożenie
+```bash
+# Połącz się z serwerem
+ssh admin@185.70.196.214
+
+# Uruchom skrypt (BEZ sudo!)
+chmod +x deploy_postgresql_email.sh
+./deploy_postgresql_email.sh
+```
+
+### 2. Konfiguracja SMTP (Gmail)
+```bash
+# Edytuj plik konfiguracyjny
+sudo nano /opt/trading-bot/.env.db
+
+# Zmień te linie na swoje dane:
+SMTP_USERNAME=your_gmail@gmail.com
+SMTP_PASSWORD=your_gmail_app_password
+
+# Zapisz: Ctrl+X, Y, Enter
+```
+
+### 3. Restart i test
+```bash
+# Restart serwisu
+sudo systemctl restart trading-bot
+
+# Test
+curl -X POST http://localhost:8009/api/register \
+  -H "Content-Type: application/json" \
+  -d '{"username":"test","password":"test12345","email":"test@test.com"}'
+```
+
+### 4. Sprawdź status
+```bash
+# Status serwisu
+sudo systemctl status trading-bot
+
+# Logi na żywo
+sudo journalctl -u trading-bot -f
+```
+
+## ✅ Sukces gdy widzisz:
+- `🐘 Using PostgreSQL database`
+- `✅ User registered: test (test@test.com) - Database: postgresql`
+- `📧 Welcome email sent to test@test.com`
+
+## 🌐 Test w przeglądarce:
+- http://185.70.196.214:8009/register
+- http://185.70.196.214:8009/login
+
+**Gotowe! 🎉**

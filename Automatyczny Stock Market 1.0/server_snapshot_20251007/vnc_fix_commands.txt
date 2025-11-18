@@ -1,0 +1,48 @@
+# 🔧 KOMENDY DO WKLEJENIA W VNC - Naprawa przekierowania rejestracji
+# Skopiuj i wklej każdą komendę osobno przez Command+V
+
+# 1. Skopiuj naprawiony login.html do katalogu produkcyjnego:
+sudo cp ~/login.html /opt/trading-bot/login.html
+
+# 2. Ustaw właściwe uprawnienia:
+sudo chown www-data:www-data /opt/trading-bot/login.html
+
+# 3. Zrestartuj serwis:
+sudo systemctl restart trading-bot
+
+# 4. Sprawdź status serwisu:
+sudo systemctl status trading-bot
+
+# 5. Przetestuj naprawę lokalnie:
+curl -s http://localhost:8009/login | grep 'href="/register"'
+
+# 6. Sprawdź bazę danych użytkowników:
+ls -la /opt/trading-bot/users.json
+
+# 7. Wyświetl rozmiar bazy danych:
+wc -l /opt/trading-bot/users.json
+
+# 8. Test końcowy - sprawdź link na stronie:
+curl -s http://localhost:8009/login | grep -A 3 "Zarejestruj się"
+
+# ===== INFORMACJA O BAZIE DANYCH =====
+# Lokalizacja: /opt/trading-bot/users.json
+# Format: JSON z hashowanymi hasłami SHA-256
+# Przykładowa struktura:
+# {
+#   "username": {
+#     "username": "user",
+#     "password_hash": "hash",
+#     "salt": "salt",
+#     "email": "email@example.com",
+#     "first_name": "Name",
+#     "last_name": "Surname",
+#     "created_at": "2024-01-01T00:00:00",
+#     "is_active": true,
+#     "account_type": "free"
+#   }
+# }
+
+# ===== OCZEKIWANY REZULTAT =====
+# Link "Zarejestruj się tutaj" na http://185.70.196.214/login
+# ma teraz wskazywać na /register zamiast register.html

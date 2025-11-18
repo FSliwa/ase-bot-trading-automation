@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <title>Zaloguj się - ASE Trading Bot</title>
+    <style>
+        body { background: #0b0d17; color: #f5f7ff; font-family: "Inter", sans-serif; }
+        .card { max-width: 420px; margin: 5rem auto; padding: 2.5rem; background: rgba(17, 22, 39, 0.92); border-radius: 18px; box-shadow: 0 20px 55px rgba(12, 17, 28, 0.45); }
+        h1 { font-size: 2rem; margin-bottom: 1rem; }
+        form { display: grid; gap: 1rem; }
+        label { font-weight: 600; }
+        input { padding: 0.9rem 1rem; border-radius: 12px; border: 1px solid rgba(94, 106, 150, 0.4); background: rgba(20, 25, 43, 0.9); color: inherit; }
+        button { padding: 0.85rem 1rem; border-radius: 12px; border: none; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        button:hover { transform: translateY(-1px); box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35); }
+        .meta { display: flex; justify-content: space-between; font-size: 0.9rem; }
+        a { color: #a5b4fc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <section class="card">
+        <header>
+            <h1>Zaloguj się</h1>
+            <p>Uzyskaj dostęp do panelu inwestycyjnego w trybie <strong>dark</strong>.</p>
+        </header>
+        <form method="post" action="/api/v2/users/login">
+            <div>
+                <label for="email">Adres e-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+                <label for="password">Hasło</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required />
+            </div>
+            <button type="submit">Zaloguj się</button>
+        </form>
+        <div class="meta">
+            <span>Nie masz konta?</span>
+            <a href="/register">Stwórz konto</a>
+        </div>
+    </section>
+</body>
+</html>

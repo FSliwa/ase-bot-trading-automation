@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend-v2:
+    build:
+      context: .
+      dockerfile: Dockerfile.v2
+    container_name: trading-backend-v2
+    restart: always
+    env_file:
+      - .env
+    expose:
+      - "8000"
+    networks:
+      - trading-net
+    dns:
+      - 8.8.8.8
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # gateway:
+  #   build:
+  #     context: ./gateway
+  #     dockerfile: Dockerfile
+  #   container_name: trading-gateway
+  #   restart: always
+  #   environment:
+  #     - BACKEND_BASE=http://backend:8009
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - trading-net
+  #   depends_on:
+  #     backend:
+  #       condition: service_healthy
+  #   dns:
+  #     - 8.8.8.8
+
+networks:
+  trading-net:
+    driver: bridge

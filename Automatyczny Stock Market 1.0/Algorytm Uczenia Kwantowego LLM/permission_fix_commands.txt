@@ -1,0 +1,62 @@
+# 🔧 PROSTE KOMENDY - PERMISSION DENIED FIX
+# Wklej każdą linię osobno przez Command+V w VNC
+
+# KROK 1: Nadaj uprawnienia
+chmod +x mac_deploy_script.sh
+
+# KROK 2: Uruchom skrypt
+./mac_deploy_script.sh
+
+# ALTERNATYWNIE - Jeśli nadal problem, wykonuj ręcznie:
+
+# A) Backup (jeśli istnieje)
+sudo cp -r /opt/trading-bot /opt/trading-bot-backup-$(date +%Y%m%d) 2>/dev/null || echo "No backup needed"
+
+# B) Utwórz katalog
+sudo mkdir -p /opt/trading-bot
+
+# C) Skopiuj wszystkie pliki
+sudo cp ~/*.py ~/*.html ~/*.conf ~/*.txt ~/*.json /opt/trading-bot/ 2>/dev/null || echo "Some files may not exist"
+
+# D) Popraw uprawnienia
+sudo chown -R www-data:www-data /opt/trading-bot
+sudo chmod +x /opt/trading-bot/enhanced_server_gpt5.py
+
+# E) Zainstaluj pakiety Python
+sudo python3 -m pip install -r /opt/trading-bot/requirements.txt
+
+# F) Konfiguruj nginx
+sudo cp /opt/trading-bot/nginx_8009.conf /etc/nginx/sites-available/trading-bot
+sudo ln -sf /etc/nginx/sites-available/trading-bot /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+
+# G) Utwórz serwis systemd
+sudo tee /etc/systemd/system/trading-bot.service > /dev/null << 'EOF'
+[Unit]
+Description=Trading Bot Server with Registration
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/trading-bot
+ExecStart=/usr/bin/python3 enhanced_server_gpt5.py
+Restart=always
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# H) Uruchom serwis
+sudo systemctl daemon-reload
+sudo systemctl enable trading-bot
+sudo systemctl restart trading-bot
+
+# I) Sprawdź status
+sudo systemctl status trading-bot
+
+# J) Test lokalny
+curl http://localhost:8009/login

@@ -1,0 +1,18 @@
+2025-09-24 20:46:34,138 - INFO - Starting database migration process...
+2025-09-24 20:46:34,158 - INFO - Executing migration: 01_market_data_partitioning
+2025-09-24 20:46:34,225 - INFO - Migration 01_market_data_partitioning completed successfully
+2025-09-24 20:46:34,231 - INFO - Executing migration: 02_portfolio_snapshots
+2025-09-24 20:46:34,296 - INFO - Migration 02_portfolio_snapshots completed successfully
+2025-09-24 20:46:34,304 - INFO - Executing migration: 03_trading_metrics_cache
+2025-09-24 20:46:34,361 - INFO - Migration 03_trading_metrics_cache completed successfully
+2025-09-24 20:46:34,367 - INFO - Executing migration: 04_audit_logs
+2025-09-24 20:46:34,440 - INFO - Migration 04_audit_logs completed successfully
+2025-09-24 20:46:34,446 - INFO - Executing migration: 05_security_events
+2025-09-24 20:46:34,527 - INFO - Migration 05_security_events completed successfully
+2025-09-24 20:46:34,536 - INFO - Executing migration: 06_risk_limits
+2025-09-24 20:46:34,620 - INFO - Migration 06_risk_limits completed successfully
+2025-09-24 20:46:34,637 - INFO - Executing migration: 07_ai_model_versions
+2025-09-24 20:46:34,761 - INFO - Migration 07_ai_model_versions completed successfully
+2025-09-24 20:46:34,770 - INFO - Migration process completed successfully!
+2025-09-24 20:46:34,771 - INFO - Total tables: 34
+2025-09-24 20:46:34,771 - INFO - Executed migrations: 7

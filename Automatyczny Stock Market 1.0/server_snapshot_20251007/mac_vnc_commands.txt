@@ -1,0 +1,31 @@
+# 🍎 KRÓTKIE KOMENDY DLA MACOBOOK VNC
+# Skopiuj każdą linijkę osobno i wklej przez Command+V
+
+# 1. Nadaj uprawnienia i uruchom skrypt:
+chmod +x mac_deploy_script.sh && ./mac_deploy_script.sh
+
+# LUB ręcznie po kolei:
+
+# 2. Backup:
+sudo cp -r /opt/trading-bot /opt/trading-bot-backup-$(date +%Y%m%d) 2>/dev/null || true
+
+# 3. Katalog:
+sudo mkdir -p /opt/trading-bot
+
+# 4. Kopiuj pliki:
+sudo cp ~/*.py ~/*.html ~/*.conf ~/*.txt ~/*.json /opt/trading-bot/
+
+# 5. Uprawnienia:
+sudo chown -R www-data:www-data /opt/trading-bot && sudo chmod +x /opt/trading-bot/enhanced_server_gpt5.py
+
+# 6. Python:
+sudo python3 -m pip install -r /opt/trading-bot/requirements.txt
+
+# 7. Nginx:
+sudo cp /opt/trading-bot/nginx_8009.conf /etc/nginx/sites-available/trading-bot && sudo ln -sf /etc/nginx/sites-available/trading-bot /etc/nginx/sites-enabled/ && sudo systemctl reload nginx
+
+# 8. Service:
+sudo systemctl enable trading-bot && sudo systemctl restart trading-bot
+
+# 9. Test:
+sudo systemctl status trading-bot

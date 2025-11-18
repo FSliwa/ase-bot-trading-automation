@@ -1,0 +1,2325 @@
+============================================================
+🚀 ASE-Bot Final Web Server with Authentication
+============================================================
+📍 Main Port: 4000
+🔗 API Backend: localhost:8012
+🌐 Frontend: Served from '/home/filip-liwa/Pulpit/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/frontend-repo/dist'
+🔐 Authentication: ✅ Enabled
+⏰ Started at: 2025-09-27 20:46:52.333979
+============================================================
+
+🌐 Access URLs:
+   Main App: http://localhost:4000
+   Admin Panel: http://localhost:4000/admin/
+   Auth Test: http://localhost:4000/auth-test
+   Health Check: http://localhost:4000/health
+
+🔐 API Endpoints:
+   POST /api/auth/register - User registration
+   POST /api/auth/login - User login
+   POST /api/auth/logout - User logout
+   GET /api/auth/session - Session info
+   POST /api/auth/verify-email - Email verification
+
+Press Ctrl+C to stop the server
+------------------------------------------------------------
+✅ Server running successfully in threaded mode!
+[2025-09-27 20:46:53.279495] GET / from 127.0.0.1
+[20:46:53] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 20:46:56.725344] GET /health from 127.0.0.1
+[20:46:57] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:46:57.831714] GET /health from 127.0.0.1
+[20:46:57] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:46:57.847581] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_204658.html
+[20:46:58] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 20:46:58.357203] POST /api/auth/login from 127.0.0.1
+[20:46:58] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 401 -
+[2025-09-27 20:47:04.175006] GET /auth-test from 127.0.0.1
+[20:47:04] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 20:47:12.894805] GET /health from 127.0.0.1
+[20:47:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:47:40.337087] GET /auth-test from 127.0.0.1
+[20:47:40] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 20:47:41.505810] GET /favicon.ico from 127.0.0.1
+[20:47:41] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 20:47:42.896092] GET /health from 127.0.0.1
+[20:47:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:48:12.943111] GET /health from 127.0.0.1
+[20:48:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:48:15.014641] GET /auth-test frINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [318536]
+/health HTTP/1.1" 200 -
+[2025-09-27 20:49:12.893900] GET /health from 127.0.0.1
+[20:49:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:49:42.895249] GET /health from 127.0.0.1
+[20:49:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:50:12.895300] GET /health from 127.0.0.1
+[20:50:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:50:42.895734] GET /health from 127.0.0.1
+[20:50:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:51:12.894147] GET /health from 127.0.0.1
+[20:51:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:51:42.895694] GET /health from 127.0.0.1
+[20:51:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:52:12.895298] GET /health from 127.0.0.1
+[20:52:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:52:42.895923] GET /health from 127.0.0.1
+[20:52:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:53:12.895940] GET /health from 127.0.0.1
+[20:53:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:53:23.944022] GET / from 127.0.0.1
+[20:53:23] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 20:53:23.989124] GET / from 127.0.0.1
+[20:53:23] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 20:53:31.738094] GET /auth-test from 127.0.0.1
+[20:53:31] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 20:53:32.778702] POST /api/auth/register from 127.0.0.1
+[20:53:32] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 20:53:42.895086] GET /health from 127.0.0.1
+[20:53:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:54:02.903000] GET /auth-test from 127.0.0.1
+[20:54:02] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 20:54:03.794615] GET /favicon.ico from 127.0.0.1
+[20:54:03] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 20:54:05.508127] POST /api/auth/register from 127.0.0.1
+[20:54:05] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 20:54:12.895043] GET /health from 127.0.0.1
+[20:54:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:54:32.006450] GET /auth-test from 127.0.0.1
+[20:54:32] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 20:54:35.257884] POST /api/auth/register from 127.0.0.1
+[20:54:35] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 20:54:42.894260] GET /health from 127.0.0.1
+[20:54:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:55:12.895133] GET /health from 127.0.0.1
+[20:55:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:55:42.895124] GET /health from 127.0.0.1
+[20:55:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:56:12.894445] GET /health from 127.0.0.1
+[20:56:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:56:42.893950] GET /health from 127.0.0.1
+[20:56:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:57:12.895371] GET /health from 127.0.0.1
+[20:57:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:57:42.895224] GET /health from 127.0.0.1
+[20:57:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:58:12.896115] GET /health from 127.0.0.1
+[20:58:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:58:42.895956] GET /health from 127.0.0.1
+[20:58:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:59:12.895237] GET /health from 127.0.0.1
+[20:59:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 20:59:42.896280] GET /health from 127.0.0.1
+[20:59:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:00:12.895090] GET /health from 127.0.0.1
+[21:00:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:00:37.534117] GET / from 127.0.0.1
+[21:00:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:00:37.581285] GET / from 127.0.0.1
+[21:00:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:00:42.894746] GET /health from 127.0.0.1
+[21:00:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:00:45.401560] GET /auth-test from 127.0.0.1
+[21:00:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:00:46.364637] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_210046.html
+[21:00:46] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:01:12.908938] GET /health from 127.0.0.1
+[21:01:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:01:15.855841] GET /auth-test from 127.0.0.1
+[21:01:15] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:01:16.647920] GET /favicon.ico from 127.0.0.1
+[21:01:16] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:01:18.310393] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_210118.html
+[21:01:18] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:01:42.893486] GET /health from 127.0.0.1
+[21:01:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:01:45.105765] GET /auth-test from 127.0.0.1
+[21:01:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:01:47.664244] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_210148.html
+[21:01:48] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:02:12.895265] GET /health from 127.0.0.1
+[21:02:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:02:42.894883] GET /health from 127.0.0.1
+[21:02:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:03:12.894563] GET /health from 127.0.0.1
+[21:03:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:03:42.894885] GET /health from 127.0.0.1
+[21:03:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:04:12.894476] GET /health from 127.0.0.1
+[21:04:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:04:42.893758] GET /health from 127.0.0.1
+[21:04:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:05:12.895073] GET /health from 127.0.0.1
+[21:05:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:05:42.894030] GET /health from 127.0.0.1
+[21:05:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:06:12.895046] GET /health from 127.0.0.1
+[21:06:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:06:42.893725] GET /health from 127.0.0.1
+[21:06:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:07:12.895110] GET /health from 127.0.0.1
+[21:07:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:07:42.893940] GET /health from 127.0.0.1
+[21:07:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:08:12.894570] GET /health from 127.0.0.1
+[21:08:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:08:42.894331] GET /health from 127.0.0.1
+[21:08:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:09:12.894640] GET /health from 127.0.0.1
+[21:09:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:09:42.894633] GET /health from 127.0.0.1
+[21:09:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:10:12.894975] GET /health from 127.0.0.1
+[21:10:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:10:42.894192] GET /health from 127.0.0.1
+[21:10:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:11:12.894920] GET /health from 127.0.0.1
+[21:11:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:11:42.114009] GET / from 127.0.0.1
+[21:11:42] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:11:42.151801] GET / from 127.0.0.1
+[21:11:42] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:11:42.895013] GET /health from 127.0.0.1
+[21:11:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:11:49.281809] GET /auth-test from 127.0.0.1
+[21:11:49] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:11:50.283395] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_211150.html
+[21:11:50] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:12:03.534067] GET /auth-test from 127.0.0.1
+[21:12:03] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:12:04.352305] GET /favicon.ico from 127.0.0.1
+[21:12:04] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:12:05.980081] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_211206.html
+[21:12:06] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:12:12.895924] GET /health from 127.0.0.1
+[21:12:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:12:17.914118] GET /auth-test from 127.0.0.1
+[21:12:17] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:12:20.497038] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_211220.html
+[21:12:20] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:12:42.894895] GET /health from 127.0.0.1
+[21:12:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:13:12.894448] GET /health from 127.0.0.1
+[21:13:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:13:42.895085] GET /health from 127.0.0.1
+[21:13:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:14:12.894209] GET /health from 127.0.0.1
+[21:14:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:14:42.895049] GET /health from 127.0.0.1
+[21:14:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:15:12.896361] GET /health from 127.0.0.1
+[21:15:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:15:42.893993] GET /health from 127.0.0.1
+[21:15:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:16:12.895254] GET /health from 127.0.0.1
+[21:16:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:16:42.894783] GET /health from 127.0.0.1
+[21:16:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:17:12.896183] GET /health from 127.0.0.1
+[21:17:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:17:42.894338] GET /health from 127.0.0.1
+[21:17:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:18:12.896122] GET /health from 127.0.0.1
+[21:18:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:18:42.893815] GET /health from 127.0.0.1
+[21:18:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:19:12.894076] GET /health from 127.0.0.1
+[21:19:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:19:42.895459] GET /health from 127.0.0.1
+[21:19:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:20:12.893842] GET /health from 127.0.0.1
+[21:20:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:20:42.893795] GET /health from 127.0.0.1
+[21:20:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:20:54.040002] GET / from 127.0.0.1
+[21:20:54] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:20:54.079455] GET / from 127.0.0.1
+[21:20:54] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:21:01.449465] GET /auth-test from 127.0.0.1
+[21:21:01] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:21:02.461139] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212102.html
+[21:21:02] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:21:12.924570] GET /health from 127.0.0.1
+[21:21:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:21:16.409749] GET /auth-test from 127.0.0.1
+[21:21:16] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:21:17.170776] GET /favicon.ico from 127.0.0.1
+[21:21:17] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:21:19.188990] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212119.html
+[21:21:19] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:21:31.201409] GET /auth-test from 127.0.0.1
+[21:21:31] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:21:34.395296] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212134.html
+[21:21:34] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:21:42.894750] GET /health from 127.0.0.1
+[21:21:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:22:12.895686] GET /health from 127.0.0.1
+[21:22:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:22:42.901249] GET /health from 127.0.0.1
+[21:22:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:23:12.895337] GET /health from 127.0.0.1
+[21:23:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:23:42.165208] GET / from 127.0.0.1
+[21:23:42] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:23:42.220915] GET / from 127.0.0.1
+[21:23:42] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:23:42.894984] GET /health from 127.0.0.1
+[21:23:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:23:49.844290] GET /auth-test from 127.0.0.1
+[21:23:49] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:23:50.824362] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212351.html
+[21:23:51] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:24:04.346934] GET /auth-test from 127.0.0.1
+[21:24:04] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:24:05.546308] GET /favicon.ico from 127.0.0.1
+[21:24:05] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:24:07.033164] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212407.html
+[21:24:07] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:24:12.895205] GET /health from 127.0.0.1
+[21:24:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:24:18.743585] GET /auth-test from 127.0.0.1
+[21:24:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:24:21.908563] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_212422.html
+[21:24:22] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:24:42.894545] GET /health from 127.0.0.1
+[21:24:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:25:12.896042] GET /health from 127.0.0.1
+[21:25:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:25:42.895698] GET /health from 127.0.0.1
+[21:25:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:26:12.895464] GET /health from 127.0.0.1
+[21:26:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:26:42.894269] GET /health from 127.0.0.1
+[21:26:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:27:12.895749] GET /health from 127.0.0.1
+[21:27:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:27:42.894921] GET /health from 127.0.0.1
+[21:27:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:28:12.895071] GET /health from 127.0.0.1
+[21:28:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:28:42.894460] GET /health from 127.0.0.1
+[21:28:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:29:12.894203] GET /health from 127.0.0.1
+[21:29:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:29:42.893965] GET /health from 127.0.0.1
+[21:29:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:30:12.894169] GET /health from 127.0.0.1
+[21:30:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:30:42.893176] GET /health from 127.0.0.1
+[21:30:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:31:07.421948] GET / from 127.0.0.1
+[21:31:07] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:31:07.461322] GET / from 127.0.0.1
+[21:31:07] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:31:12.896367] GET /health from 127.0.0.1
+[21:31:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:31:15.374641] GET /auth-test from 127.0.0.1
+[21:31:15] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:31:16.489912] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_213117.html
+[21:31:17] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:31:17.635694] GET /verify?token=uK4yWHNWqX5gpQMAhq_57Eo7zptw3CupBqMAj7uNFcE from 127.0.0.1
+[21:31:17] [127.0.0.1] "GET /verify?token=uK4yWHNWqX5gpQMAhq_57Eo7zptw3CupBqMAj7uNFcE HTTP/1.1" 200 -
+[2025-09-27 21:31:40.856577] GET /auth-test from 127.0.0.1
+[21:31:40] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:31:41.846601] GET /favicon.ico from 127.0.0.1
+[21:31:41] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:31:42.898945] GET /health from 127.0.0.1
+[21:31:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:31:43.406631] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_213143.html
+[21:31:43] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:31:44.624152] GET /verify?token=pxiyI-wBjrzZTMRi7PHuSosOyQCsN7Tv-wVeUCGBBmA from 127.0.0.1
+[21:31:44] [127.0.0.1] "GET /verify?token=pxiyI-wBjrzZTMRi7PHuSosOyQCsN7Tv-wVeUCGBBmA HTTP/1.1" 200 -
+[2025-09-27 21:32:05.500844] GET /auth-test from 127.0.0.1
+[21:32:05] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:32:08.106350] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_213208.html
+[21:32:08] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:32:09.155851] GET /verify?token=N-00QLFBRcA-gTh-iSCMD3U9E4et3VRGchMsBPJRw3A from 127.0.0.1
+[21:32:09] [127.0.0.1] "GET /verify?token=N-00QLFBRcA-gTh-iSCMD3U9E4et3VRGchMsBPJRw3A HTTP/1.1" 200 -
+[2025-09-27 21:32:12.899371] GET /health from 127.0.0.1
+[21:32:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:32:42.894360] GET /health from 127.0.0.1
+[21:32:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:33:12.893896] GET /health from 127.0.0.1
+[21:33:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:33:42.893815] GET /health from 127.0.0.1
+[21:33:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:34:12.894818] GET /health from 127.0.0.1
+[21:34:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:34:42.894038] GET /health from 127.0.0.1
+[21:34:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:35:12.896136] GET /health from 127.0.0.1
+[21:35:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:35:42.893802] GET /health from 127.0.0.1
+[21:35:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:36:12.893924] GET /health from 127.0.0.1
+[21:36:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:36:42.894932] GET /health from 127.0.0.1
+[21:36:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:37:12.893807] GET /health from 127.0.0.1
+[21:37:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:37:42.894138] GET /health from 127.0.0.1
+[21:37:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:38:12.894931] GET /health from 127.0.0.1
+[21:38:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:38:42.895069] GET /health from 127.0.0.1
+[21:38:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:39:12.895744] GET /health from 127.0.0.1
+[21:39:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:39:39.306062] GET / from 127.0.0.1
+[21:39:39] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:39:39.370268] GET / from 127.0.0.1
+[21:39:39] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:39:42.895200] GET /health from 127.0.0.1
+[21:39:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:39:47.209548] GET /auth-test from 127.0.0.1
+[21:39:47] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:39:48.775350] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_213949.html
+[21:39:49] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:39:49.809374] GET /verify?token=hiQ9fOPKCp8-FnTZ0Ozm6aqDVQmBmFQ179XWa3lScQc from 127.0.0.1
+[21:39:49] [127.0.0.1] "GET /verify?token=hiQ9fOPKCp8-FnTZ0Ozm6aqDVQmBmFQ179XWa3lScQc HTTP/1.1" 200 -
+[2025-09-27 21:40:12.908780] GET /health from 127.0.0.1
+[21:40:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:40:13.823285] GET /auth-test from 127.0.0.1
+[21:40:13] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:40:14.651068] GET /favicon.ico from 127.0.0.1
+[21:40:14] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:40:16.172350] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214016.html
+[21:40:16] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:40:16.888456] GET /verify?token=nlVnIdyfLq4fBGi3SiDvZ_5x7-xCFGIrOgGiSPJ5bhU from 127.0.0.1
+[21:40:16] [127.0.0.1] "GET /verify?token=nlVnIdyfLq4fBGi3SiDvZ_5x7-xCFGIrOgGiSPJ5bhU HTTP/1.1" 200 -
+[2025-09-27 21:40:37.805496] GET /auth-test from 127.0.0.1
+[21:40:37] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:40:40.383704] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214040.html
+[21:40:40] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:40:41.435167] GET /verify?token=k9S3f1JGKtNWx9tDiGjloHhdSI0tWOFhaqUvSWt4xY8 from 127.0.0.1
+[21:40:41] [127.0.0.1] "GET /verify?token=k9S3f1JGKtNWx9tDiGjloHhdSI0tWOFhaqUvSWt4xY8 HTTP/1.1" 200 -
+[2025-09-27 21:40:42.894315] GET /health from 127.0.0.1
+[21:40:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:41:12.893764] GET /health from 127.0.0.1
+[21:41:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:41:42.895181] GET /health from 127.0.0.1
+[21:41:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:42:12.893885] GET /health from 127.0.0.1
+[21:42:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:42:42.894400] GET /health from 127.0.0.1
+[21:42:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:43:12.894902] GET /health from 127.0.0.1
+[21:43:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:43:37.809902] GET / from 127.0.0.1
+[21:43:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:43:37.857299] GET / from 127.0.0.1
+[21:43:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:43:42.893941] GET /health from 127.0.0.1
+[21:43:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:43:45.426268] GET /auth-test from 127.0.0.1
+[21:43:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:43:46.501916] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214346.html
+[21:43:46] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:43:47.038371] GET /verify?token=hR9H84Zaj7mLkfSacJecSQYfHhOtyNO_o-eUMeFRA_4 from 127.0.0.1
+[21:43:47] [127.0.0.1] "GET /verify?token=hR9H84Zaj7mLkfSacJecSQYfHhOtyNO_o-eUMeFRA_4 HTTP/1.1" 200 -
+[2025-09-27 21:43:47.268142] GET /auth-test from 127.0.0.1
+[21:43:47] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:43:47.758084] POST /api/auth/login from 127.0.0.1
+[21:43:48] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:44:02.955563] GET /auth-test from 127.0.0.1
+[21:44:02] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:44:03.800229] GET /favicon.ico from 127.0.0.1
+[21:44:03] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:44:05.425277] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214405.html
+[21:44:05] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:44:06.101791] GET /verify?token=ZmEq-xPV3qeE095q0drd_g-AKt8SwNjEeAPvh7AuRNQ from 127.0.0.1
+[21:44:06] [127.0.0.1] "GET /verify?token=ZmEq-xPV3qeE095q0drd_g-AKt8SwNjEeAPvh7AuRNQ HTTP/1.1" 200 -
+[2025-09-27 21:44:06.523498] GET /auth-test from 127.0.0.1
+[21:44:06] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:44:07.389109] POST /api/auth/login from 127.0.0.1
+[21:44:07] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:44:12.896026] GET /health from 127.0.0.1
+[21:44:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:44:18.714231] GET /auth-test from 127.0.0.1
+[21:44:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:44:21.429375] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214421.html
+[21:44:21] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:44:22.019344] GET /verify?token=G4NPZx3zyClYw3B7h2YAXFfUpvvnZSW5cPte5zLs8zU from 127.0.0.1
+[21:44:22] [127.0.0.1] "GET /verify?token=G4NPZx3zyClYw3B7h2YAXFfUpvvnZSW5cPte5zLs8zU HTTP/1.1" 200 -
+[2025-09-27 21:44:22.640767] GET /auth-test from 127.0.0.1
+[21:44:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:44:23.676069] POST /api/auth/login from 127.0.0.1
+[21:44:24] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:44:42.895330] GET /health from 127.0.0.1
+[21:44:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:45:12.894708] GET /health from 127.0.0.1
+[21:45:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:45:42.895329] GET /health from 127.0.0.1
+[21:45:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:46:12.900975] GET /health from 127.0.0.1
+[21:46:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:46:38.827013] GET / from 127.0.0.1
+[21:46:38] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:46:38.869765] GET / from 127.0.0.1
+[21:46:38] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:46:42.896367] GET /health from 127.0.0.1
+[21:46:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:46:46.656781] GET /auth-test from 127.0.0.1
+[21:46:46] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:46:47.612369] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214648.html
+[21:46:48] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:46:48.729801] GET /verify?token=_6jpNnxHIZu-ZomVTFvKK3lAZHCeX_ZDwJ2ZOPhqddA from 127.0.0.1
+[21:46:48] [127.0.0.1] "GET /verify?token=_6jpNnxHIZu-ZomVTFvKK3lAZHCeX_ZDwJ2ZOPhqddA HTTP/1.1" 200 -
+[2025-09-27 21:46:48.932576] GET /auth-test from 127.0.0.1
+[21:46:48] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:46:49.448518] POST /api/auth/login from 127.0.0.1
+[21:46:49] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:47:12.894815] GET /health from 127.0.0.1
+[21:47:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:47:42.895216] GET /health from 127.0.0.1
+[21:47:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:48:00.005200] GET /auth-test from 127.0.0.1
+[21:48:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:48:00.844075] GET /favicon.ico from 127.0.0.1
+[21:48:00] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:48:02.274704] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214802.html
+[21:48:02] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:48:03.068439] GET /verify?token=_Rwg0ui4GQcCGn6Rb6kAjpWuu659mtllAzBE-kkJXV8 from 127.0.0.1
+[21:48:03] [127.0.0.1] "GET /verify?token=_Rwg0ui4GQcCGn6Rb6kAjpWuu659mtllAzBE-kkJXV8 HTTP/1.1" 200 -
+[2025-09-27 21:48:03.538454] GET /auth-test from 127.0.0.1
+[21:48:03] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:48:04.455318] POST /api/auth/login from 127.0.0.1
+[21:48:04] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:48:12.895154] GET /health from 127.0.0.1
+[21:48:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:48:42.895217] GET /health from 127.0.0.1
+[21:48:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:49:07.221810] GET /auth-test from 127.0.0.1
+[21:49:07] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:49:09.844819] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_214910.html
+[21:49:10] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:49:10.461642] GET /verify?token=yLeUVKGD8hS7MEYCMGtCKIRvk6BIQ_-sOkeeJYlaoDI from 127.0.0.1
+[21:49:10] [127.0.0.1] "GET /verify?token=yLeUVKGD8hS7MEYCMGtCKIRvk6BIQ_-sOkeeJYlaoDI HTTP/1.1" 200 -
+[2025-09-27 21:49:11.059947] GET /auth-test from 127.0.0.1
+[21:49:11] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:49:12.072962] POST /api/auth/login from 127.0.0.1
+[21:49:12] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:49:12.904055] GET /health from 127.0.0.1
+[21:49:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:49:42.895024] GET /health from 127.0.0.1
+[21:49:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:50:12.894887] GET /health from 127.0.0.1
+[21:50:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:50:42.895633] GET /health from 127.0.0.1
+[21:50:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:51:12.894847] GET /health from 127.0.0.1
+[21:51:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:51:42.894503] GET /health from 127.0.0.1
+[21:51:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:52:12.894289] GET /health from 127.0.0.1
+[21:52:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:52:42.895274] GET /health from 127.0.0.1
+[21:52:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:52:51.289188] GET / from 127.0.0.1
+[21:52:51] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:52:51.327568] GET / from 127.0.0.1
+[21:52:51] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 21:52:59.041352] GET /auth-test from 127.0.0.1
+[21:52:59] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:53:00.229161] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_215300.html
+[21:53:00] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:53:00.772626] GET /verify?token=9Zo9bFE0z_y-aLXdHO8b7-QD29O9nav35z8iZ57eKkc from 127.0.0.1
+[21:53:00] [127.0.0.1] "GET /verify?token=9Zo9bFE0z_y-aLXdHO8b7-QD29O9nav35z8iZ57eKkc HTTP/1.1" 200 -
+[2025-09-27 21:53:00.980610] GET /auth-test from 127.0.0.1
+[21:53:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:53:01.393498] POST /api/auth/login from 127.0.0.1
+[21:53:01] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:53:12.895157] GET /health from 127.0.0.1
+[21:53:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:53:42.894543] GET /health from 127.0.0.1
+[21:53:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:54:10.893800] GET /auth-test from 127.0.0.1
+[21:54:10] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:54:11.928895] GET /favicon.ico from 127.0.0.1
+[21:54:11] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 21:54:12.902985] GET /health from 127.0.0.1
+[21:54:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:54:13.939369] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_215414.html
+[21:54:14] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:54:14.629269] GET /verify?token=IEzKXE0D5HzsVN2OB8HPetcBVZzXUCED01-WKEibxyA from 127.0.0.1
+[21:54:14] [127.0.0.1] "GET /verify?token=IEzKXE0D5HzsVN2OB8HPetcBVZzXUCED01-WKEibxyA HTTP/1.1" 200 -
+[2025-09-27 21:54:15.092811] GET /auth-test from 127.0.0.1
+[21:54:15] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:54:15.923726] POST /api/auth/login from 127.0.0.1
+[21:54:16] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:54:42.893791] GET /health from 127.0.0.1
+[21:54:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:55:12.894639] GET /health from 127.0.0.1
+[21:55:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:55:18.722002] GET /auth-test from 127.0.0.1
+[21:55:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:55:21.269144] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_215521.html
+[21:55:21] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 21:55:22.301849] GET /verify?token=bWcjhRmJmPi1TnKljQBsUsjtUG8k9DhFUuQ0aDX8W3I from 127.0.0.1
+[21:55:22] [127.0.0.1] "GET /verify?token=bWcjhRmJmPi1TnKljQBsUsjtUG8k9DhFUuQ0aDX8W3I HTTP/1.1" 200 -
+[2025-09-27 21:55:23.186277] GET /auth-test from 127.0.0.1
+[21:55:23] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 21:55:24.133865] POST /api/auth/login from 127.0.0.1
+[21:55:24] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 21:55:42.895709] GET /health from 127.0.0.1
+[21:55:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:56:12.895117] GET /health from 127.0.0.1
+[21:56:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:56:42.893746] GET /health from 127.0.0.1
+[21:56:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:57:12.895018] GET /health from 127.0.0.1
+[21:57:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:57:42.894264] GET /health from 127.0.0.1
+[21:57:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:58:12.896344] GET /health from 127.0.0.1
+[21:58:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:58:42.894615] GET /health from 127.0.0.1
+[21:58:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:59:12.895819] GET /health from 127.0.0.1
+[21:59:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 21:59:42.895016] GET /health from 127.0.0.1
+[21:59:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:00:12.895014] GET /health from 127.0.0.1
+[22:00:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:00:42.894795] GET /health from 127.0.0.1
+[22:00:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:01:12.895281] GET /health from 127.0.0.1
+[22:01:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:01:42.894956] GET /health from 127.0.0.1
+[22:01:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:02:12.894878] GET /health from 127.0.0.1
+[22:02:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:02:42.894050] GET /health from 127.0.0.1
+[22:02:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:02:52.672121] GET / from 127.0.0.1
+[22:02:52] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:02:52.716198] GET / from 127.0.0.1
+[22:02:52] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:03:00.538368] GET /auth-test from 127.0.0.1
+[22:03:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:03:01.560710] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_220301.html
+[22:03:01] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:03:02.065221] GET /verify?token=g_LJZY6tp4eILs7C8VQUe7ZdophcAI2cWnIblj9d5W0 from 127.0.0.1
+[22:03:02] [127.0.0.1] "GET /verify?token=g_LJZY6tp4eILs7C8VQUe7ZdophcAI2cWnIblj9d5W0 HTTP/1.1" 200 -
+[2025-09-27 22:03:02.258144] GET /auth-test from 127.0.0.1
+[22:03:02] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:03:02.644014] POST /api/auth/login from 127.0.0.1
+[22:03:03] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:03:12.896186] GET /health from 127.0.0.1
+[22:03:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:03:42.896238] GET /health from 127.0.0.1
+[22:03:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:04:12.918164] GET /health from 127.0.0.1
+[22:04:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:04:13.053002] GET /auth-test from 127.0.0.1
+[22:04:13] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:04:13.989801] GET /favicon.ico from 127.0.0.1
+[22:04:13] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:04:15.614598] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_220416.html
+[22:04:16] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:04:16.700913] GET /verify?token=DnsetPGge5CP1Fj-PwhRjM1unk45f4EXKtd8TRumyNY from 127.0.0.1
+[22:04:16] [127.0.0.1] "GET /verify?token=DnsetPGge5CP1Fj-PwhRjM1unk45f4EXKtd8TRumyNY HTTP/1.1" 200 -
+[2025-09-27 22:04:17.415569] GET /auth-test from 127.0.0.1
+[22:04:17] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:04:18.508475] POST /api/auth/login from 127.0.0.1
+[22:04:18] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:04:42.893996] GET /health from 127.0.0.1
+[22:04:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:05:12.895606] GET /health from 127.0.0.1
+[22:05:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:05:20.351198] GET /auth-test from 127.0.0.1
+[22:05:20] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:05:23.639199] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_220524.html
+[22:05:24] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:05:24.753380] GET /verify?token=CsYL3Bfne-xNKH6cr19YKYpCGq6jUNsHW24mLKn__5g from 127.0.0.1
+[22:05:24] [127.0.0.1] "GET /verify?token=CsYL3Bfne-xNKH6cr19YKYpCGq6jUNsHW24mLKn__5g HTTP/1.1" 200 -
+[2025-09-27 22:05:25.279399] GET /auth-test from 127.0.0.1
+[22:05:25] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:05:26.419815] POST /api/auth/login from 127.0.0.1
+[22:05:26] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:05:42.895898] GET /health from 127.0.0.1
+[22:05:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:06:12.906567] GET /health from 127.0.0.1
+[22:06:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:06:42.895543] GET /health from 127.0.0.1
+[22:06:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:07:12.896354] GET /health from 127.0.0.1
+[22:07:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:07:42.894859] GET /health from 127.0.0.1
+[22:07:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:08:12.895054] GET /health from 127.0.0.1
+[22:08:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:08:42.895427] GET /health from 127.0.0.1
+[22:08:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:09:12.897092] GET /health from 127.0.0.1
+[22:09:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:09:42.895516] GET /health from 127.0.0.1
+[22:09:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:10:12.894965] GET /health from 127.0.0.1
+[22:10:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:10:42.896086] GET /health from 127.0.0.1
+[22:10:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:11:12.895412] GET /health from 127.0.0.1
+[22:11:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:11:42.896160] GET /health from 127.0.0.1
+[22:11:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:12:09.502421] GET / from 127.0.0.1
+[22:12:09] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:12:09.537606] GET / from 127.0.0.1
+[22:12:09] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:12:12.898281] GET /health from 127.0.0.1
+[22:12:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:12:17.141833] GET /auth-test from 127.0.0.1
+[22:12:17] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:18.133895] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221218.html
+[22:12:18] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:12:18.628011] GET /verify?token=UIg7fRtDDtJIMr0IfwyZZlow74TvOQ59KKLAx1QwdRk from 127.0.0.1
+[22:12:18] [127.0.0.1] "GET /verify?token=UIg7fRtDDtJIMr0IfwyZZlow74TvOQ59KKLAx1QwdRk HTTP/1.1" 200 -
+[2025-09-27 22:12:18.814604] GET /auth-test from 127.0.0.1
+[22:12:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:19.206765] POST /api/auth/login from 127.0.0.1
+[22:12:19] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:12:32.472165] GET /auth-test from 127.0.0.1
+[22:12:32] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:33.539418] GET /favicon.ico from 127.0.0.1
+[22:12:33] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:12:35.078385] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221235.html
+[22:12:35] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:12:35.735732] GET /verify?token=1Hhh81RqdV2Ax9aRL1l-m9ga_wdKFdRKOPxLkWUPA9w from 127.0.0.1
+[22:12:35] [127.0.0.1] "GET /verify?token=1Hhh81RqdV2Ax9aRL1l-m9ga_wdKFdRKOPxLkWUPA9w HTTP/1.1" 200 -
+[2025-09-27 22:12:36.186691] GET /auth-test from 127.0.0.1
+[22:12:36] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:37.019546] POST /api/auth/login from 127.0.0.1
+[22:12:37] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:12:42.895079] GET /health from 127.0.0.1
+[22:12:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:12:48.195864] GET /auth-test from 127.0.0.1
+[22:12:48] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:50.949378] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221251.html
+[22:12:51] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:12:52.104292] GET /verify?token=TmeqedTB4_h-ytW8hqVLnni6ObeJUFVgRHqYfjXSzTY from 127.0.0.1
+[22:12:52] [127.0.0.1] "GET /verify?token=TmeqedTB4_h-ytW8hqVLnni6ObeJUFVgRHqYfjXSzTY HTTP/1.1" 200 -
+[2025-09-27 22:12:53.259707] GET /auth-test from 127.0.0.1
+[22:12:53] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:12:54.489191] POST /api/auth/login from 127.0.0.1
+[22:12:55] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:13:12.894130] GET /health from 127.0.0.1
+[22:13:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:13:42.893797] GET /health from 127.0.0.1
+[22:13:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:14:12.894054] GET /health from 127.0.0.1
+[22:14:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:14:42.894819] GET /health from 127.0.0.1
+[22:14:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:15:12.894842] GET /health from 127.0.0.1
+[22:15:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:15:42.893689] GET /health from 127.0.0.1
+[22:15:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:16:01.470178] GET / from 127.0.0.1
+[22:16:01] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:16:01.508881] GET / from 127.0.0.1
+[22:16:01] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:16:09.738393] GET /auth-test from 127.0.0.1
+[22:16:09] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:11.275134] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221611.html
+[22:16:11] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:16:11.773846] GET /verify?token=4g-LJMcMCWQy1iru6c17eud5oE9c6UZrk8-O9rcmPP0 from 127.0.0.1
+[22:16:11] [127.0.0.1] "GET /verify?token=4g-LJMcMCWQy1iru6c17eud5oE9c6UZrk8-O9rcmPP0 HTTP/1.1" 200 -
+[2025-09-27 22:16:11.992821] GET /auth-test from 127.0.0.1
+[22:16:11] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:12.329154] POST /api/auth/login from 127.0.0.1
+[22:16:12] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:16:12.900583] GET /health from 127.0.0.1
+[22:16:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:16:13.210044] GET /auth-test from 127.0.0.1
+[22:16:13] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:13.705756] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221614.html
+[22:16:14] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:16:21.534442] GET /auth-test from 127.0.0.1
+[22:16:21] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:22.277278] POST /api/auth/register from 127.0.0.1
+[22:16:22] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:16:38.972260] GET /auth-test from 127.0.0.1
+[22:16:38] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:39.724765] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221640.html
+[22:16:40] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:16:42.911808] GET /health from 127.0.0.1
+[22:16:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:16:47.386125] GET /auth-test from 127.0.0.1
+[22:16:47] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:16:48.137550] POST /api/auth/register from 127.0.0.1
+[22:16:48] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:17:04.554733] GET /auth-test from 127.0.0.1
+[22:17:04] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:17:05.336325] POST /api/auth/register from 127.0.0.1
+[22:17:05] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:17:12.894044] GET /health from 127.0.0.1
+[22:17:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:17:22.266294] GET /auth-test from 127.0.0.1
+[22:17:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:17:23.036873] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221723.html
+[22:17:23] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:17:30.471852] GET /auth-test from 127.0.0.1
+[22:17:30] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:17:31.237823] POST /api/auth/register from 127.0.0.1
+[22:17:31] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:17:42.896342] GET /health from 127.0.0.1
+[22:17:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:17:54.644281] GET /auth-test from 127.0.0.1
+[22:17:54] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:17:55.290677] GET /favicon.ico from 127.0.0.1
+[22:17:55] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:17:56.857315] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221757.html
+[22:17:57] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:17:57.512052] GET /verify?token=lr7ad92KiGeai5EyiwSuZjWBnjUxb4-bQNaxMU0lsRw from 127.0.0.1
+[22:17:57] [127.0.0.1] "GET /verify?token=lr7ad92KiGeai5EyiwSuZjWBnjUxb4-bQNaxMU0lsRw HTTP/1.1" 200 -
+[2025-09-27 22:17:57.963149] GET /auth-test from 127.0.0.1
+[22:17:57] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:17:58.819123] POST /api/auth/login from 127.0.0.1
+[22:17:59] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:18:00.860153] GET /auth-test from 127.0.0.1
+[22:18:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:18:01.151416] GET /favicon.ico from 127.0.0.1
+[22:18:01] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:18:01.792906] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221802.html
+[22:18:02] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:18:12.894424] GET /health from 127.0.0.1
+[22:18:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:18:18.634196] GET /auth-test from 127.0.0.1
+[22:18:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:18:19.432888] GET /favicon.ico from 127.0.0.1
+[22:18:19] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:18:20.753380] POST /api/auth/register from 127.0.0.1
+[22:18:21] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:18:42.896167] GET /health from 127.0.0.1
+[22:18:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:18:46.902548] GET /auth-test from 127.0.0.1
+[22:18:46] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:18:47.668704] GET /favicon.ico from 127.0.0.1
+[22:18:47] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:18:49.065584] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_221849.html
+[22:18:49] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:19:06.990843] GET /auth-test from 127.0.0.1
+[22:19:06] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:19:07.863278] GET /favicon.ico from 127.0.0.1
+[22:19:07] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:19:09.153565] POST /api/auth/register from 127.0.0.1
+[22:19:09] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:19:12.894443] GET /health from 127.0.0.1
+[22:19:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:19:34.569262] GET /auth-test from 127.0.0.1
+[22:19:34] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:19:35.393501] GET /favicon.ico from 127.0.0.1
+[22:19:35] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:19:36.783000] POST /api/auth/register from 127.0.0.1
+[22:19:37] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:19:42.895587] GET /health from 127.0.0.1
+[22:19:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:20:02.633644] GET /auth-test from 127.0.0.1
+[22:20:02] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:20:03.490817] GET /favicon.ico from 127.0.0.1
+[22:20:03] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:20:04.805950] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_222005.html
+[22:20:05] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:20:12.897915] GET /health from 127.0.0.1
+[22:20:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:20:21.717365] GET /auth-test from 127.0.0.1
+[22:20:21] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:20:22.719116] GET /favicon.ico from 127.0.0.1
+[22:20:22] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:20:24.121439] POST /api/auth/register from 127.0.0.1
+[22:20:24] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:20:42.895558] GET /health from 127.0.0.1
+[22:20:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:20:45.337007] GET /auth-test from 127.0.0.1
+[22:20:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:20:48.059543] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_222048.html
+[22:20:48] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:20:49.160453] GET /verify?token=g83rqmwcprKl3ovbYBfMCGz4pJBHU8dBkQ4ueTpnals from 127.0.0.1
+[22:20:49] [127.0.0.1] "GET /verify?token=g83rqmwcprKl3ovbYBfMCGz4pJBHU8dBkQ4ueTpnals HTTP/1.1" 200 -
+[2025-09-27 22:20:50.399916] GET /auth-test from 127.0.0.1
+[22:20:50] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:20:51.433414] POST /api/auth/login from 127.0.0.1
+[22:20:51] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 200 -
+[2025-09-27 22:20:54.670402] GET /auth-test from 127.0.0.1
+[22:20:54] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:20:57.290639] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_222057.html
+[22:20:57] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:21:07.761266] GET /auth-test from 127.0.0.1
+[22:21:07] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:21:10.259523] POST /api/auth/register from 127.0.0.1
+[22:21:10] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:21:12.894793] GET /health from 127.0.0.1
+[22:21:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:21:28.166286] GET /auth-test from 127.0.0.1
+[22:21:28] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:21:30.634190] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_222131.html
+[22:21:31] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:21:40.278556] GET /auth-test from 127.0.0.1
+[22:21:40] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:21:42.811556] POST /api/auth/register from 127.0.0.1
+[2025-09-27 22:21:42.908741] GET /health from 127.0.0.1
+[22:21:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[22:21:43] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:22:00.704425] GET /auth-test from 127.0.0.1
+[22:22:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:22:03.270873] POST /api/auth/register from 127.0.0.1
+[22:22:03] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:22:12.894977] GET /health from 127.0.0.1
+[22:22:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:22:21.553538] GET /auth-test from 127.0.0.1
+[22:22:21] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:22:24.066389] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250927_222224.html
+[22:22:24] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-27 22:22:33.789806] GET /auth-test from 127.0.0.1
+[22:22:33] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:22:36.264463] POST /api/auth/register from 127.0.0.1
+[22:22:36] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-27 22:22:42.894213] GET /health from 127.0.0.1
+[22:22:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:23:12.894999] GET /health from 127.0.0.1
+[22:23:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:23:42.895806] GET /health from 127.0.0.1
+[22:23:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:24:12.895471] GET /health from 127.0.0.1
+[22:24:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:24:42.896233] GET /health from 127.0.0.1
+[22:24:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:25:12.894619] GET /health from 127.0.0.1
+[22:25:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:25:42.895568] GET /health from 127.0.0.1
+[22:25:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:26:12.894548] GET /health from 127.0.0.1
+[22:26:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:26:42.895150] GET /health from 127.0.0.1
+[22:26:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:27:12.894588] GET /health from 127.0.0.1
+[22:27:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:27:42.898736] GET /health from 127.0.0.1
+[22:27:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:28:12.895120] GET /health from 127.0.0.1
+[22:28:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:28:42.894790] GET /health from 127.0.0.1
+[22:28:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:29:12.894163] GET /health from 127.0.0.1
+[22:29:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:29:42.894016] GET /health from 127.0.0.1
+[22:29:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:30:12.893789] GET /health from 127.0.0.1
+[22:30:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:30:42.894575] GET /health from 127.0.0.1
+[22:30:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:31:12.893812] GET /health from 127.0.0.1
+[22:31:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:31:42.894430] GET /health from 127.0.0.1
+[22:31:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:32:12.893473] GET /health from 127.0.0.1
+[22:32:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:32:42.893823] GET /health from 127.0.0.1
+[22:32:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:33:12.893435] GET /health from 127.0.0.1
+[22:33:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:33:25.660950] GET / from 127.0.0.1
+[22:33:25] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:33:25.693698] GET / from 127.0.0.1
+[22:33:25] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 22:33:39.082240] GET /auth-test from 127.0.0.1
+[22:33:39] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:33:42.894018] GET /health from 127.0.0.1
+[22:33:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:34:12.894723] GET /health from 127.0.0.1
+[22:34:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:34:42.897988] GET /health from 127.0.0.1
+[22:34:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:34:45.617449] GET /auth-test from 127.0.0.1
+[22:34:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:35:12.894551] GET /health from 127.0.0.1
+[22:35:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:35:42.894175] GET /health from 127.0.0.1
+[22:35:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:35:52.582072] GET /auth-test from 127.0.0.1
+[22:35:52] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:36:12.894381] GET /health from 127.0.0.1
+[22:36:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:36:42.894281] GET /health from 127.0.0.1
+[22:36:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:36:58.825077] GET /auth-test from 127.0.0.1
+[22:36:58] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:37:12.895085] GET /health from 127.0.0.1
+[22:37:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:37:42.903961] GET /health from 127.0.0.1
+[22:37:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:38:05.348094] GET /auth-test from 127.0.0.1
+[22:38:05] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:38:12.894621] GET /health from 127.0.0.1
+[22:38:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:38:42.895362] GET /health from 127.0.0.1
+[22:38:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:39:12.109854] GET /auth-test from 127.0.0.1
+[22:39:12] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:39:12.907633] GET /health from 127.0.0.1
+[22:39:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:39:42.894687] GET /health from 127.0.0.1
+[22:39:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:40:12.896268] GET /health from 127.0.0.1
+[22:40:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:40:18.655027] GET /auth-test from 127.0.0.1
+[22:40:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:40:42.895859] GET /health from 127.0.0.1
+[22:40:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:41:12.894436] GET /health from 127.0.0.1
+[22:41:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:41:25.118024] GET /auth-test from 127.0.0.1
+[22:41:25] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:41:42.895196] GET /health from 127.0.0.1
+[22:41:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:42:12.894675] GET /health from 127.0.0.1
+[22:42:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:42:31.770323] GET /auth-test from 127.0.0.1
+[22:42:31] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:42:42.895876] GET /health from 127.0.0.1
+[22:42:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:43:12.894720] GET /health from 127.0.0.1
+[22:43:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:43:38.372444] GET /auth-test from 127.0.0.1
+[22:43:38] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:43:42.896171] GET /health from 127.0.0.1
+[22:43:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:44:12.895630] GET /health from 127.0.0.1
+[22:44:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:44:42.894415] GET /health from 127.0.0.1
+[22:44:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:44:45.231302] GET /auth-test from 127.0.0.1
+[22:44:45] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:45:12.894744] GET /health from 127.0.0.1
+[22:45:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:45:42.895805] GET /health from 127.0.0.1
+[22:45:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:46:03.770631] GET /auth-test from 127.0.0.1
+[22:46:03] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:46:04.812220] GET /favicon.ico from 127.0.0.1
+[22:46:04] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:46:12.895133] GET /health from 127.0.0.1
+[22:46:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:46:42.895679] GET /health from 127.0.0.1
+[22:46:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:47:12.895164] GET /health from 127.0.0.1
+[22:47:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:47:15.310006] GET /auth-test from 127.0.0.1
+[22:47:15] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:47:15.903975] GET /favicon.ico from 127.0.0.1
+[22:47:15] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:47:42.894818] GET /health from 127.0.0.1
+[22:47:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:48:12.894145] GET /health from 127.0.0.1
+[22:48:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:48:27.288401] GET /auth-test from 127.0.0.1
+[22:48:27] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:48:28.280683] GET /favicon.ico from 127.0.0.1
+[22:48:28] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:48:42.893996] GET /health from 127.0.0.1
+[22:48:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:49:12.894465] GET /health from 127.0.0.1
+[22:49:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:49:37.311595] GET /auth-test from 127.0.0.1
+[22:49:37] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:49:38.141924] GET /favicon.ico from 127.0.0.1
+[22:49:38] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:49:42.894504] GET /health from 127.0.0.1
+[22:49:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:50:12.894156] GET /health from 127.0.0.1
+[22:50:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:50:42.894150] GET /health from 127.0.0.1
+[22:50:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:50:48.083339] GET /auth-test from 127.0.0.1
+[22:50:48] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:50:48.962470] GET /favicon.ico from 127.0.0.1
+[22:50:48] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:51:12.895266] GET /health from 127.0.0.1
+[22:51:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:51:42.895621] GET /health from 127.0.0.1
+[22:51:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:52:00.154347] GET /auth-test from 127.0.0.1
+[22:52:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:52:00.924869] GET /favicon.ico from 127.0.0.1
+[22:52:00] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:52:12.895883] GET /health from 127.0.0.1
+[22:52:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:52:42.895141] GET /health from 127.0.0.1
+[22:52:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:53:10.817577] GET /auth-test from 127.0.0.1
+[22:53:10] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:53:11.649486] GET /favicon.ico from 127.0.0.1
+[22:53:11] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:53:12.896334] GET /health from 127.0.0.1
+[22:53:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:53:42.894566] GET /health from 127.0.0.1
+[22:53:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:54:12.895336] GET /health from 127.0.0.1
+[22:54:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:54:22.116505] GET /auth-test from 127.0.0.1
+[22:54:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:54:22.785321] GET /favicon.ico from 127.0.0.1
+[22:54:22] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:54:42.894939] GET /health from 127.0.0.1
+[22:54:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:55:12.894881] GET /health from 127.0.0.1
+[22:55:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:55:33.320087] GET /auth-test from 127.0.0.1
+[22:55:33] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:55:34.103905] GET /favicon.ico from 127.0.0.1
+[22:55:34] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:55:42.897166] GET /health from 127.0.0.1
+[22:55:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:56:12.894881] GET /health from 127.0.0.1
+[22:56:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:56:42.896074] GET /health from 127.0.0.1
+[22:56:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:56:44.722995] GET /auth-test from 127.0.0.1
+[22:56:44] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:56:45.564601] GET /favicon.ico from 127.0.0.1
+[22:56:45] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:57:12.894393] GET /health from 127.0.0.1
+[22:57:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:57:42.893985] GET /health from 127.0.0.1
+[22:57:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:57:56.189621] GET /auth-test from 127.0.0.1
+[22:57:56] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:57:57.807775] GET /favicon.ico from 127.0.0.1
+[22:57:57] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 22:58:12.894206] GET /health from 127.0.0.1
+[22:58:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:58:42.894999] GET /health from 127.0.0.1
+[22:58:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:59:09.265529] GET /auth-test from 127.0.0.1
+[22:59:09] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 22:59:12.896131] GET /health from 127.0.0.1
+[22:59:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 22:59:42.896315] GET /health from 127.0.0.1
+[22:59:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:00:12.893416] GET /health from 127.0.0.1
+[23:00:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:00:16.119074] GET /auth-test from 127.0.0.1
+[23:00:16] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:00:42.895139] GET /health from 127.0.0.1
+[23:00:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:01:12.895301] GET /health from 127.0.0.1
+[23:01:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:01:22.905267] GET /auth-test from 127.0.0.1
+[23:01:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:01:42.895198] GET /health from 127.0.0.1
+[23:01:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:02:12.895157] GET /health from 127.0.0.1
+[23:02:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:02:42.894839] GET /health from 127.0.0.1
+[23:02:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:03:12.894335] GET /health from 127.0.0.1
+[23:03:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:03:42.893539] GET /health from 127.0.0.1
+[23:03:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:04:12.894419] GET /health from 127.0.0.1
+[23:04:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:04:42.894156] GET /health from 127.0.0.1
+[23:04:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:05:12.894330] GET /health from 127.0.0.1
+[23:05:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:05:42.893895] GET /health from 127.0.0.1
+[23:05:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:06:12.893525] GET /health from 127.0.0.1
+[23:06:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:06:42.894115] GET /health from 127.0.0.1
+[23:06:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:07:12.895182] GET /health from 127.0.0.1
+[23:07:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:07:39.137809] GET / from 127.0.0.1
+[23:07:39] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:07:39.176477] GET / from 127.0.0.1
+[23:07:39] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:07:42.895476] GET /health from 127.0.0.1
+[23:07:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:07:46.551929] GET / from 127.0.0.1
+[23:07:46] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:07:46.587855] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:07:46.590376] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:07:46] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:07:46] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:07:46.715394] GET /auth-test from 127.0.0.1
+[23:07:46] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:07:47.686632] GET / from 127.0.0.1
+[23:07:47] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:07:47.727733] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:07:47] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:07:47.733567] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:07:47] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:08:04.589785] GET / from 127.0.0.1
+[23:08:04] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:08:04.636258] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:08:04.638593] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:08:04] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:08:04] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:08:12.894393] GET /health from 127.0.0.1
+[23:08:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:08:42.899070] GET /health from 127.0.0.1
+[23:08:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:09:10.565854] GET / from 127.0.0.1
+[23:09:10] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:09:10.618621] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:09:10] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:09:10.624295] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:09:10] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:09:12.895476] GET /health from 127.0.0.1
+[23:09:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:09:27.117354] GET / from 127.0.0.1
+[23:09:27] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:09:27.171455] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:09:27] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:09:27.176563] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:09:27] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:09:42.896072] GET /health from 127.0.0.1
+[23:09:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:09:44.259325] GET / from 127.0.0.1
+[23:09:44] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:09:44.307973] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:09:44.310842] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:09:44] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:09:44] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:10:01.507822] GET / from 127.0.0.1
+[23:10:01] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:10:01.647451] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:10:01] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:10:01.661128] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:10:01] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:10:12.894263] GET /health from 127.0.0.1
+[23:10:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:10:18.233009] GET / from 127.0.0.1
+[23:10:18] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:10:18.288479] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:10:18] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:10:18.293764] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:10:18] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:10:34.964550] GET / from 127.0.0.1
+[23:10:34] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:10:35.028368] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:10:35.032558] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:10:35] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:10:35] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:10:42.894953] GET /health from 127.0.0.1
+[23:10:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:10:52.267573] GET / from 127.0.0.1
+[23:10:52] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:10:52.312210] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:10:52.316415] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:10:52] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:10:52] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:11:09.113613] GET / from 127.0.0.1
+[23:11:09] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:11:09.162919] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:11:09.166270] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:11:09] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59086)
+Exception occurred during processing of request from ('127.0.0.1', 59076)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/filip-liwa/Pulpit/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/final_web_server_with_auth.py", line 57, in __init__
+    super().__init__(*args, directory=FRONTEND_DIR, **kwargs)
+  File "/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/filip-liwa/Pulpit/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/final_web_server_with_auth.py", line 113, in do_GET
+    super().do_GET()
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/home/filip-liwa/Pulpit/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/final_web_server_with_auth.py", line 57, in __init__
+    super().__init__(*args, directory=FRONTEND_DIR, **kwargs)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+  File "/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+BrokenPipeError: [Errno 32] Broken pipe
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+----------------------------------------
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/filip-liwa/Pulpit/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/final_web_server_with_auth.py", line 113, in do_GET
+    super().do_GET()
+  File "/usr/lib/python3.12/http/server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/usr/lib/python3.12/http/server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/usr/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+[23:11:09] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:11:12.894715] GET /health from 127.0.0.1
+[23:11:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:11:25.836150] GET / from 127.0.0.1
+[23:11:25] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:11:25.872150] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:11:25.875044] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:11:25] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:11:25] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:11:42.895991] GET /health from 127.0.0.1
+[23:11:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:12:12.895176] GET /health from 127.0.0.1
+[23:12:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:12:37.729921] GET / from 127.0.0.1
+[23:12:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:12:38.439434] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:12:38.441077] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:12:38] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:12:38] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:12:38.724536] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:12:38.725865] GET /favicon.png from 127.0.0.1
+[23:12:38] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:12:38] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:12:38.760990] GET /auth-test from 127.0.0.1
+[23:12:38] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:12:39.090400] GET /favicon.ico from 127.0.0.1
+[23:12:39] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 23:12:40.777398] GET / from 127.0.0.1
+[23:12:40] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:12:40.934843] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:12:40] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:12:40.940988] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:12:40] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:12:41.161713] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:12:41.163445] GET /favicon.png from 127.0.0.1
+[23:12:41] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:12:41] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:12:42.895629] GET /health from 127.0.0.1
+[23:12:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:13:07.955093] GET / from 127.0.0.1
+[23:13:07] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:13:08.404127] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:13:08.406049] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:13:08] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:13:08] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:13:08.736990] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:13:08.739488] GET /favicon.png from 127.0.0.1
+[23:13:08] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:13:08] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:13:12.895325] GET /health from 127.0.0.1
+[23:13:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:13:42.895405] GET /health from 127.0.0.1
+[23:13:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:14:12.894432] GET /health from 127.0.0.1
+[23:14:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:14:18.599372] GET / from 127.0.0.1
+[23:14:18] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:14:19.038999] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:14:19] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:14:19.044513] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:14:19] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:14:19.533329] GET /favicon.png from 127.0.0.1
+[23:14:19] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:14:19.537428] GET /favicon.png from 127.0.0.1
+[23:14:19] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:14:42.894247] GET /health from 127.0.0.1
+[23:14:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:14:45.231306] GET / from 127.0.0.1
+[23:14:45] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:14:45.643213] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:14:45.645071] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:14:45] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:14:45] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:14:46.050871] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:14:46.052491] GET /favicon.png from 127.0.0.1
+[23:14:46] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:14:46] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:15:11.786041] GET / from 127.0.0.1
+[23:15:11] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:15:12.219249] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:15:12] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:15:12.231107] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:15:12] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:15:12.613420] GET /favicon.png from 127.0.0.1
+[23:15:12] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:15:12.617609] GET /favicon.png from 127.0.0.1
+[23:15:12] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:15:12.895175] GET /health from 127.0.0.1
+[23:15:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:15:37.910507] GET / from 127.0.0.1
+[23:15:37] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:15:38.342418] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:15:38] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:15:38.347927] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:15:38] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:15:38.748131] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:15:38.749964] GET /favicon.png from 127.0.0.1
+[23:15:38] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:15:38] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:15:42.894431] GET /health from 127.0.0.1
+[23:15:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:16:05.065804] GET / from 127.0.0.1
+[23:16:05] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:16:05.456861] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:16:05] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:16:05.463508] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:16:05] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:16:05.832954] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:16:05.834526] GET /favicon.png from 127.0.0.1
+[23:16:05] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:16:05] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:16:12.894956] GET /health from 127.0.0.1
+[23:16:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:16:31.272141] GET / from 127.0.0.1
+[23:16:31] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:16:31.681800] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:16:31] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:16:31.687182] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:16:31] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:16:32.121545] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:16:32.123460] GET /favicon.png from 127.0.0.1
+[23:16:32] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:16:32] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:16:42.894553] GET /health from 127.0.0.1
+[23:16:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:16:57.462839] GET / from 127.0.0.1
+[23:16:57] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:16:57.866452] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:16:57] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:16:57.874926] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:16:57] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:16:58.302352] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:16:58.304020] GET /favicon.png from 127.0.0.1
+[23:16:58] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:16:58] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:17:12.896949] GET /health from 127.0.0.1
+[23:17:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:17:23.534987] GET / from 127.0.0.1
+[23:17:23] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:17:23.960916] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:17:23] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:17:23.978859] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:17:23] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:17:24.373150] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:17:24.375920] GET /favicon.png from 127.0.0.1
+[23:17:24] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:17:24] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:17:42.894489] GET /health from 127.0.0.1
+[23:17:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:17:49.496596] GET / from 127.0.0.1
+[23:17:49] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:17:50.274238] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:17:50.275812] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:17:50] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:17:50] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:17:50.550536] GET /favicon.png from 127.0.0.1
+[23:17:50] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:17:50.555644] GET /favicon.png from 127.0.0.1
+[23:17:50] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:18:12.894957] GET /health from 127.0.0.1
+[23:18:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:18:42.894585] GET /health from 127.0.0.1
+[23:18:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:18:56.048403] GET / from 127.0.0.1
+[23:18:56] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:18:56.100589] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:18:56] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:18:56.271908] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:18:56] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:18:56.455590] GET /auth-test from 127.0.0.1
+[23:18:56] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:18:59.507887] GET / from 127.0.0.1
+[23:18:59] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:18:59.712993] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:18:59.714241] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:18:59] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:18:59] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:19:12.894417] GET /health from 127.0.0.1
+[23:19:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:19:17.518040] GET / from 127.0.0.1
+[23:19:17] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:19:17.724496] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:19:17.726128] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:19:17] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:19:17] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:19:42.894463] GET /health from 127.0.0.1
+[23:19:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:20:12.895585] GET /health from 127.0.0.1
+[23:20:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:20:23.827599] GET / from 127.0.0.1
+[23:20:23] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:20:24.059167] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:20:24.060823] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:20:24] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:20:24] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:20:42.045185] GET / from 127.0.0.1
+[23:20:42] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:20:42.257114] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:20:42.259968] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:20:42] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:20:42] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:20:42.894515] GET /health from 127.0.0.1
+[23:20:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:21:00.202966] GET / from 127.0.0.1
+[23:21:00] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:21:00.397995] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:21:00.399514] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:21:00] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:21:00] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:21:12.895938] GET /health from 127.0.0.1
+[23:21:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:21:18.406810] GET / from 127.0.0.1
+[23:21:18] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:21:18.620241] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:21:18.622171] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:21:18] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:21:18] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:21:36.810209] GET / from 127.0.0.1
+[23:21:36] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:21:37.060090] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:21:37.061303] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:21:37] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:21:37] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:21:42.895445] GET /health from 127.0.0.1
+[23:21:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:21:55.129376] GET / from 127.0.0.1
+[23:21:55] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:21:55.361997] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:21:55.363266] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:21:55] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:21:55] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:22:12.895053] GET /health from 127.0.0.1
+[23:22:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:22:13.425153] GET / from 127.0.0.1
+[23:22:13] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:22:13.643179] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:22:13] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:22:13.647254] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:22:13] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:22:31.522819] GET / from 127.0.0.1
+[23:22:31] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:22:31.731895] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:22:31] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:22:31.735338] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:22:31] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:22:42.895045] GET /health from 127.0.0.1
+[23:22:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:22:49.676966] GET / from 127.0.0.1
+[23:22:49] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:22:49.727575] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:22:49] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:22:49.890943] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:22:49] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:23:12.893980] GET /health from 127.0.0.1
+[23:23:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:23:42.896133] GET /health from 127.0.0.1
+[23:23:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:24:12.895044] GET /health from 127.0.0.1
+[23:24:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:24:42.895124] GET /health from 127.0.0.1
+[23:24:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:25:12.894744] GET /health from 127.0.0.1
+[23:25:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:25:42.897780] GET /health from 127.0.0.1
+[23:25:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:26:12.914620] GET /health from 127.0.0.1
+[23:26:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:26:42.896808] GET /health from 127.0.0.1
+[23:26:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:27:12.895118] GET /health from 127.0.0.1
+[23:27:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:27:42.892961] GET /health from 127.0.0.1
+[23:27:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:28:12.915847] GET /health from 127.0.0.1
+[23:28:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:28:42.894338] GET /health from 127.0.0.1
+[23:28:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:29:12.894434] GET /health from 127.0.0.1
+[23:29:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:29:42.895621] GET /health from 127.0.0.1
+[23:29:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:30:12.893404] GET /health from 127.0.0.1
+[23:30:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:30:42.894204] GET /health from 127.0.0.1
+[23:30:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:31:12.893742] GET /health from 127.0.0.1
+[23:31:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:31:43.055403] GET /health from 127.0.0.1
+[23:31:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:31:50.764116] GET / from 127.0.0.1
+[23:31:50] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:31:50.814389] GET / from 127.0.0.1
+[23:31:50] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:31:58.676795] GET / from 127.0.0.1
+[23:31:58] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:31:58.716531] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:31:58.718349] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:31:58] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:31:58] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:31:58.874742] GET /auth-test from 127.0.0.1
+[23:31:58] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:32:00.066150] GET /auth-test from 127.0.0.1
+[23:32:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:32:12.913611] GET /health from 127.0.0.1
+[23:32:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:32:17.899113] GET /auth-test from 127.0.0.1
+[23:32:17] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:32:42.895986] GET /health from 127.0.0.1
+[23:32:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:33:12.893991] GET /health from 127.0.0.1
+[23:33:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:33:24.703298] GET /auth-test from 127.0.0.1
+[23:33:24] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:33:42.512621] GET /auth-test from 127.0.0.1
+[23:33:42] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:33:42.895893] GET /health from 127.0.0.1
+[23:33:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:33:59.174049] GET /auth-test from 127.0.0.1
+[23:33:59] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:34:12.894425] GET /health from 127.0.0.1
+[23:34:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:34:16.389069] GET /auth-test from 127.0.0.1
+[23:34:16] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:34:33.056597] GET /auth-test from 127.0.0.1
+[23:34:33] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:34:42.894901] GET /health from 127.0.0.1
+[23:34:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:34:49.911419] GET /auth-test from 127.0.0.1
+[23:34:49] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:35:06.607637] GET /auth-test from 127.0.0.1
+[23:35:06] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:35:12.894823] GET /health from 127.0.0.1
+[23:35:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:35:23.684235] GET /auth-test from 127.0.0.1
+[23:35:23] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:35:41.017953] GET /auth-test from 127.0.0.1
+[23:35:41] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:35:41.460732] GET / from 127.0.0.1
+[23:35:41] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:35:41.506505] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:35:41.508884] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:35:41] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:35:41] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:35:42.894621] GET /health from 127.0.0.1
+[23:35:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:36:12.895505] GET /health from 127.0.0.1
+[23:36:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:36:42.894399] GET /health from 127.0.0.1
+[23:36:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:36:52.733086] GET / from 127.0.0.1
+[23:36:52] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:36:53.434982] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:36:53.436872] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:36:53] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:36:53] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:36:53.795341] GET /auth-test from 127.0.0.1
+[23:36:53] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:36:54.103004] GET /favicon.ico from 127.0.0.1
+[23:36:54] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 23:36:55.804576] GET /auth-test from 127.0.0.1
+[23:36:55] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:37:12.894795] GET /health from 127.0.0.1
+[23:37:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:37:22.285417] GET /auth-test from 127.0.0.1
+[23:37:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:37:42.894121] GET /health from 127.0.0.1
+[23:37:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:38:12.894947] GET /health from 127.0.0.1
+[23:38:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:38:32.622117] GET /auth-test from 127.0.0.1
+[23:38:32] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:38:42.895633] GET /health from 127.0.0.1
+[23:38:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:38:58.403308] GET /auth-test from 127.0.0.1
+[23:38:58] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:39:12.895961] GET /health from 127.0.0.1
+[23:39:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:39:25.077553] GET /auth-test from 127.0.0.1
+[23:39:25] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:39:42.895096] GET /health from 127.0.0.1
+[23:39:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:39:51.013114] GET /auth-test from 127.0.0.1
+[23:39:51] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:40:12.896555] GET /health from 127.0.0.1
+[23:40:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:40:16.581057] GET /auth-test from 127.0.0.1
+[23:40:16] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:40:42.895491] GET /health from 127.0.0.1
+[23:40:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:40:43.505838] GET /auth-test from 127.0.0.1
+[23:40:43] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:41:08.522065] GET /auth-test from 127.0.0.1
+[23:41:08] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:41:09.294293] GET /favicon.ico from 127.0.0.1
+[23:41:09] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 23:41:12.894323] GET /health from 127.0.0.1
+[23:41:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:41:34.625935] GET /auth-test from 127.0.0.1
+[23:41:34] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:41:35.498834] GET /favicon.ico from 127.0.0.1
+[23:41:35] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 23:41:42.894100] GET /health from 127.0.0.1
+[23:41:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:42:00.465884] GET /auth-test from 127.0.0.1
+[23:42:00] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:42:01.418493] GET /favicon.ico from 127.0.0.1
+[23:42:01] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-27 23:42:01.459250] GET / from 127.0.0.1
+[23:42:01] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:42:01.692189] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[2025-09-27 23:42:01.693166] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:42:01] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[23:42:01] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:42:01.966803] GET /favicon.png from 127.0.0.1
+[2025-09-27 23:42:01.968082] GET /favicon.png from 127.0.0.1
+[23:42:01] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[23:42:01] [127.0.0.1] "GET /favicon.png HTTP/1.1" 200 -
+[2025-09-27 23:42:12.895007] GET /health from 127.0.0.1
+[23:42:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:42:42.894321] GET /health from 127.0.0.1
+[23:42:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:43:06.861404] GET / from 127.0.0.1
+[23:43:06] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:43:06.902438] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:43:06] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:43:06.908002] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:43:06] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:43:07.266071] GET /auth-test from 127.0.0.1
+[23:43:07] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:43:10.103428] GET /auth-test from 127.0.0.1
+[23:43:10] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:43:12.895229] GET /health from 127.0.0.1
+[23:43:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:43:28.614411] GET /auth-test from 127.0.0.1
+[23:43:28] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:43:42.894970] GET /health from 127.0.0.1
+[23:43:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:44:12.895210] GET /health from 127.0.0.1
+[23:44:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:44:34.788696] GET /auth-test from 127.0.0.1
+[23:44:34] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:44:42.894811] GET /health from 127.0.0.1
+[23:44:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:44:53.666347] GET /auth-test from 127.0.0.1
+[23:44:53] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:45:12.896007] GET /health from 127.0.0.1
+[23:45:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:45:13.735451] GET /auth-test from 127.0.0.1
+[23:45:13] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:45:32.797296] GET /auth-test from 127.0.0.1
+[23:45:32] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:45:42.895106] GET /health from 127.0.0.1
+[23:45:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:45:51.774691] GET /auth-test from 127.0.0.1
+[23:45:51] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:46:11.333556] GET /auth-test from 127.0.0.1
+[23:46:11] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:46:12.896942] GET /health from 127.0.0.1
+[23:46:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:46:29.883249] GET /auth-test from 127.0.0.1
+[23:46:29] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:46:42.894636] GET /health from 127.0.0.1
+[23:46:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:46:48.549631] GET /auth-test from 127.0.0.1
+[23:46:48] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:47:07.672909] GET /auth-test from 127.0.0.1
+[23:47:07] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:47:08.903402] GET / from 127.0.0.1
+[23:47:08] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:47:09.715306] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:47:09] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:47:09.719017] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[23:47:09] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-27 23:47:12.895020] GET /health from 127.0.0.1
+[23:47:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:47:42.894412] GET /health from 127.0.0.1
+[23:47:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:48:12.895094] GET /health from 127.0.0.1
+[23:48:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:48:42.894360] GET /health from 127.0.0.1
+[23:48:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:49:12.895058] GET /health from 127.0.0.1
+[23:49:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:49:42.894582] GET /health from 127.0.0.1
+[23:49:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:50:12.897357] GET /health from 127.0.0.1
+[23:50:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:50:42.894905] GET /health from 127.0.0.1
+[23:50:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:51:12.893862] GET /health from 127.0.0.1
+[23:51:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:51:42.893816] GET /health from 127.0.0.1
+[23:51:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:52:10.453325] GET / from 127.0.0.1
+[23:52:10] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:52:10.488191] GET / from 127.0.0.1
+[23:52:10] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:52:12.901723] GET /health from 127.0.0.1
+[23:52:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:52:18.617931] GET / from 127.0.0.1
+[23:52:18] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-27 23:52:18.678047] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[2025-09-27 23:52:18.680571] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[23:52:18] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[23:52:18] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-27 23:52:18.797484] GET /auth-test from 127.0.0.1
+[23:52:18] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:52:19.843126] GET /auth-test from 127.0.0.1
+[23:52:19] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:52:42.893965] GET /health from 127.0.0.1
+[23:52:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:53:12.900768] GET /health from 127.0.0.1
+[23:53:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:53:26.695294] GET /auth-test from 127.0.0.1
+[23:53:26] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:53:27.026123] GET /auth-test from 127.0.0.1
+[23:53:27] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:53:42.894875] GET /health from 127.0.0.1
+[23:53:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:54:12.895872] GET /health from 127.0.0.1
+[23:54:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:54:34.179461] GET /auth-test from 127.0.0.1
+[23:54:34] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:54:42.895199] GET /health from 127.0.0.1
+[23:54:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:55:12.894444] GET /health from 127.0.0.1
+[23:55:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:55:41.518843] GET /auth-test from 127.0.0.1
+[23:55:41] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:55:42.893944] GET /health from 127.0.0.1
+[23:55:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:56:12.896285] GET /health from 127.0.0.1
+[23:56:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:56:42.895198] GET /health from 127.0.0.1
+[23:56:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:56:51.230175] GET /auth-test from 127.0.0.1
+[23:56:51] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:57:12.895379] GET /health from 127.0.0.1
+[23:57:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:57:42.895988] GET /health from 127.0.0.1
+[23:57:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:58:01.532443] GET /auth-test from 127.0.0.1
+[23:58:01] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:58:12.896090] GET /health from 127.0.0.1
+[23:58:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:58:42.910306] GET /health from 127.0.0.1
+[23:58:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:59:12.905396] GET /health from 127.0.0.1
+[23:59:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-27 23:59:13.085702] GET /auth-test from 127.0.0.1
+[23:59:13] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-27 23:59:43.145630] GET /health from 127.0.0.1
+[23:59:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:00:12.897206] GET /health from 127.0.0.1
+[00:00:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:00:21.414676] GET /auth-test from 127.0.0.1
+[00:00:21] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:00:42.900914] GET /health from 127.0.0.1
+[00:00:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:01:12.894930] GET /health from 127.0.0.1
+[00:01:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:01:30.089214] GET /auth-test from 127.0.0.1
+[00:01:30] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:01:42.985151] GET /health from 127.0.0.1
+[00:01:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:02:12.895129] GET /health from 127.0.0.1
+[00:02:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:02:38.531599] GET /auth-test from 127.0.0.1
+[00:02:38] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:02:43.392323] GET /health from 127.0.0.1
+[00:02:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:03:12.895446] GET /health from 127.0.0.1
+[00:03:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:03:42.966847] GET /health from 127.0.0.1
+[00:03:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:03:47.646844] GET /auth-test from 127.0.0.1
+[00:03:47] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:03:48.130385] GET /auth-test from 127.0.0.1
+[00:03:48] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:04:12.900536] GET /health from 127.0.0.1
+[00:04:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:04:43.142986] GET /health from 127.0.0.1
+[00:04:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:05:03.089113] GET / from 127.0.0.1
+[00:05:03] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-28 00:05:04.204717] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[00:05:04] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-28 00:05:04.228630] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[00:05:04] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-28 00:05:04.737897] GET /auth-test from 127.0.0.1
+[00:05:04] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:05:05.369808] GET /favicon.ico from 127.0.0.1
+[00:05:05] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-28 00:05:08.226851] GET /auth-test from 127.0.0.1
+[00:05:08] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:05:12.899966] GET /health from 127.0.0.1
+[00:05:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:05:42.969095] GET /health from 127.0.0.1
+[00:05:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:06:12.929370] GET /health from 127.0.0.1
+[00:06:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:06:27.020564] GET /auth-test from 127.0.0.1
+[00:06:27] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:06:27.677198] GET /auth-test from 127.0.0.1
+[00:06:27] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:06:43.097630] GET /health from 127.0.0.1
+[00:06:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:07:12.900954] GET /health from 127.0.0.1
+[00:07:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:07:41.112397] GET /auth-test from 127.0.0.1
+[00:07:41] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:07:42.910344] GET /health from 127.0.0.1
+[00:07:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:08:12.895457] GET /health from 127.0.0.1
+[00:08:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:08:42.905014] GET /health from 127.0.0.1
+[00:08:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:08:56.939325] GET /auth-test from 127.0.0.1
+[00:08:56] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:09:12.897025] GET /health from 127.0.0.1
+[00:09:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:09:43.241560] GET /health from 127.0.0.1
+[00:09:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:10:11.240845] GET /auth-test from 127.0.0.1
+[00:10:11] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:10:12.899441] GET /health from 127.0.0.1
+[00:10:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:10:42.896501] GET /health from 127.0.0.1
+[00:10:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:11:12.898644] GET /health from 127.0.0.1
+[00:11:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:11:25.795265] GET /auth-test from 127.0.0.1
+[00:11:25] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:11:43.388618] GET /health from 127.0.0.1
+[00:11:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:12:12.895908] GET /health from 127.0.0.1
+[00:12:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:12:40.042624] GET /auth-test from 127.0.0.1
+[00:12:40] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:12:42.921418] GET /health from 127.0.0.1
+[00:12:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:13:12.896253] GET /health from 127.0.0.1
+[00:13:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:13:42.912876] GET /health from 127.0.0.1
+[00:13:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:13:54.718092] GET /auth-test from 127.0.0.1
+[00:13:54] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:14:12.896427] GET /health from 127.0.0.1
+[00:14:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:14:42.916481] GET /health from 127.0.0.1
+[00:14:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:15:08.098594] GET /auth-test from 127.0.0.1
+[00:15:08] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:15:08.986701] GET /favicon.ico from 127.0.0.1
+[00:15:08] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-28 00:15:12.896879] GET /health from 127.0.0.1
+[00:15:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:15:43.304096] GET /health from 127.0.0.1
+[00:15:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:16:12.911706] GET /health from 127.0.0.1
+[00:16:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:16:25.701480] GET /auth-test from 127.0.0.1
+[00:16:25] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:16:26.502776] GET /favicon.ico from 127.0.0.1
+[00:16:26] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-28 00:16:42.970361] GET /health from 127.0.0.1
+[00:16:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:17:12.897527] GET /health from 127.0.0.1
+[00:17:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:17:39.539118] GET /auth-test from 127.0.0.1
+[00:17:39] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:17:40.618364] GET /favicon.ico from 127.0.0.1
+[00:17:40] [127.0.0.1] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-09-28 00:17:40.672106] GET /auth-test from 127.0.0.1
+[00:17:40] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:17:42.917995] GET /health from 127.0.0.1
+[00:17:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:18:12.894440] GET /health from 127.0.0.1
+[00:18:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:18:42.915787] GET /health from 127.0.0.1
+[00:18:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:18:48.579017] GET / from 127.0.0.1
+[00:18:48] [127.0.0.1] "GET / HTTP/1.1" 200 -
+[2025-09-28 00:18:48.653515] GET /assets/index-C3LZPugA.js from 127.0.0.1
+[00:18:48] [127.0.0.1] "GET /assets/index-C3LZPugA.js HTTP/1.1" 200 -
+[2025-09-28 00:18:48.830233] GET /assets/index-B3Flo38Y.css from 127.0.0.1
+[00:18:48] [127.0.0.1] "GET /assets/index-B3Flo38Y.css HTTP/1.1" 200 -
+[2025-09-28 00:18:49.067844] GET /auth-test from 127.0.0.1
+[00:18:49] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:18:52.611355] GET /auth-test from 127.0.0.1
+[00:18:52] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:19:12.895013] GET /health from 127.0.0.1
+[00:19:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:19:43.446910] GET /health from 127.0.0.1
+[00:19:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:20:01.185160] GET /auth-test from 127.0.0.1
+[00:20:01] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:20:02.796748] GET /auth-test from 127.0.0.1
+[00:20:02] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:20:12.897217] GET /health from 127.0.0.1
+[00:20:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:20:43.333704] GET /health from 127.0.0.1
+[00:20:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:21:11.234521] GET /auth-test from 127.0.0.1
+[00:21:11] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:21:12.901168] GET /health from 127.0.0.1
+[00:21:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:21:42.920310] GET /health from 127.0.0.1
+[00:21:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:22:12.908597] GET /health from 127.0.0.1
+[00:22:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:22:20.744490] GET /auth-test from 127.0.0.1
+[00:22:20] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:22:42.912217] GET /health from 127.0.0.1
+[00:22:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:23:12.894881] GET /health from 127.0.0.1
+[00:23:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:23:30.164615] GET /auth-test from 127.0.0.1
+[00:23:30] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:23:42.975936] GET /health from 127.0.0.1
+[00:23:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:24:12.902516] GET /health from 127.0.0.1
+[00:24:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:24:38.621479] GET /auth-test from 127.0.0.1
+[00:24:38] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:24:42.920447] GET /health from 127.0.0.1
+[00:24:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:25:12.899353] GET /health from 127.0.0.1
+[00:25:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:25:42.937100] GET /health from 127.0.0.1
+[00:25:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:25:47.573422] GET /auth-test from 127.0.0.1
+[00:25:47] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:26:12.895935] GET /health from 127.0.0.1
+[00:26:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:26:42.916346] GET /health from 127.0.0.1
+[00:26:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:26:56.101449] GET /auth-test from 127.0.0.1
+[00:26:56] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:27:12.894887] GET /health from 127.0.0.1
+[00:27:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:27:42.907522] GET /health from 127.0.0.1
+[00:27:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:28:05.794480] GET /auth-test from 127.0.0.1
+[00:28:05] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:28:12.896431] GET /health from 127.0.0.1
+[00:28:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:28:42.908052] GET /health from 127.0.0.1
+[00:28:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:29:12.900772] GET /health from 127.0.0.1
+[00:29:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:29:14.666101] GET /auth-test from 127.0.0.1
+[00:29:14] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:29:42.920854] GET /health from 127.0.0.1
+[00:29:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:30:12.895069] GET /health from 127.0.0.1
+[00:30:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:30:22.981190] GET /auth-test from 127.0.0.1
+[00:30:22] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:30:24.445181] GET /auth-test from 127.0.0.1
+[00:30:24] [127.0.0.1] "GET /auth-test HTTP/1.1" 200 -
+[2025-09-28 00:30:42.926141] GET /health from 127.0.0.1
+[00:30:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:31:12.899018] GET /health from 127.0.0.1
+[00:31:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:31:43.125490] GET /health from 127.0.0.1
+[00:31:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:32:12.894480] GET /health from 127.0.0.1
+[00:32:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:32:43.073209] GET /health from 127.0.0.1
+[00:32:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:33:12.896460] GET /health from 127.0.0.1
+[00:33:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:33:43.503549] GET /health from 127.0.0.1
+[00:33:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:34:12.894304] GET /health from 127.0.0.1
+[00:34:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:34:43.281442] GET /health from 127.0.0.1
+[00:34:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:35:12.894822] GET /health from 127.0.0.1
+[00:35:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:35:42.894468] GET /health from 127.0.0.1
+[00:35:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:36:12.910598] GET /health from 127.0.0.1
+[00:36:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:36:42.893038] GET /health from 127.0.0.1
+[00:36:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:37:12.893713] GET /health from 127.0.0.1
+[00:37:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:37:42.894265] GET /health from 127.0.0.1
+[00:37:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:38:12.894193] GET /health from 127.0.0.1
+[00:38:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:38:22.545020] GET /api/health from 127.0.0.1
+Backend URL Error: <urlopen error [Errno 111] Connection refused>
+[00:38:22] [127.0.0.1] "GET /api/health HTTP/1.1" 503 -
+[2025-09-28 00:38:43.343819] GET /health from 127.0.0.1
+[00:38:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:38:58.534720] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250928_003858.html
+[00:38:58] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-28 00:39:12.894897] GET /health from 127.0.0.1
+[00:39:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:39:42.894427] GET /health from 127.0.0.1
+[00:39:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:40:12.894396] GET /health from 127.0.0.1
+[00:40:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:40:42.908399] GET /health from 127.0.0.1
+[00:40:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:41:12.894240] GET /health from 127.0.0.1
+[00:41:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:41:42.893968] GET /health from 127.0.0.1
+[00:41:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:42:12.896058] GET /health from 127.0.0.1
+[00:42:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:42:42.895038] GET /health from 127.0.0.1
+[00:42:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:43:12.895339] GET /health from 127.0.0.1
+[00:43:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:43:42.894005] GET /health from 127.0.0.1
+[00:43:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:44:12.895356] GET /health from 127.0.0.1
+[00:44:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:44:42.895334] GET /health from 127.0.0.1
+[00:44:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:45:12.893875] GET /health from 127.0.0.1
+[00:45:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:45:43.042748] GET /health from 127.0.0.1
+[00:45:43] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:46:12.894289] GET /health from 127.0.0.1
+[00:46:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:46:42.907748] GET /health from 127.0.0.1
+[00:46:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:47:12.895169] GET /health from 127.0.0.1
+[00:47:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:47:42.919614] GET /health from 127.0.0.1
+[00:47:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:48:12.894225] GET /health from 127.0.0.1
+[00:48:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:48:42.902818] GET /health from 127.0.0.1
+[00:48:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:49:12.896058] GET /health from 127.0.0.1
+[00:49:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:49:42.926543] GET /health from 127.0.0.1
+[00:49:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:50:12.894781] GET /health from 127.0.0.1
+[00:50:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:50:42.935275] GET /health from 127.0.0.1
+[00:50:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:51:12.895797] GET /health from 127.0.0.1
+[00:51:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:51:42.939299] GET /health from 127.0.0.1
+[00:51:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:52:12.894022] GET /health from 127.0.0.1
+[00:52:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:52:42.895226] GET /health from 127.0.0.1
+[00:52:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:53:12.895520] GET /health from 127.0.0.1
+[00:53:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:53:42.894496] GET /health from 127.0.0.1
+[00:53:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:54:12.894129] GET /health from 127.0.0.1
+[00:54:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:54:42.895904] GET /health from 127.0.0.1
+[00:54:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:55:12.894476] GET /health from 127.0.0.1
+[00:55:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:55:42.895178] GET /health from 127.0.0.1
+[00:55:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:56:12.895177] GET /health from 127.0.0.1
+[00:56:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:56:42.893697] GET /health from 127.0.0.1
+[00:56:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:57:12.894830] GET /health from 127.0.0.1
+[00:57:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:57:42.893992] GET /health from 127.0.0.1
+[00:57:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:58:12.894864] GET /health from 127.0.0.1
+[00:58:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:58:42.895010] GET /health from 127.0.0.1
+[00:58:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:59:12.893968] GET /health from 127.0.0.1
+[00:59:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 00:59:42.893556] GET /health from 127.0.0.1
+[00:59:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:00:12.905027] GET /health from 127.0.0.1
+[01:00:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:00:42.894107] GET /health from 127.0.0.1
+[01:00:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:01:12.894835] GET /health from 127.0.0.1
+[01:01:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:01:42.894209] GET /health from 127.0.0.1
+[01:01:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:02:12.893804] GET /health from 127.0.0.1
+[01:02:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:02:42.893770] GET /health from 127.0.0.1
+[01:02:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:03:12.894204] GET /health from 127.0.0.1
+[01:03:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:03:42.893144] GET /health from 127.0.0.1
+[01:03:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:03:45.751344] GET /health from 127.0.0.1
+[01:03:45] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:04:12.893534] GET /health from 127.0.0.1
+[01:04:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:04:42.893057] GET /health from 127.0.0.1
+[01:04:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:05:12.895260] GET /health from 127.0.0.1
+[01:05:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:05:42.893816] GET /health from 127.0.0.1
+[01:05:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:06:12.894307] GET /health from 127.0.0.1
+[01:06:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:06:42.893164] GET /health from 127.0.0.1
+[01:06:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:07:12.893898] GET /health from 127.0.0.1
+[01:07:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:07:42.906820] GET /health from 127.0.0.1
+[01:07:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:08:12.898631] GET /health from 127.0.0.1
+[01:08:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:08:42.903425] GET /health from 127.0.0.1
+[01:08:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:09:12.910530] GET /health from 127.0.0.1
+[01:09:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:09:42.895348] GET /health from 127.0.0.1
+[01:09:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:10:12.893920] GET /health from 127.0.0.1
+[01:10:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:10:42.915595] GET /health from 127.0.0.1
+[01:10:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:11:12.893843] GET /health from 127.0.0.1
+[01:11:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:11:42.895202] GET /health from 127.0.0.1
+[01:11:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:12:12.894784] GET /health from 127.0.0.1
+[01:12:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:12:42.892815] GET /health from 127.0.0.1
+[01:12:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:13:12.894192] GET /health from 127.0.0.1
+[01:13:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:13:42.893873] GET /health from 127.0.0.1
+[01:13:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:14:12.893004] GET /health from 127.0.0.1
+[01:14:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:14:42.894819] GET /health from 127.0.0.1
+[01:14:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:14:58.413954] POST /api/auth/register from 127.0.0.1
+[01:14:58] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-28 01:15:12.893576] GET /health from 127.0.0.1
+[01:15:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:15:40.654980] POST /api/auth/register from 127.0.0.1
+[01:15:40] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-28 01:15:42.896858] GET /health from 127.0.0.1
+[01:15:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:16:12.894176] GET /health from 127.0.0.1
+[01:16:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:16:26.459977] POST /api/auth/register from 127.0.0.1
+[01:16:26] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 400 -
+[2025-09-28 01:16:42.894242] GET /health from 127.0.0.1
+[01:16:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:16:56.102543] POST /api/auth/register from 127.0.0.1
+📧 Test email saved to email_20250928_011656.html
+[01:16:56] [127.0.0.1] "POST /api/auth/register HTTP/1.1" 200 -
+[2025-09-28 01:17:12.893871] GET /health from 127.0.0.1
+[01:17:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:17:30.439827] POST /api/auth/login from 127.0.0.1
+[01:17:30] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 400 -
+[2025-09-28 01:17:42.892791] GET /health from 127.0.0.1
+[01:17:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:18:03.756232] POST /api/auth/login from 127.0.0.1
+[01:18:04] [127.0.0.1] "POST /api/auth/login HTTP/1.1" 401 -
+[2025-09-28 01:18:12.896599] GET /health from 127.0.0.1
+[01:18:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:18:42.894705] GET /health from 127.0.0.1
+[01:18:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:19:12.897749] GET /health from 127.0.0.1
+[01:19:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:19:42.894710] GET /health from 127.0.0.1
+[01:19:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:20:12.895681] GET /health from 127.0.0.1
+[01:20:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:20:42.893716] GET /health from 127.0.0.1
+[01:20:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:21:12.903043] GET /health from 127.0.0.1
+[01:21:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:21:42.893987] GET /health from 127.0.0.1
+[01:21:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:22:12.894367] GET /health from 127.0.0.1
+[01:22:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:22:42.893518] GET /health from 127.0.0.1
+[01:22:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:23:12.894334] GET /health from 127.0.0.1
+[01:23:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:23:42.893025] GET /health from 127.0.0.1
+[01:23:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:24:12.894406] GET /health from 127.0.0.1
+[01:24:12] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:24:42.893972] GET /health from 127.0.0.1
+[01:24:42] [127.0.0.1] "GET /health HTTP/1.1" 200 -
+[2025-09-28 01:25:12.894052] GET /health from 127.0.0.1

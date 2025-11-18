@@ -1,0 +1,458 @@
+# Optimized Docker Configuration for ASE Trading Bot
+# Designed for 16GB RAM, 6 cores @ 2.271GHz server
+
+version: '3.8'
+
+services:
+  # Main FastAPI Application
+  trading-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.optimized
+      target: production
+    container_name: ase-trading-app
+    restart: unless-stopped
+    
+    # Resource limits optimized for 16GB/6 cores server
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'        # Use 4 of 6 cores
+          memory: 6G         # 6GB of 16GB total
+        reservations:
+          cpus: '2.0'        # Reserve 2 cores minimum  
+          memory: 2G         # Reserve 2GB minimum
+    
+    environment:
+      # Application settings
+      - APP_ENV=production
+      - LOG_LEVEL=INFO
+      - DEBUG=false
+      
+      # Performance optimization
+      - WORKERS=4                    # 4 Gunicorn workers
+      - WORKER_CLASS=uvicorn.workers.UvicornWorker
+      - WORKER_CONNECTIONS=1000      # Connections per worker
+      - MAX_REQUESTS=10000           # Restart workers after 10k requests
+      - MAX_REQUESTS_JITTER=1000     # Add jitter to prevent thundering herd
+      
+      # Memory optimization
+      - PYTHONOPTIMIZE=1             # Enable Python optimizations
+      - PYTHONUNBUFFERED=1           # Unbuffered output
+      - MALLOC_TRIM_THRESHOLD_=100000 # Trim memory more aggressively
+      
+      # Database connections (optimized for connection pooling)
+      - DB_POOL_SIZE=10
+      - DB_MAX_OVERFLOW=20
+      - DB_POOL_RECYCLE=3600
+      
+      # Redis configuration
+      - REDIS_POOL_SIZE=15
+      - REDIS_MAX_CONNECTIONS=50
+      
+      # Exchange API settings
+      - API_RATE_LIMIT_PER_MINUTE=1000
+      - EXCHANGE_TIMEOUT=30
+      - MAX_CONCURRENT_REQUESTS=100
+      
+    ports:
+      - "8000:8000"
+      
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - trading_cache:/tmp/trading_cache
+      
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    networks:
+      - trading-network
+    
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.trading-app.rule=Host(`trading.localhost`)"
+      - "traefik.http.services.trading-app.loadbalancer.server.port=8000"
+
+  # PostgreSQL with TimescaleDB
+  postgres:
+    image: timescale/timescaledb-ha:pg15-latest
+    container_name: ase-postgres
+    restart: unless-stopped
+    
+    # Resource limits for database
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'        # 2 cores for database
+          memory: 4G         # 4GB for database
+        reservations:
+          cpus: '1.0'
+          memory: 1G
+    
+    environment:
+      # Basic PostgreSQL settings
+      - POSTGRES_DB=trading_bot
+      - POSTGRES_USER=trading_user
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-secure_password_123}
+      
+      # Performance tuning for 16GB server
+      - POSTGRES_SHARED_BUFFERS=1GB           # 25% of allocated memory
+      - POSTGRES_EFFECTIVE_CACHE_SIZE=3GB     # 75% of allocated memory  
+      - POSTGRES_WORK_MEM=64MB                # Per-connection work memory
+      - POSTGRES_MAINTENANCE_WORK_MEM=256MB   # Maintenance operations
+      - POSTGRES_MAX_CONNECTIONS=50           # Connection limit
+      - POSTGRES_CHECKPOINT_COMPLETION_TARGET=0.9
+      - POSTGRES_WAL_BUFFERS=16MB
+      - POSTGRES_RANDOM_PAGE_COST=1.1        # SSD optimization
+      
+      # TimescaleDB settings
+      - POSTGRES_TIMESCALEDB_MAX_BACKGROUND_WORKERS=4
+      - POSTGRES_MAX_WORKER_PROCESSES=8
+      - POSTGRES_MAX_PARALLEL_WORKERS_PER_GATHER=2
+      
+      # Logging optimization
+      - POSTGRES_LOG_STATEMENT=none
+      - POSTGRES_LOG_DURATION=off
+      - POSTGRES_LOG_CHECKPOINTS=on
+      - POSTGRES_LOG_LOCK_WAITS=on
+    
+    ports:
+      - "5432:5432"
+    
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./scripts/timescale-setup.sql:/docker-entrypoint-initdb.d/02-timescale.sql
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trading_user -d trading_bot"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    
+    networks:
+      - trading-network
+    
+    command: >
+      postgres
+      -c max_connections=50
+      -c shared_buffers=1GB
+      -c effective_cache_size=3GB
+      -c work_mem=64MB
+      -c maintenance_work_mem=256MB
+      -c checkpoint_completion_target=0.9
+      -c wal_buffers=16MB
+      -c default_statistics_target=100
+      -c random_page_cost=1.1
+      -c effective_io_concurrency=200
+      -c max_worker_processes=8
+      -c max_parallel_workers_per_gather=2
+      -c max_parallel_maintenance_workers=2
+      -c log_min_duration_statement=1000
+
+  # Redis for caching and session storage
+  redis:
+    image: redis:7-alpine
+    container_name: ase-redis
+    restart: unless-stopped
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    
+    ports:
+      - "6379:6379"
+    
+    volumes:
+      - redis_data:/data
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf
+    
+    command: >
+      redis-server /usr/local/etc/redis/redis.conf
+      --maxmemory 1.5gb
+      --maxmemory-policy allkeys-lru
+      --save 900 1
+      --save 300 10
+      --save 60 10000
+      --appendonly yes
+      --appendfsync everysec
+      --tcp-keepalive 300
+      --timeout 300
+    
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    
+    networks:
+      - trading-network
+
+  # Nginx reverse proxy with load balancing
+  nginx:
+    image: nginx:alpine
+    container_name: ase-nginx
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.2'
+          memory: 128M
+    
+    ports:
+      - "80:80"
+      - "443:443"
+    
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx/sites-enabled:/etc/nginx/sites-enabled:ro
+      - ./ssl:/etc/nginx/ssl:ro
+      - nginx_logs:/var/log/nginx
+    
+    depends_on:
+      - trading-app
+    
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    
+    networks:
+      - trading-network
+
+  # Monitoring with Prometheus and Grafana
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ase-prometheus
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1G
+        reservations:
+          cpus: '0.2'
+          memory: 256M
+    
+    ports:
+      - "9090:9090"
+    
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=30d'
+      - '--storage.tsdb.retention.size=2GB'
+      - '--web.enable-lifecycle'
+    
+    networks:
+      - trading-network
+
+  # Log aggregation
+  loki:
+    image: grafana/loki:latest
+    container_name: ase-loki
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    
+    ports:
+      - "3100:3100"
+    
+    volumes:
+      - ./config/loki-config.yaml:/etc/loki/local-config.yaml:ro
+      - loki_data:/loki
+    
+    networks:
+      - trading-network
+
+  # Log shipping
+  promtail:
+    image: grafana/promtail:latest
+    container_name: ase-promtail
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    
+    volumes:
+      - ./config/promtail-config.yaml:/etc/promtail/config.yaml:ro
+      - ./logs:/var/log/app:ro
+      - nginx_logs:/var/log/nginx:ro
+      - /var/log:/var/log/host:ro
+    
+    depends_on:
+      - loki
+    
+    networks:
+      - trading-network
+
+  # Background task worker (Celery)
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.optimized
+      target: worker
+    container_name: ase-worker
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - CELERY_WORKER_CONCURRENCY=4
+      - CELERY_WORKER_MAX_TASKS_PER_CHILD=1000
+      - CELERY_WORKER_PREFETCH_MULTIPLIER=1
+      - CELERY_TASK_ACKS_LATE=true
+      - CELERY_TASK_REJECT_ON_WORKER_LOST=true
+    
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    
+    depends_on:
+      - redis
+      - postgres
+    
+    healthcheck:
+      test: ["CMD", "celery", "-A", "app", "inspect", "ping"]
+      interval: 60s
+      timeout: 30s
+      retries: 3
+    
+    networks:
+      - trading-network
+
+  # WebSocket server for real-time updates
+  websocket:
+    build:
+      context: .
+      dockerfile: Dockerfile.websocket
+    container_name: ase-websocket
+    restart: unless-stopped
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    
+    ports:
+      - "8001:8001"
+    
+    environment:
+      - WS_HOST=0.0.0.0
+      - WS_PORT=8001
+      - WS_MAX_CONNECTIONS=10000
+      - WS_PING_INTERVAL=30
+      - WS_PING_TIMEOUT=10
+    
+    depends_on:
+      - redis
+    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/ws-health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    
+    networks:
+      - trading-network
+
+# Volumes for data persistence
+volumes:
+  postgres_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/postgres
+  
+  redis_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/redis
+  
+  prometheus_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/prometheus
+  
+  loki_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data/loki
+  
+  nginx_logs:
+    driver: local
+  
+  trading_cache:
+    driver: local
+
+# Networks
+networks:
+  trading-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16

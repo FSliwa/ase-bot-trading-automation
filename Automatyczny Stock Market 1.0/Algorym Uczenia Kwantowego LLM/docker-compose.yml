@@ -1,0 +1,143 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trading-backend
+    restart: always
+    env_file:
+      - .env
+    expose:
+      - "8009"
+    networks:
+      - trading-net
+    dns:
+      - 8.8.8.8
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8009/ready"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    environment:
+      - DATABASE_PROXY_URL=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@pgbouncer:6432/${POSTGRES_DB}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318
+      - OTEL_SERVICE_NAME=trading-backend
+
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: trading-gateway
+    restart: always
+    environment:
+      - BACKEND_BASE=http://backend:8009
+    ports:
+      - "8080:8080"
+    networks:
+      - trading-net
+    depends_on:
+      - backend
+    dns:
+      - 8.8.8.8
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  pgbouncer:
+    image: edoburu/pgbouncer:1.22.0
+    container_name: trading-pgbouncer
+    restart: always
+    environment:
+      - DB_HOST=${POSTGRES_HOST}
+      - DB_PORT=${POSTGRES_PORT:-5432}
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - POOL_MODE=${PGBOUNCER_POOL_MODE:-transaction}
+      - MAX_CLIENT_CONN=${PGBOUNCER_MAX_CLIENT_CONN:-500}
+      - DEFAULT_POOL_SIZE=${PGBOUNCER_DEFAULT_POOL_SIZE:-50}
+      - LISTEN_PORT=6432
+      - ADMIN_USERS=${PGBOUNCER_ADMIN_USERS:-postgres}
+      - AUTH_TYPE=md5
+      - DB_TLS_MODE=${PG_DB_TLS_MODE:-require}
+    expose:
+      - "6432"
+    networks:
+      - trading-net
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: trading-prometheus
+    restart: always
+    volumes:
+      - ./deploy/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    ports:
+      - "9090:9090"
+    networks:
+      - trading-net
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: trading-grafana
+    restart: always
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      - GF_SERVER_ROOT_URL=https://ase-bot.live/grafana
+      - GF_SERVER_SERVE_FROM_SUB_PATH=true
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./deploy/grafana/provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml:ro
+      - ./deploy/grafana/provisioning/datasources/tempo.yml:/etc/grafana/provisioning/datasources/tempo.yml:ro
+      - ./deploy/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./deploy/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    networks:
+      - trading-net
+    depends_on:
+      - prometheus
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.95.0
+    container_name: otel-collector
+    restart: always
+    command: ["--config=/etc/otel/config.yaml"]
+    volumes:
+      - ./deploy/otel/otel-collector.yaml:/etc/otel/config.yaml:ro
+    ports:
+      - "4317:4317" # OTLP gRPC
+      - "4318:4318" # OTLP HTTP
+    networks:
+      - trading-net
+
+  tempo:
+    image: grafana/tempo:2.4.1
+    container_name: tempo
+    restart: always
+    command: ["-config.file=/etc/tempo/tempo.yml"]
+    volumes:
+      - ./deploy/tempo/tempo.yml:/etc/tempo/tempo.yml:ro
+      - tempo-data:/tmp/tempo
+    expose:
+      - "3200"
+      - "4317"
+      - "4318"
+    networks:
+      - trading-net
+
+networks:
+  trading-net:
+    driver: bridge
+volumes:
+  prometheus-data:
+  grafana-data:
