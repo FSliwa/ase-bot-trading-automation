@@ -211,6 +211,74 @@ class GridTradingStrategy(TradingStrategy):
         return sorted(levels)
 
 
+class AIStrategy(TradingStrategy):
+    """Strategy that executes signals from AI analysis."""
+    
+    def __init__(self, symbols: List[str], config: AppConfig):
+        super().__init__("AIStrategy", symbols, config)
+        self.latest_signals: Dict[str, Dict] = {}
+        
+    def update_signals(self, ai_analyses: List[Dict]):
+        """Update the latest AI signals."""
+        self.latest_signals.clear()
+        if not ai_analyses:
+            return
+            
+        for analysis in ai_analyses:
+            symbol = analysis.get('symbol')
+            if symbol:
+                self.latest_signals[symbol] = analysis
+                
+    def analyze(self, market_data: Dict[str, MarketData], positions: Dict) -> List[Signal]:
+        signals = []
+        
+        for symbol in self.symbols:
+            # Skip if no AI analysis for this symbol
+            if symbol not in self.latest_signals:
+                continue
+                
+            analysis = self.latest_signals[symbol]
+            action = analysis.get('action', 'hold').lower()
+            
+            # Skip HOLD signals
+            if action == 'hold':
+                continue
+                
+            has_position = symbol in positions
+            
+            # Map AI action to Signal action
+            signal_action = None
+            if action == 'buy' and not has_position:
+                signal_action = 'buy'
+            elif action == 'sell' and has_position:
+                signal_action = 'close' # or 'sell' if shorting supported
+            
+            if signal_action:
+                # Use confidence to determine quantity or leverage if desired
+                confidence = float(analysis.get('confidence', 0.5))
+                
+                # Default quantity logic (can be enhanced)
+                quantity = 0.01 # Base quantity
+                
+                signal = Signal(
+                    action=signal_action,
+                    symbol=symbol,
+                    quantity=quantity,
+                    order_type="market",
+                    reason=f"AI Signal: {analysis.get('reasoning', 'No reasoning')}",
+                    confidence=confidence
+                )
+                
+                # Add targets if available
+                targets = analysis.get('targets', [])
+                if targets:
+                    signal.take_profit = float(targets[0])
+                    
+                signals.append(signal)
+                
+        return [s for s in signals if self.validate_signal(s)]
+
+
 class AutoTradingEngine:
     """Automatic trading engine that runs strategies."""
     
@@ -259,14 +327,19 @@ class AutoTradingEngine:
             
         return market_data
         
-    def run_cycle(self) -> List[Signal]:
+    async def run_cycle(self) -> List[Signal]:
         """Run one trading cycle - analyze and execute signals."""
         if not self.active:
             return []
             
         executed_signals = []
         market_data = self.get_mock_market_data()
-        positions = self.broker.get_positions()
+        
+        # Handle async vs sync broker
+        if hasattr(self.broker, 'client'):
+             positions = await self.broker.get_positions()
+        else:
+             positions = self.broker.get_positions()
         
         # Collect signals from all strategies
         all_signals = []
@@ -282,11 +355,9 @@ class AutoTradingEngine:
             try:
                 if signal.action == "buy":
                     # Check if it's LiveBroker (async) or PaperBroker (sync)
-                    if hasattr(self.broker, 'exchange'):
+                    if hasattr(self.broker, 'client'):
                         # LiveBroker - run async method
-                        import asyncio
-                        loop = asyncio.get_event_loop()
-                        loop.run_until_complete(self.broker.place_order(
+                        await self.broker.place_order(
                             side="buy",
                             symbol=signal.symbol,
                             order_type=signal.order_type,
@@ -296,7 +367,7 @@ class AutoTradingEngine:
                             stop_loss=signal.stop_loss,
                             take_profit=signal.take_profit,
                             leverage=signal.leverage
-                        ))
+                        )
                     else:
                         # PaperBroker - sync method
                         self.broker.place_order(
@@ -314,10 +385,8 @@ class AutoTradingEngine:
                     self.trade_history.append((datetime.now(), signal))
                     
                 elif signal.action == "close":
-                    if hasattr(self.broker, 'exchange'):
-                        import asyncio
-                        loop = asyncio.get_event_loop()
-                        loop.run_until_complete(self.broker.close_position(symbol=signal.symbol))
+                    if hasattr(self.broker, 'client'):
+                        await self.broker.close_position(symbol=signal.symbol)
                     else:
                         self.broker.close_position(symbol=signal.symbol)
                     executed_signals.append(signal)

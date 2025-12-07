@@ -1,0 +1,34 @@
+Generated new encryption key: VBVsPBDTJc2LY_c7cxxhia7icaW6ow9Nncp46tUFV0Q=
+Save this key securely in your .env file as ENCRYPTION_KEY
+Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/execute_trade.py", line 84, in execute_trade
+    balance = await exchange.fetch_balance()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/kraken.py", line 1554, in fetch_balance
+    response = await self.privatePostBalanceEx(params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 993, in request
+    return await self.fetch2(path, api, method, params, headers, body, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 987, in fetch2
+    raise e
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 978, in fetch2
+    return await self.fetch(request['url'], request['method'], request['headers'], request['body'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 263, in fetch
+    self.handle_errors(http_status_code, http_status_text, url, method, headers, http_response, json_response, request_headers, request_body)
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/kraken.py", line 3429, in handle_errors
+    self.throw_exactly_matched_exception(self.exceptions['exact'], error, message)
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/base/exchange.py", line 5391, in throw_exactly_matched_exception
+    raise exact[string](message)
+ccxt.base.errors.InvalidNonce: kraken {"error":["EAPI:Invalid nonce"]}
+Fetching keys for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken...
+Keys decrypted successfully.
+Connecting to kraken...
+API Key length: 56
+API Key start: GJ3J...
+API Secret length: 88
+Server time: 1764292641000
+Using standard nonce: 1764292641634
+Fetching balance...
+Error executing trade: kraken {"error":["EAPI:Invalid nonce"]}

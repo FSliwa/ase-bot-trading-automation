@@ -127,3 +127,28 @@ def ensure_live_confirmation(live_flag: bool, confirm_yes_flag: bool) -> None:
     )
 
 
+@dataclass
+class SupabaseConfig:
+    """Supabase configuration for Edge Functions"""
+    url: str
+    key: str
+    function_name: str = "ai-trading-signals"
+
+
+def load_supabase_config() -> SupabaseConfig:
+    """Load Supabase configuration."""
+    load_dotenv()
+    
+    # Defaults from the Rust test file
+    default_project_ref = "iqqmbzznwpheqiihnjhz"
+    default_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlxcW1ienpud3BoZXFpaWhuamh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwMDc5MDUsImV4cCI6MjA3NDU4MzkwNX0.qwk2MN2CnwybHKfQgXcpSTx4B5VPWTjnO7ZkGLxlr4c"
+    
+    project_ref = os.getenv("SUPABASE_PROJECT_REF", default_project_ref)
+    key = os.getenv("SUPABASE_KEY", default_key)
+    
+    return SupabaseConfig(
+        url=f"https://{project_ref}.supabase.co/functions/v1",
+        key=key
+    )
+
+

@@ -1,0 +1,28 @@
+Generated new encryption key: eP0kwtysW6s25Yud5F2Efc116oIH9uG8Gj2DS8SYRQw=
+Save this key securely in your .env file as ENCRYPTION_KEY
+Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/execute_trade.py", line 121, in execute_trade
+    order = await exchange.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/kraken.py", line 1635, in create_order
+    'volume': self.amount_to_precision(symbol, amount),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/base/exchange.py", line 6185, in amount_to_precision
+    raise InvalidOrder(self.id + ' amount of ' + market['symbol'] + ' must be greater than minimum amount precision of ' + self.number_to_string(market['precision']['amount']))
+ccxt.base.errors.InvalidOrder: kraken amount of XRP/USDT must be greater than minimum amount precision of 0.00000001
+Fetching keys for user 18385ef5-bf36-4d38-9927-b5766d433868 on kraken...
+Keys decrypted successfully.
+Connecting to kraken...
+API Key length: 56
+API Key start: Weuh...
+API Secret length: 88
+Server time: 1764293054000
+Using microseconds nonce: 1764293054034602
+Fetching balance...
+Connection verified. Total Balance: 0 USDT, Free: 0 USDT
+Warning: Low USDT balance (0). Trade might fail.
+Fetching ticker for XRP/USDT...
+Current XRP/USDT price: 2.18387
+Placing BUY order for 0.00 XRP (~0.00 USDT)...
+SL: 2.09, TP: 2.5
+Error executing trade: kraken amount of XRP/USDT must be greater than minimum amount precision of 0.00000001

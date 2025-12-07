@@ -2,8 +2,12 @@
 
 from .base import BaseBroker
 from .enhanced_paper import EnhancedPaperBroker
-from .live_broker import LiveBroker
-from .primexbt import PrimeXBTBroker
+try:
+    from .live_broker import LiveBroker
+    from .primexbt import PrimeXBTBroker
+except ImportError:
+    LiveBroker = None
+    PrimeXBTBroker = None
 
 __all__ = [
     'BaseBroker',

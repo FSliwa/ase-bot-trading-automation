@@ -165,3 +165,11 @@ class LiveBroker(BaseBroker):
             'asks': [],
             'timestamp': datetime.now().isoformat()
         }
+
+    async def get_positions(self, symbol: Optional[str] = None):
+        """Get open positions (delegates to CCXT adapter)."""
+        return await self.client.get_positions(symbol)
+
+    async def get_spot_balances(self) -> List[str]:
+        """Get spot balances (delegates to CCXT adapter)."""
+        return await self.client.get_spot_balances()

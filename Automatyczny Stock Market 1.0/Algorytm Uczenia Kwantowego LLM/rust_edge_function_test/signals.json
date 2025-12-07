@@ -1,0 +1,54 @@
+[
+  {
+    "symbol": "BTC",
+    "action": "BUY",
+    "entryPrice": 91562.54,
+    "takeProfitPrice": 94309.4162,
+    "stopLossPrice": 86984.41299999999,
+    "confidence": 85.0,
+    "reasoning": "[3-MODEL CONSENSUS] 1) Recent news from Tavily indicates Bitcoin remains steady above $91,000 with potential for a move toward $100,000 if levels hold, alongside positive macroeconomic support; 2) Scraped exchange data from Parse.bot shows stable price action on Binance with a 24h high of $91,940.18 and consistent volume at 12,780; 3) Historical win rate for BTC is 100% based on 1 trade, though limited data suggests caution; 4) Patterns from 5000 recent trades (though not fully detailed here) align with bullish sentiment during similar price consolidation phases.",
+    "duration": "12-24h",
+    "marketSentiment": "bullish",
+    "technicalAnalysis": "Price at $91,562.54 shows consolidation near key support of $91,000 with 24h volume of 12,780 indicating sustained interest; scraped indicators from Parse.bot suggest low volatility and potential breakout above $92,000; historical success rate of 100% supports upside potential.",
+    "historicalInsight": "Reference to the single past trade on 2025-10-22 with a BUY at $45,230 resulting in +$1,250 gain supports confidence in bullish setups for BTC; however, limited sample size of 1 trade warrants cautious optimism."
+  },
+  {
+    "symbol": "ETH",
+    "action": "BUY",
+    "entryPrice": 3059.9,
+    "takeProfitPrice": 3151.697,
+    "stopLossPrice": 2906.9049999999997,
+    "confidence": 78.0,
+    "reasoning": "[3-MODEL CONSENSUS] 1) Recent news from Tavily indicates positive sentiment with Vitalik Buterin's $765K donation to privacy apps and BitMine's $44M Ethereum purchase, alongside optimistic price predictions from Tom Lee ($7000-$9000 by Jan 2026). 2) Scraped exchange data from Parse.bot confirms current Binance price at $3059.90 with a stable 24h change of 0.77% and significant volume (282525), suggesting market stability. 3) Historical win rate data is unavailable due to no past trades for ETH, so caution is applied. 4) Analysis of 5000 recent trades across other assets shows no contradictory patterns, with general market stability supporting a cautious buy signal.",
+    "duration": "12-24h",
+    "marketSentiment": "bullish",
+    "technicalAnalysis": "Price at $3059.90 is testing a key support zone near $3000 with a 24h high of $3077.77 and low of $2985.78. Volume at 282525 indicates active trading. Scraped indicators from Parse.bot show no immediate red flags, and historical success rate data for ETH is unavailable, so analysis relies on current market stability and news sentiment.",
+    "historicalInsight": "No specific past trades for ETH available in the database. Analysis of 5000 recent trades across other assets shows no consistent losing streaks or warning signs that contradict this signal, supporting a cautious buy based on current data."
+  },
+  {
+    "symbol": "SOL",
+    "action": "HOLD",
+    "entryPrice": 141.88,
+    "takeProfitPrice": 137.62359999999998,
+    "stopLossPrice": 148.974,
+    "confidence": 72.0,
+    "reasoning": "[3-MODEL CONSENSUS] 1) No recent tweets available for SOL due to rate limits on twitterapi.io, limiting social sentiment analysis; 2) Scraped exchange data from Parse.bot indicates neutral momentum with SOL price at $142.15, aligning with Binance real-time price of $141.88, and volume data showing no significant spikes; 3) No historical win rate available as there are 0 previous trades for SOL in the database; 4) Analysis of 5000 recent trades across other assets shows no clear pattern or correlation to SOL due to lack of specific historical data for this symbol.",
+    "duration": "12-24h",
+    "marketSentiment": "neutral",
+    "technicalAnalysis": "Price analysis shows SOL at $141.88 with a 24h change of -0.61%, indicating slight bearish pressure. Volume at 2,499,645 is moderate, not signaling strong momentum. Historical success rate unavailable due to lack of past trades. Parse.bot scraped indicators (50-day EMA at $165, 200-day EMA at $159, RSI at 53) confirm neutral momentum, neither overbought nor oversold.",
+    "historicalInsight": "No specific past trades or patterns for SOL available in the database of 5000 trades. General market patterns from other assets suggest caution in neutral sentiment environments without strong catalysts."
+  },
+  {
+    "symbol": "XRP",
+    "action": "HOLD",
+    "entryPrice": 2.2384,
+    "takeProfitPrice": 2.171248,
+    "stopLossPrice": 2.35032,
+    "confidence": 72.0,
+    "reasoning": "[3-MODEL CONSENSUS] 1) No recent tweets available for XRP due to rate limits on twitterapi.io, limiting social sentiment analysis. 2) News from Tavily indicates mixed signals with XRP slipping below $2.20 due to a death cross (bearish pressure), though ETF inflows are strong with $628 million in assets (bullish). 3) Scraped exchange data from Parse.bot (API KEY: 55b39b77-5a72-4938-85e4-95057e2fe8f2) aligns with Binance data showing price at $2.24 with moderate volume (90938521) but no clear breakout signal. 4) Historical data from 5000 recent trades shows no specific XRP trade history, reducing pattern reliability and warranting caution.",
+    "duration": "12-24h",
+    "marketSentiment": "neutral",
+    "technicalAnalysis": "Price at $2.24 with 1.58% 24h change; volume (90938521) is moderate but not indicative of strong momentum. 24h high/low ($2.25/$2.17) suggests consolidation. No historical success rate for XRP specifically; Parse.bot indicators show no immediate trend reversal signals.",
+    "historicalInsight": "No past trades for XRP found in database of 5000 trades, limiting actionable patterns. General market trades show caution during periods of mixed news sentiment and unclear technical signals, supporting a HOLD position."
+  }
+]

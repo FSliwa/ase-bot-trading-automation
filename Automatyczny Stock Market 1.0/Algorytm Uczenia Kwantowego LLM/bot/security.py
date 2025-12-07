@@ -68,9 +68,82 @@ class SecurityManager:
                 logger.error(f"Failed to decrypt Fernet data: {e}")
                 raise ValueError("Failed to decrypt data")
         else:
-            # Plain text - return as is (for backward compatibility with Supabase direct inserts)
-            logger.warning(f"API key stored as plain text (length: {len(encrypted_data)}). Consider re-encrypting.")
-            return encrypted_data
+            # Try to decrypt using frontend format (AES-GCM)
+            try:
+                return self.decrypt_frontend_format(encrypted_data)
+            except Exception:
+                # If that fails, assume it's plain text (legacy)
+                # Plain text - return as is (for backward compatibility with Supabase direct inserts)
+                # logger.warning(f"API key stored as plain text (length: {len(encrypted_data)}). Consider re-encrypting.")
+                return encrypted_data
+
+    def decrypt_frontend_format(self, encrypted_data: str) -> str:
+        """
+        Decrypt data encrypted by the frontend (AES-256-GCM).
+        
+        Args:
+            encrypted_data: Base64 encoded string containing IV + Ciphertext
+            
+        Returns:
+            Decrypted string
+        """
+        try:
+            import base64
+            from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+            from cryptography.hazmat.backends import default_backend
+
+            # Hardcoded key from frontend: 'trading_api_encryption_key_2024'
+            # Padded to 32 bytes as done in frontend logic
+            key_string = 'trading_api_encryption_key_2024'
+            key_bytes = key_string.ljust(32, '0')[:32].encode('utf-8')
+            
+            # Decode base64
+            combined = base64.b64decode(encrypted_data)
+            
+            # Extract IV (12 bytes) and ciphertext
+            iv = combined[:12]
+            ciphertext = combined[12:]
+            
+            # Decrypt
+            cipher = Cipher(
+                algorithms.AES(key_bytes),
+                modes.GCM(iv),
+                backend=default_backend()
+            )
+            decryptor = cipher.decryptor()
+            
+            # GCM mode handles authentication tag automatically if it's part of the ciphertext?
+            # In cryptography library, GCM tag is usually passed separately or appended.
+            # Wait, Web Crypto API 'AES-GCM' produces ciphertext + tag.
+            # The frontend code does: combined.set(iv); combined.set(new Uint8Array(encrypted), iv.length);
+            # 'encrypted' from crypto.subtle.encrypt includes the tag at the end.
+            # So 'ciphertext' here includes the tag at the end.
+            
+            # cryptography.hazmat.primitives.ciphers.modes.GCM expects the tag to be passed to finalize() or 
+            # if using the high-level API, it might handle it.
+            # Actually, for GCM, the tag is the last 16 bytes of the ciphertext usually.
+            # Let's check how cryptography library handles GCM.
+            # It requires the tag to be passed to the constructor of GCM mode or set later.
+            
+            # The standard Web Crypto API appends the tag to the end of the ciphertext.
+            # So we need to split it. Tag length is usually 128 bits (16 bytes).
+            
+            tag = ciphertext[-16:]
+            actual_ciphertext = ciphertext[:-16]
+            
+            cipher = Cipher(
+                algorithms.AES(key_bytes),
+                modes.GCM(iv, tag),
+                backend=default_backend()
+            )
+            decryptor = cipher.decryptor()
+            decrypted_data = decryptor.update(actual_ciphertext) + decryptor.finalize()
+            
+            return decrypted_data.decode('utf-8')
+            
+        except Exception as e:
+            # logger.debug(f"Failed to decrypt as frontend format: {e}")
+            raise e
     
     def encrypt_dict(self, data: dict, keys_to_encrypt: list) -> dict:
         """

@@ -1,0 +1,221 @@
+Generated new encryption key: SZz_k_lMFz7BndBv3Bomq0Z_93DTXbXRIOdlbVVOlkY=
+Save this key securely in your .env file as ENCRYPTION_KEY
+[11/28/25 15:50:07] INFO     🔄 Fetching all users and API keys from database...                                                                                                     run_all_users.py:67
+[11/28/25 15:50:08] INFO     ✅ Found 10 users. Launching bots...                                                                                                                    run_all_users.py:97
+                    INFO     🚀 Starting bot for user b812b608-3bdc-4afe-9dbd-9857e65a3bfe on binance...                                                                             run_all_users.py:38
+[11/28/25 15:50:08] INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:09] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:09] INFO     🚀 Starting bot for user 47b49177-17e8-4426-a3f3-cfdafbf7b786 on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:10] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:10] INFO     🚀 Starting bot for user 8260053f-b934-4581-b057-a9a4f62b126e on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:11] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: True                                                                                                                                       auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:11] INFO     🚀 Starting bot for user 8260053f-b934-4581-b057-a9a4f62b126e on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:12] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:12] INFO     🚀 Starting bot for user a5fa3424-c074-4848-b736-976222649365 on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+[11/28/25 15:50:13] INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:13] INFO     🚀 Starting bot for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken...                                                                              run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on kraken                                                                                                                  auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+                    INFO     🚀 Starting bot for user e4f7f9e4-1664-4419-aaa2-592f12dc2f2a on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:14] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:14] INFO     🚀 Starting bot for user fd21db06-2278-4109-a6d0-0468e72272cf on kraken...                                                                              run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:15] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on kraken                                                                                                                  auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:15] INFO     🚀 Starting bot for user fd21db06-2278-4109-a6d0-0468e72272cf on binance...                                                                             run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:16] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on binance                                                                                                                 auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+[11/28/25 15:50:16] INFO     🚀 Starting bot for user 18385ef5-bf36-4d38-9927-b5766d433868 on kraken...                                                                              run_all_users.py:38
+                    INFO     Initializing Automated Trading Bot...                                                                                                                     auto_trader.py:66
+[11/28/25 15:50:17] INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                                                                           auto_trader.py:95
+                    INFO     Initialized with 2 strategies on kraken                                                                                                                  auto_trader.py:126
+                    INFO     Trading symbols: ['BTC/USDT', 'ETH/USDT']                                                                                                                auto_trader.py:127
+                    INFO     Testnet mode: False                                                                                                                                      auto_trader.py:128
+                    INFO     DEBUG: self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                                   auto_trader.py:129
+                    INFO     DEBUG: self.broker type: None                                                                                                                            auto_trader.py:130
+                    INFO     Bot started - trading every 3600 seconds                                                                                                                 auto_trader.py:335
+                    INFO     Starting trading cycle...                                                                                                                                auto_trader.py:283
+Exchange error fetching account info: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+[11/28/25 15:50:19] ERROR    Risk check failed: binance {"code":-2008,"msg":"Invalid Api-Key ID."}                                                                                    auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+Exchange error fetching account info: binance {"code":-2008,"msg":"Invalid Api-Key ID."}
+                    ERROR    Risk check failed: binance {"code":-2008,"msg":"Invalid Api-Key ID."}                                                                                    auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+[11/28/25 15:50:28] INFO     DEBUG: check_risk_limits self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                 auto_trader.py:168
+[11/28/25 15:50:29] INFO     DEBUG: check_risk_limits self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                 auto_trader.py:168
+[11/28/25 15:50:30] INFO     DEBUG: check_risk_limits self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                 auto_trader.py:168
+Network error fetching account info: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+[11/28/25 15:50:31] ERROR    Risk check failed: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo                                                                             auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+Network error fetching account info: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+                    ERROR    Risk check failed: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo                                                                             auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+Network error fetching account info: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+                    ERROR    Risk check failed: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo                                                                             auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+Network error fetching account info: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo
+                    ERROR    Risk check failed: binance GET https://dapi.binance.com/dapi/v1/exchangeInfo                                                                             auto_trader.py:181
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+[11/28/25 15:50:36] INFO     DEBUG: check_risk_limits self.exchange type: <class 'bot.http.ccxt_adapter.CCXTAdapter'>                                                                 auto_trader.py:168
+                    INFO     Max positions reached (5/5). Spot: 5, Margin: 0                                                                                                          auto_trader.py:175
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+[11/28/25 15:50:37] INFO     Fetching market data...                                                                                                                                  auto_trader.py:292
+                    INFO     Fetching market data...                                                                                                                                  auto_trader.py:292
+                    INFO     Max positions reached (5/5). Spot: 5, Margin: 0                                                                                                          auto_trader.py:175
+                    INFO     Risk limits exceeded, skipping cycle                                                                                                                     auto_trader.py:288
+[11/28/25 15:50:38] INFO     Market data fetched for 2 symbols                                                                                                                        auto_trader.py:298
+                    INFO     Running AI market analysis...                                                                                                                            auto_trader.py:304
+                    INFO     🔍 Fetching top volume symbols for analysis...                                                                                                           auto_trader.py:191
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3412 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['USDC/USDT', 'BTC/USDT', 'ETH/USDT', 'MET/USDT', 'SOL/USDT']
+[11/28/25 15:50:39] INFO     ✅ Selected top 5 symbols: ['USDC/USDT', 'BTC/USDT', 'ETH/USDT', 'MET/USDT', 'SOL/USDT']                                                                 auto_trader.py:196
+                    INFO     📊 Fetching market data for 5 symbols...                                                                                                                 auto_trader.py:201
+[11/28/25 15:50:41] INFO     Market data fetched for 2 symbols                                                                                                                        auto_trader.py:298
+                    INFO     Running AI market analysis...                                                                                                                            auto_trader.py:304
+                    INFO     🔍 Fetching top volume symbols for analysis...                                                                                                           auto_trader.py:191
+DEBUG: Loading markets for kraken...
+DEBUG: Fetching tickers...
+                    INFO     🤖 Requesting AI analysis for 5 symbols...                                                                                                               auto_trader.py:224
+[11/28/25 15:50:41] INFO     Calling Supabase Edge Function for 5 symbols: https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-tranłding-signals                      supabase_analysis_service.py:50
+DEBUG: Fetched 1552 tickers
+DEBUG: Found 43 USDT tickers
+DEBUG: Top symbols: ['USDC/USDT', 'BTC/USDT', 'ETH/USDT', 'XMR/USDT', 'XRP/USDT']
+[11/28/25 15:50:42] INFO     ✅ Selected top 5 symbols: ['USDC/USDT', 'BTC/USDT', 'ETH/USDT', 'XMR/USDT', 'XRP/USDT']                                                                 auto_trader.py:196
+                    INFO     📊 Fetching market data for 5 symbols...                                                                                                                 auto_trader.py:201
+[11/28/25 15:50:48] INFO     🤖 Requesting AI analysis for 5 symbols...                                                                                                               auto_trader.py:224
+[11/28/25 15:50:48] INFO     Calling Supabase Edge Function for 5 symbols: https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                      supabase_analysis_service.py:50
+[11/28/25 15:52:25] INFO     ✅ Received 5 signals from AI                                                                                                                            auto_trader.py:231
+                    INFO     AI Analysis for USDC/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available for USDC due to potential rate limits on twitterapi.io, limiting     auto_trader.py:246
+                             social sentiment analysis; 2) Scraped exchange data from Parse.bot indicates stable price at $1.00 with minimal volatility, high 24h volume of 1.63B                       
+                             suggesting liquidity but no clear directional momentum; 3) Historical win rate data unavailable for USDC as no past trades found, reducing reliability                     
+                             of predictive models; 4) Analysis of 5000 recent trades shows no specific patterns for USDC, providing no actionable historical insights.                                  
+                    INFO     💾 Saved signal for USDC/USDT to DB                                                                                                                      auto_trader.py:269
+                    INFO     AI Analysis for ETH/USDT: BUY - [3-MODEL CONSENSUS] 1) Recent news from Tavily indicates bullish sentiment with BitMine's $44 million Ethereum purchase  auto_trader.py:246
+                             and price predictions of $7000-$9000 by Jan 2026, despite a recent 1.5% drop; 2) Scraped exchange data from Parse.bot (API KEY:                                            
+                             55b39b77-5a72-4938-85e4-95057e2fe8f2) confirms Binance data with a 2.44% price increase in 24h and strong volume at 298016, signaling positive momentum;                   
+                             3) Historical win rate data unavailable due to no past trades for ETH, limiting confidence boost; 4) Analysis of 5000 recent trades shows no specific                      
+                             ETH patterns, but general market trends support cautious optimism during price recovery phases.                                                                            
+                    INFO     💾 Saved signal for ETH/USDT to DB                                                                                                                       auto_trader.py:269
+[11/28/25 15:52:26] INFO     AI Analysis for BTC/USDT: BUY - [3-MODEL CONSENSUS] 1) Recent news from Tavily indicates a Bitcoin price rally and recovery, with BTC rising to $91,500  auto_trader.py:246
+                             and stabilizing near $92,000 despite some bearish predictions of capped momentum. 2) Scraped exchange data from Parse.bot (API KEY:                                        
+                             55b39b77-5a72-4938-85e4-95057e2fe8f2) aligns with Binance API data showing a 1.69% price increase in the last 24 hours and strong volume at 14494,                         
+                             suggesting sustained buying interest. 3) Historical win rate for BTC is 100% based on the single past trade, though limited sample size warrants                           
+                             caution. 4) Patterns from 5000 recent trades (though not fully detailed here) suggest a general positive sentiment for BTC with past AI signals showing                    
+                             27 BUY signals at an average confidence of 80%.                                                                                                                            
+                    INFO     💾 Saved signal for BTC/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI Analysis for MET/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available for MET due to rate limits on twitterapi.io, limiting social          auto_trader.py:246
+                             sentiment analysis; 2) Parsed exchange data from Parse.bot indicates high 24h volume (1.86B) but a negative price change of -2.30%, suggesting bearish                     
+                             pressure on Binance; 3) No historical win rate data available for MET as no past trades are recorded; 4) Analysis of 5000 recent trades shows no                           
+                             specific patterns for MET, reducing confidence in directional signals.                                                                                                     
+                    INFO     💾 Saved signal for MET/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI Analysis for SOL/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available for SOL due to potential rate limits on twitterapi.io, limiting       auto_trader.py:246
+                             social sentiment analysis; 2) Scraped exchange data from Parse.bot indicates stable price movement with moderate volume on Binance, but no strong                          
+                             breakout signals; 3) Historical win rate data unavailable for SOL as no past trades found, reducing reliability of prediction; 4) Analysis of 5000                         
+                             recent trades shows no specific patterns for SOL, and general market trends are mixed with no clear direction.                                                             
+                    INFO     💾 Saved signal for SOL/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI analysis completed successfully                                                                                                                       auto_trader.py:307
+                    INFO     Executing trading strategies...                                                                                                                          auto_trader.py:310
+[11/28/25 15:52:33] INFO     No trading signals generated this cycle                                                                                                                  auto_trader.py:319
+[11/28/25 15:52:34] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                                                                           auto_trader.py:325
+[11/28/25 15:52:46] INFO     ✅ Received 5 signals from AI                                                                                                                            auto_trader.py:231
+                    INFO     AI Analysis for ETH/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available due to rate limits on twitterapi.io, limiting social sentiment        auto_trader.py:246
+                             analysis. 2) Scraped exchange data from Parse.bot indicates mixed signals with moderate volume and price stability on Binance. 3) Historical win rate                      
+                             data unavailable as no past trades found for ETH, increasing uncertainty. 4) Patterns from 5000 recent trades across other assets show no clear                            
+                             directional bias for ETH due to lack of specific historical data.                                                                                                          
+                    INFO     💾 Saved signal for ETH/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI Analysis for XRP/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available due to rate limits on twitterapi.io, limiting social sentiment data;  auto_trader.py:246
+                             2) Mixed news sentiment from Tavily with XRP showing both breakout potential ($2.63 with volume surge) and downside risks (death cross below $2.20); 3)                    
+                             Historical win rate for XRP is 0.0% based on 1 trade, indicating high risk; 4) Analysis of 5000 recent trades shows no strong patterns for XRP due to                      
+                             limited specific data, but overall market caution is warranted given past AI signals favoring HOLD with 70% avg confidence.                                                
+                    INFO     💾 Saved signal for XRP/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI Analysis for BTC/USDT: BUY - [3-MODEL CONSENSUS] 1) Recent news from Tavily indicates a Bitcoin price rebound to $91,500 with potential for further   auto_trader.py:246
+                             upside if it breaks $98,000, suggesting bullish momentum. 2) Scraped exchange data from Parse.bot (API KEY: 55b39b77-5a72-4938-85e4-95057e2fe8f2) aligns                   
+                             with Binance API, showing a 1.72% price increase and solid volume at 14496, indicating sustained interest. 3) Historical win rate for BTC is 100% based                    
+                             on 1 trade, though limited data suggests caution. 4) Analysis of 5000 recent trades shows consistent success with BUY signals (27 out of 30 past AI                        
+                             signals), supporting a positive outlook.                                                                                                                                   
+                    INFO     💾 Saved signal for BTC/USDT to DB                                                                                                                       auto_trader.py:269
+                    INFO     AI Analysis for USDC/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available for USDC due to rate limits on twitterapi.io, limiting social        auto_trader.py:246
+                             sentiment analysis; 2) Scraped exchange data from Parse.bot indicates stable price at $1.00 with minimal volatility (24h high/low at $1.00) and high                       
+                             volume (1.63B), suggesting no immediate catalysts for movement; 3) Historical win rate data unavailable as no past trades found for USDC, reducing                         
+                             predictive power; 4) Patterns from 5000 recent trades cannot be applied specifically to USDC due to lack of direct historical data, though general                         
+                             market stability is noted.                                                                                                                                                 
+                    INFO     💾 Saved signal for USDC/USDT to DB                                                                                                                      auto_trader.py:269
+                    INFO     AI Analysis for XMR/USDT: HOLD - [3-MODEL CONSENSUS] 1) No recent tweets available for XMR due to rate limits on twitterapi.io, limiting social          auto_trader.py:246
+                             sentiment analysis; 2) Scraped exchange data from Parse.bot indicates a current price of $408.05 for XMR, significantly higher than Binance real-time                      
+                             data of $118.70, creating uncertainty in price accuracy; 3) Historical win rate data is unavailable as no past trades for XMR are recorded; 4) Analysis                    
+                             of 5000 recent trades shows no specific patterns for XMR, providing no historical support for a BUY or SELL signal.                                                        
+                    INFO     💾 Saved signal for XMR/USDT to DB                                                                                                                       auto_trader.py:269
+[11/28/25 15:52:47] INFO     AI analysis completed successfully                                                                                                                       auto_trader.py:307
+                    INFO     Executing trading strategies...                                                                                                                          auto_trader.py:310
+[11/28/25 15:52:52] INFO     No trading signals generated this cycle                                                                                                                  auto_trader.py:319
+[11/28/25 15:52:57] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                                                                           auto_trader.py:325

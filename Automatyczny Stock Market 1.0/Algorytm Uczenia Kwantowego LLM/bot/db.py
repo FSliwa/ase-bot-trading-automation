@@ -224,6 +224,34 @@ class TradingMetricsCache(Base):  # type: ignore[misc]
     )
 
 
+class Trade(Base):  # type: ignore[misc]
+    __tablename__ = "trades"
+
+    id = Column(Integer, primary_key=True)
+    symbol = Column(String, nullable=False, index=True)
+    trade_type = Column(String, nullable=False)  # BUY/SELL
+    price = Column(Float, nullable=False)
+    amount = Column(Float, nullable=False)
+    pnl = Column(Float, nullable=True)
+    source = Column(String, nullable=True)  # bot/manual
+    emotion = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, default=_utcnow, index=True)
+
+
+class TradingSignal(Base):  # type: ignore[misc]
+    __tablename__ = "trading_signals"
+
+    id = Column(Integer, primary_key=True)
+    symbol = Column(String, nullable=False, index=True)
+    signal_type = Column(String, nullable=False)  # BUY/SELL/HOLD
+    strength = Column(String, nullable=True)
+    confidence_score = Column(Float, nullable=True)
+    price_target = Column(Float, nullable=True)
+    ai_analysis = Column(Text, nullable=True)
+    source = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, default=_utcnow, index=True)
+
+
 SUPABASE_DB_URL = os.getenv("SUPABASE_DB_URL")
 DATABASE_URL = SUPABASE_DB_URL or os.getenv("DATABASE_URL")
 
@@ -273,7 +301,11 @@ class DatabaseManager(AbstractContextManager["DatabaseManager"]):
     StrategyDailyPerformance = StrategyDailyPerformance
     TradingBot = TradingBot
     AIAnalysis = AIAnalysis
+    TradingBot = TradingBot
+    AIAnalysis = AIAnalysis
     TradingMetricsCache = TradingMetricsCache
+    Trade = Trade
+    TradingSignal = TradingSignal
 
     def __init__(self) -> None:
         self.session: Optional[Session] = None
@@ -779,6 +811,31 @@ class DatabaseManager(AbstractContextManager["DatabaseManager"]):
             )
             self.session.add(record)
         return record
+
+    # -- Trading Signals ---------------------------------------------------
+    def save_trading_signal(
+        self,
+        *,
+        symbol: str,
+        signal_type: str,
+        confidence_score: float,
+        price_target: Optional[float] = None,
+        ai_analysis: Optional[str] = None,
+        source: str = "bot",
+        strength: Optional[str] = None,
+    ) -> TradingSignal:
+        assert self.session is not None
+        signal = TradingSignal(
+            symbol=symbol,
+            signal_type=signal_type,
+            confidence_score=confidence_score,
+            price_target=price_target,
+            ai_analysis=ai_analysis,
+            source=source,
+            strength=strength,
+        )
+        self.session.add(signal)
+        return signal
 
     def get_latest_metric_cache(
         self,

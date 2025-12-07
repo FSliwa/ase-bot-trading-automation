@@ -1,0 +1,24 @@
+🔍 Fetching credentials for user 1aa87e38-f100-49d1-85dc-292bc58e25f1...
+🔌 Connecting to kraken...
+
+💰 --- SPOT BALANCE CHECK ---
+
+📊 --- ASSET BREAKDOWN ---
+   🔹 PEPE: Total=346029.21 (Free=346029.21, Used=0.0)
+   🔹 SOL: Total=0.9442870663 (Free=0.9442870663, Used=0.0)
+      (≈ 119.90 USDT)
+   🔹 USDG: Total=0.5 (Free=0.5, Used=0.0)
+   🔹 USDT: Total=143.19960966 (Free=143.19960966, Used=0.0)
+   🔹 ETH: Total=5.3e-09 (Free=5.3e-09, Used=0.0)
+      (≈ 0.00 USDT)
+   🔹 XRP: Total=290.09933439 (Free=290.09933439, Used=0.0)
+      (≈ 594.69 USDT)
+   🔹 USD: Total=0.0087 (Free=0.0087, Used=0.0)
+
+💵 Estimated Total Spot Portfolio Value: ~857.78 USDT
+
+🔮 --- FUTURES BALANCE CHECK ---
+❌ Could not connect to Kraken Futures with these keys: krakenfutures {"result":"error","error":"authenticationError","serverTime":"2025-12-01T03:49:20.909Z"}
+
+📜 --- OPEN ORDERS CHECK ---
+✅ No open orders blocking funds.

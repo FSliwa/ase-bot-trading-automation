@@ -1,0 +1,39 @@
+Generated new encryption key: Dp9lnZmuRm5aBQK1tgFRT3TZ9JWAYGDx8_rB66AnLcE=
+Save this key securely in your .env file as ENCRYPTION_KEY
+Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/execute_trade.py", line 121, in execute_trade
+    order = await exchange.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/kraken.py", line 1640, in create_order
+    response = await self.privatePostAddOrder(self.extend(orderRequest[0], orderRequest[1]))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 993, in request
+    return await self.fetch2(path, api, method, params, headers, body, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 989, in fetch2
+    raise e
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 978, in fetch2
+    return await self.fetch(request['url'], request['method'], request['headers'], request['body'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/base/exchange.py", line 263, in fetch
+    self.handle_errors(http_status_code, http_status_text, url, method, headers, http_response, json_response, request_headers, request_body)
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/async_support/kraken.py", line 3429, in handle_errors
+    self.throw_exactly_matched_exception(self.exceptions['exact'], error, message)
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/.venv/lib/python3.12/site-packages/ccxt/base/exchange.py", line 5391, in throw_exactly_matched_exception
+    raise exact[string](message)
+ccxt.base.errors.PermissionDenied: kraken {"error":["EGeneral:Permission denied"]}
+Fetching keys for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken...
+Keys decrypted successfully.
+Connecting to kraken...
+API Key length: 56
+API Key start: GJ3J...
+API Secret length: 88
+Server time: 1764292745000
+Using microseconds nonce: 1764292745772911
+Fetching balance...
+Connection verified. Total Balance: 290.0776 USDT, Free: 290.0776 USDT
+Fetching ticker for XRP/USDT...
+Current XRP/USDT price: 2.185
+Placing BUY order for 131.43 XRP (~287.18 USDT)...
+SL: 2.09, TP: 2.5
+Error executing trade: kraken {"error":["EGeneral:Permission denied"]}
