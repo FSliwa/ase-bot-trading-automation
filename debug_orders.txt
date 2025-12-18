@@ -1,0 +1,25 @@
+Generated new encryption key: Vag6BO5d6o3X7WStVfBIudtS2OoxpNhdmAmYJJ0MsIc=
+Save this key securely in your .env file as ENCRYPTION_KEY
+Fetching keys for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken...
+Keys decrypted successfully.
+Connecting to kraken...
+Fetching open orders...
+
+================================================================================
+OPEN ORDERS ANALYSIS FOR USER: 1aa87e38-f100-49d1-85dc-292bc58e25f1
+================================================================================
+ID                   | SYMBOL     | TYPE       | SIDE  | AMOUNT     | PRICE      | STOP PRICE | STATUS
+----------------------------------------------------------------------------------------------------
+O74RTU-7X724-6YQJIC  | XRP/USDT   | market     | sell  | 130.51771539 | Market     | 2.09       | open
+OZPBGQ-I4P4G-TOIU6S  | XRP/USDT   | market     | sell  | 130.51771539 | Market     | 2.5        | open
+
+================================================================================
+RECENT CLOSED ORDERS (Last 5)
+================================================================================
+ID                   | SYMBOL     | TYPE       | SIDE  | AMOUNT     | PRICE      | STATUS
+----------------------------------------------------------------------------------------------------
+OPXVQZ-MXBDR-FFHHOF  | XRP/USDT   | market     | buy   | 130.51771539 | 2.19727    | closed
+  -> Found target order OPXVQZ-MXBDR-FFHHOF. Checking info...
+  -> Info: {'id': 'OPXVQZ-MXBDR-FFHHOF', 'refid': None, 'userref': '0', 'status': 'closed', 'opentm': '1764316448.788401', 'starttm': '0', 'expiretm': '0', 'descr': {'pair': 'XRPUSDT', 'aclass': 'forex', 'type': 'buy', 'ordertype': 'market', 'price': '0', 'price2': '0', 'leverage': 'none', 'order': 'buy 130.51771539 XRPUSDT @ market', 'close': ''}, 'vol': '130.51771539', 'vol_exec': '130.51771539', 'cost': '286.78396567', 'fee': '1.14713586', 'price': '2.19727', 'stopprice': '0.00000000', 'limitprice': '0.00000000', 'misc': '', 'oflags': 'fciq', 'reason': None, 'closetm': '1764316448.788401'}
+================================================================================
+

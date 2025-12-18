@@ -1,0 +1,136 @@
+#!/usr/bin/expect
+set timeout 60
+
+# Configuration
+set server_ip "185.70.196.214"  
+set server_user "admin"
+
+puts "🔍 Debugging Trading Bot service startup..."
+puts "Enter SSH password for admin@185.70.196.214:"
+stty -echo
+gets stdin ssh_pass
+stty echo
+puts ""
+
+puts "Enter sudo password:"
+stty -echo  
+gets stdin sudo_pass
+stty echo
+puts ""
+
+# Connect to server
+spawn ssh -o StrictHostKeyChecking=no $server_user@$server_ip
+expect "password:"
+send "$ssh_pass\r"
+expect "$ "
+
+# Check if virtual environment exists
+puts "🐍 Checking Python virtual environment..."
+send "ls -la /opt/trading-bot/.venv/\r"
+expect "$ "
+
+# Check if uvicorn is installed
+send "ls -la /opt/trading-bot/.venv/bin/uvicorn\r"
+expect "$ "
+
+# Try to install uvicorn if missing
+puts "📦 Installing FastAPI and Uvicorn..."
+send "echo '$sudo_pass' | sudo -S /opt/trading-bot/.venv/bin/pip install fastapi uvicorn\r"
+expect "$ "
+
+# Check if fastapi_app.py exists
+puts "📄 Checking fastapi_app.py..."
+send "ls -la /opt/trading-bot/fastapi_app.py\r"
+expect "$ "
+
+# Test running uvicorn manually
+puts "🧪 Testing uvicorn manually..."
+send "cd /opt/trading-bot && /opt/trading-bot/.venv/bin/uvicorn fastapi_app:app --host 127.0.0.1 --port 8009 --workers 1 &\r"
+expect "$ "
+
+# Wait a moment and check if it's running
+send "sleep 3\r"
+expect "$ "
+
+send "ps aux | grep uvicorn\r"
+expect "$ "
+
+# Kill the test process
+send "pkill -f uvicorn\r"
+expect "$ "
+
+# Try with system python if venv fails
+puts "🔄 Trying with system Python..."
+send "echo '$sudo_pass' | sudo -S pip3 install fastapi uvicorn\r"
+expect "$ "
+
+# Update service to use system python
+puts "⚙️ Updating service to use system Python..."
+send "echo '$sudo_pass' | sudo -S tee /etc/systemd/system/trading-bot.service > /dev/null << 'EOF'\r"
+expect "> "
+send "\[Unit\]\r"
+expect "> "
+send "Description=Trading Bot FastAPI Server\r"
+expect "> "
+send "After=network.target\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Service\]\r"
+expect "> "
+send "Type=simple\r"
+expect "> "
+send "User=admin\r"
+expect "> "
+send "Group=admin\r"
+expect "> "
+send "WorkingDirectory=/opt/trading-bot\r"
+expect "> "
+send "Environment=PYTHONPATH=/opt/trading-bot\r"
+expect "> "
+send "EnvironmentFile=/opt/trading-bot/.env.db\r"
+expect "> "
+send "ExecStart=/usr/bin/python3 -m uvicorn fastapi_app:app --host 0.0.0.0 --port 8009 --workers 1\r"
+expect "> "
+send "Restart=always\r"
+expect "> "
+send "RestartSec=10\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Install\]\r"
+expect "> "
+send "WantedBy=multi-user.target\r"
+expect "> "
+send "EOF\r"
+expect "$ "
+
+# Reload and start
+puts "🔄 Reloading and starting service..."
+send "echo '$sudo_pass' | sudo -S systemctl daemon-reload\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S systemctl start trading-bot\r"
+expect "$ "
+
+send "sleep 5\r"
+expect "$ "
+
+# Check status
+puts "📊 Checking service status..."
+send "echo '$sudo_pass' | sudo -S systemctl status trading-bot --no-pager\r"
+expect "$ "
+
+# Check logs
+puts "📋 Checking service logs..."
+send "echo '$sudo_pass' | sudo -S journalctl -u trading-bot --no-pager -n 10\r"
+expect "$ "
+
+# Test endpoints
+puts "🧪 Testing endpoints..."
+send "curl -s -w 'Health: %{http_code}\\n' http://localhost:8009/healthz\r"
+expect "$ "
+
+puts "✅ Debug completed!"
+send "exit\r"
+expect eof

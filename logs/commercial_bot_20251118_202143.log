@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/commercial_trading_bot.py", line 29, in <module>
+    from supabase import create_client, Client
+ModuleNotFoundError: No module named 'supabase'

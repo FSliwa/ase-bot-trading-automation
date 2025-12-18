@@ -1,0 +1,502 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Generated new encryption key: 58noA9NqvIgiH8WSjtOHeUOeGm6Tm7JvGJ4DUap6-xs=
+Save this key securely in your .env file as ENCRYPTION_KEY
+[12/16/25 06:49:18] INFO     🤖 Starting bot for user: e4f7f9e4-1664-4419-aaa2-592f12dc2f2a                               run_single_user.py:102
+                    INFO     🔍 Looking up API keys for user e4f7f9e4-1664-4419-aaa2-592f12dc2f2a...                       run_single_user.py:42
+                    INFO     🚀 Starting bot for user e4f7f9e4-1664-4419-aaa2-592f12dc2f2a on binance (testnet=False)...   run_single_user.py:62
+[12/16/25 06:49:18] INFO     Initializing Automated Trading Bot...                                                            auto_trader.py:146
+[12/16/25 06:49:20] INFO     📊 Position Monitor SL/TP: SL=250.0% | TP=350.0%                                                 auto_trader.py:211
+[12/16/25 06:49:20] INFO     ✅ Position lock manager initialized for PositionMonitor                                    position_monitor.py:348
+                    INFO     ✅ Close operation RateLimiter initialized for PositionMonitor                              position_monitor.py:374
+                    INFO     PositionMonitorService initialized (interval: 5.0s) | Trailing: True | Dynamic SL/TP: True  position_monitor.py:376
+                             | Partial TP: True | Time Exit: True | Auto SL/TP: True | 🚨 Liquidation Monitor: True                             
+                             (warn:15.0% / auto-close:3.5%) | 💾 Hybrid Persistence: True (interval: 5.0s)                                      
+                    INFO     DatabaseManager connected to PositionMonitor for reevaluation logging                       position_monitor.py:389
+                    WARNING  💾 Supabase credentials not configured - persistence disabled                               position_monitor.py:410
+                    WARNING  💾 Hybrid Persistence: Supabase not available - using RAM only                             position_monitor.py:1473
+                    INFO     ✅ Position monitor started                                                                position_monitor.py:1483
+                    INFO     ✅ Position Monitor started (5s interval) | Auto SL/TP: ✅ | Partial TP: ✅ | Time Exit: ✅ (12h auto_trader.py:233
+                             max)                                                                                                               
+                    INFO     No existing positions to restore from database                                             position_monitor.py:1206
+                    INFO     Position monitoring loop started                                                           position_monitor.py:1509
+[12/16/25 06:49:26] INFO     No positions on binance to sync                                                            position_monitor.py:1245
+[12/16/25 06:49:29] INFO     ✅ WebSocket real-time data connected                                                            auto_trader.py:262
+[12/16/25 06:49:29] INFO     📡 Supabase Edge Function URL:                                                      supabase_analysis_service.py:36
+                             https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                                           
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                  auto_trader.py:278
+                    INFO     ✅ Signal Validator initialized (adaptive confidence threshold)                                  auto_trader.py:288
+                    INFO     ✅ Portfolio Manager initialized (portfolio-aware trading)                                       auto_trader.py:306
+                    INFO     📋 Loaded user risk settings for e4f7f9e4... | Risk Level: 4/5 | Risk Per Trade: 1.5% | Max     auto_trader.py:2338
+                             Position: $35 | SL: 5.0% | TP: 3.0%                                                                                
+                    INFO     ✅ Risk Manager initialized with USER SETTINGS | User: e4f7f9e4... | Risk Level: 4/5 (1.5% risk) auto_trader.py:367
+                             | Max Position: $35 | SL: 5.0% | TP: 3.0% | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅ |                         
+                             Leverage: 10x                                                                                                      
+[12/16/25 06:49:29] INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+                    INFO     🔗 Connected Risk Manager to Position Monitor                                                    auto_trader.py:389
+                    INFO     ✅ Market Intelligence initialized (liquidity check, sentiment, dynamic SL/TP)                   auto_trader.py:398
+                    INFO     ✅ Rate Limiter initialized: 3/cycle, 5/hour, 15/day                                             auto_trader.py:411
+                    INFO     ✅ Signal Deduplicator initialized (6h window, prefer newest)                                    auto_trader.py:421
+                    INFO     ✅ Symbol Normalizer initialized (unified format across all components)                          auto_trader.py:435
+                    INFO     ✅ Transaction Manager initialized (atomic DB operations)                                        auto_trader.py:441
+                    INFO     ✅ Position Lock Manager initialized (race condition prevention)                                 auto_trader.py:445
+                    WARNING  Core modules initialization failed: __init__() got an unexpected keyword argument                auto_trader.py:483
+                             'max_daily_loss_pct'                                                                                               
+                    WARNING  DCA Manager initialization failed: 'DCAManager' object has no attribute 'get_user_dca_settings'  auto_trader.py:518
+                    INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+                    INFO     Initialized with 2 strategies on binance                                                         auto_trader.py:580
+                    INFO     Default fallback symbols: ['BTC/USDT', 'ETH/USDT'] (actual symbols from DB signals)              auto_trader.py:581
+                    INFO     Testnet mode: False                                                                              auto_trader.py:582
+                    INFO     WebSocket: enabled                                                                               auto_trader.py:583
+                    INFO     Position Monitor: enabled                                                                        auto_trader.py:584
+                    INFO     Portfolio Manager: enabled                                                                       auto_trader.py:585
+                    INFO     Risk Manager: enabled                                                                            auto_trader.py:586
+                    INFO     DCA Manager: disabled                                                                            auto_trader.py:587
+                    INFO       └─ Risk Level: aggressive | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅                       auto_trader.py:591
+                    INFO     Bot started - initial interval: 3600 seconds (adaptive enabled)                                 auto_trader.py:1893
+                    INFO     📅 HIGH-IMPACT ECONOMIC EVENTS THIS WEEK:                                                       auto_trader.py:1874
+                    INFO        🔴 FOMC Interest Rate Decision: 2025-12-17 19:00 UTC                                         auto_trader.py:1876
+                    INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 06:49:31] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 06:49:32] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+[12/16/25 06:49:33] INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 4 active signals from trading_signals: ['VOXEL/USDT', 'LUNA/USDT', 'FIS/USDT',          auto_trader.py:987
+                             'ACE/USDT']                                                                                                        
+                    INFO     🔍 Deduplication: 0 duplicates removed, 4 stale removed, 0 upgraded | 0 signals remaining       auto_trader.py:1591
+                    WARNING  ⚠️ No signals in trading_signals table, using default symbols                                    auto_trader.py:1605
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+                    WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 06:49:35] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 06:49:36] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 06:49:37] INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 4 active signals from trading_signals: ['VOXEL/USDT', 'LUNA/USDT', 'FIS/USDT',          auto_trader.py:987
+                             'ACE/USDT']                                                                                                        
+                    WARNING  ⚠️ Found 4 signals but ALL are HOLD/0% confidence - treating as no signals for FALLBACK          auto_trader.py:1053
+                    INFO     📊 No actionable signals in trading_signals table - falling back to COUNCIL V2.0 Edge           auto_trader.py:1234
+                             Function...                                                                                                        
+                    INFO        (titan_v3 signals were HOLD/0% confidence or no signals at all)                              auto_trader.py:1235
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3445 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+[12/16/25 06:49:38] INFO     ✅ Selected top 5 symbols for AI: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT'] auto_trader.py:1241
+                    INFO     📊 Using 2 pre-fetched market data symbols                                                      auto_trader.py:1246
+[12/16/25 06:49:39] INFO     🤖 Requesting AI analysis for 2 symbols...                                                      auto_trader.py:1288
+[12/16/25 06:49:39] INFO     🤖 K3: Calling Edge Function for 2 symbols: ['BTC', 'ETH']                          supabase_analysis_service.py:74
+                    INFO     📡 Edge Function attempt 1/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+[12/16/25 06:50:15] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:51:16] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:51:43] INFO     📥 Response status: 200                                                             supabase_analysis_service.py:91
+                    INFO     📥 Response data keys: ['success', 'signals', 'isDemo', 'timestamp', 'modelsUsed', supabase_analysis_service.py:127
+                             'toolsUsed']                                                                                                       
+                    INFO     ✅ K3: Received 2 signals from Edge Function                                       supabase_analysis_service.py:156
+                    INFO        📊 ETH: HOLD (98%)                                                              supabase_analysis_service.py:196
+                    INFO        📊 BTC: HOLD (82%)                                                              supabase_analysis_service.py:196
+                    INFO     ✅ K3: Mapped 2 actionable signals                                                 supabase_analysis_service.py:202
+[12/16/25 06:51:43] INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+[12/16/25 06:51:44] INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=0.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     💾 Saved NEW signal for ETH to DB (TP=2830.0332, SL=3063.438)                                   auto_trader.py:1446
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     💾 Saved NEW signal for BTC to DB (TP=83492.5851, SL=90378.5715)                                auto_trader.py:1446
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 06:51:48] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 06:51:49] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+[12/16/25 06:51:50] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 06:52:16] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:53:17] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:54:17] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:54:18] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+[12/16/25 06:54:19] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 06:55:19] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:56:20] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:57:20] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:58:21] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:59:22] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:59:23] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:00:24] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:01:24] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:01:50] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:01:51] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:01:53] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 6 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2, 'titan_v3': 4}             auto_trader.py:894
+                    INFO        (0 user-specific, 6 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 6 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT', 'VOXEL/USDT',           auto_trader.py:987
+                             'LUNA/USDT', 'FIS/USDT', 'ACE/USDT']                                                                               
+                    INFO     🔍 Deduplication: 0 duplicates removed, 4 stale removed, 0 upgraded | 2 signals remaining       auto_trader.py:1591
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDT', 'BTC/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDT', 'BTC/USDT']                                 auto_trader.py:1611
+                    WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 07:01:55] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:01:56] INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 6 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2, 'titan_v3': 4}             auto_trader.py:894
+                    INFO        (0 user-specific, 6 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 6 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT', 'VOXEL/USDT',           auto_trader.py:987
+                             'LUNA/USDT', 'FIS/USDT', 'ACE/USDT']                                                                               
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDT', 'BTC/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDT', 'BTC/USDT']                            auto_trader.py:1065
+[12/16/25 07:01:57] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.15, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+[12/16/25 07:01:58] INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:01:59] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:02:00] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+[12/16/25 07:02:01] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:02:25] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:03:26] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:04:27] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:04:28] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:05:28] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:06:29] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:07:30] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:08:30] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:09:31] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:09:32] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:10:33] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:11:34] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:12:01] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:12:02] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:12:04] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 5 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2, 'titan_v3': 3}             auto_trader.py:894
+                    INFO        (0 user-specific, 5 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 5 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT', 'VOXEL/USDT',           auto_trader.py:987
+                             'LUNA/USDT', 'FIS/USDT']                                                                                           
+                    INFO     🔍 Deduplication: 0 duplicates removed, 3 stale removed, 0 upgraded | 2 signals remaining       auto_trader.py:1591
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDT', 'BTC/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDT', 'BTC/USDT']                                 auto_trader.py:1611
+                    WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 07:12:07] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:12:08] INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 5 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2, 'titan_v3': 3}             auto_trader.py:894
+                    INFO        (0 user-specific, 5 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 5 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT', 'VOXEL/USDT',           auto_trader.py:987
+                             'LUNA/USDT', 'FIS/USDT']                                                                                           
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDT', 'BTC/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDT', 'BTC/USDT']                            auto_trader.py:1065
+[12/16/25 07:12:09] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.15, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+                    INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:12:11] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:12:12] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+                    INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:12:34] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:13:35] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:14:36] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:14:37] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:15:38] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:16:38] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:17:43] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:18:44] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:19:44] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:19:45] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:20:46] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:21:47] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:22:12] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:22:14] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:22:15] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDT', 'BTC/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDT', 'BTC/USDT']                                 auto_trader.py:1611
+[12/16/25 07:22:16] WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 07:22:18] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 07:22:19] INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDT', 'BTC/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDT', 'BTC/USDT']                            auto_trader.py:1065
+[12/16/25 07:22:20] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.15, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+                    INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:22:22] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:22:23] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+                    INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:22:48] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:23:48] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:24:49] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:24:50] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:25:51] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:26:52] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:27:52] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:28:53] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:29:54] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:29:55] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:30:55] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:31:56] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:32:23] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:32:25] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:32:26] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDT', 'BTC/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDT', 'BTC/USDT']                                 auto_trader.py:1611
+[12/16/25 07:32:27] WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 07:32:29] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 07:32:30] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDT', 'BTC/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDT', 'BTC/USDT']                            auto_trader.py:1065
+[12/16/25 07:32:31] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.12, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+[12/16/25 07:32:32] INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:32:33] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:32:34] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+[12/16/25 07:32:35] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:32:57] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:33:58] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:34:59] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:35:00] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:36:01] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:37:01] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:38:02] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:39:03] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:40:03] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:40:04] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:41:05] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:42:06] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:42:35] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:42:36] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:42:38] WARNING  No sufficient trading capital found in USDT, USDC, or FIAT.                                     auto_trader.py:1500
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDT', 'BTC/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDT', 'BTC/USDT']                                 auto_trader.py:1611
+                    WARNING  Could not determine account equity, using default                                                auto_trader.py:667
+[12/16/25 07:42:40] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:42:41] INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDT', 'BTC/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDT', 'BTC/USDT']                            auto_trader.py:1065
+[12/16/25 07:42:42] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: HOLD - [COUNCIL] Unanimous council alignment on HOLD (CIO 65%, Exec   auto_trader.py:1311
+                             82%, HoR 88%, Risk PASS) amid mixed signals: bullish macro/LT catalysts (halving supply shock,                     
+                             ETF inflows, fiat debasement; 92/100 LT value) vs. bearish short-term microstructure (CVD -34,                     
+                             thin bids, spoofed asks, 18.4% cascade/VaR risks). Z-Score oversold + Kijun trigger preserves                      
+                             asymmetric R:R (>2:1) without portfolio drag (Sharpe neutral, drawdown <5.1%). Audit fidelity                      
+                             confirmed; re-eval on FOMC/Kijun $87.4k.                                                                           
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.12, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous team rejection of SELL proposal due to     auto_trader.py:1311
+                             critical data hallucinations (fictional BTC $2.9k vs. real ~$66-67k Oct 2024 per                                   
+                             CME/Coinbase/Glassnode). Audit FAIL on data integrity voids all tactical signals                                   
+                             (orderflow/VaR/Z-Score ungrounded). Fundamentals intact (halving supply shock, ETF inflows                         
+                             >$60B, institutional HODL); macro transient. Portfolio NET NEUTRAL per Q4 limits (max 5%                           
+                             exposure). No validated alpha for action—monitor real-time feeds (DXY/10Y/OI) for grounded                         
+                             proposals.                                                                                                         
+[12/16/25 07:42:43] INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:42:44] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:42:45] INFO     Account Balance: 0.00 USDT | Open Positions: 0                                                  auto_trader.py:1808
+[12/16/25 07:42:46] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:43:06] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:44:07] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:45:07] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:45:08] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+[12/16/25 07:45:09] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:46:09] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159

@@ -1,0 +1,9 @@
+/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/rust_edge_function_test/target/debug/deps/utf8_iter-09be6fe1c1163a1d.d: /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/lib.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/indices.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/report.rs
+
+/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/rust_edge_function_test/target/debug/deps/libutf8_iter-09be6fe1c1163a1d.rlib: /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/lib.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/indices.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/report.rs
+
+/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/rust_edge_function_test/target/debug/deps/libutf8_iter-09be6fe1c1163a1d.rmeta: /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/lib.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/indices.rs /home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/report.rs
+
+/home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/lib.rs:
+/home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/indices.rs:
+/home/filip-liwa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.0.4/src/report.rs:

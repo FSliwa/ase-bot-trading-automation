@@ -1,0 +1,906 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+⚠️ ENCRYPTION_KEY not set - Fernet encryption disabled. Frontend-encrypted keys (AES-GCM) will still work. For Fernet encryption, set ENCRYPTION_KEY in .env
+[12/16/25 13:21:09] INFO     🤖 Starting bot for user: 43e88b0b-d34f-4795-8efa-5507f40426e8                               run_single_user.py:104
+                    INFO     🔍 Looking up API keys for user 43e88b0b-d34f-4795-8efa-5507f40426e8...                       run_single_user.py:44
+[12/16/25 13:21:10] INFO     🚀 Starting bot for user 43e88b0b-d34f-4795-8efa-5507f40426e8 on binance (testnet=False)...   run_single_user.py:64
+[12/16/25 13:21:10] INFO     Initializing Automated Trading Bot...                                                            auto_trader.py:146
+[12/16/25 13:21:11] INFO     📊 Position Monitor SL/TP: SL=250.0% | TP=350.0%                                                 auto_trader.py:211
+[12/16/25 13:21:11] INFO     ✅ Position lock manager initialized for PositionMonitor                                    position_monitor.py:348
+                    INFO     ✅ Close operation RateLimiter initialized for PositionMonitor                              position_monitor.py:377
+                    INFO     PositionMonitorService initialized (interval: 5.0s) | Trailing: True | Dynamic SL/TP: True  position_monitor.py:379
+                             | Partial TP: True | Time Exit: True | Auto SL/TP: True | 🚨 Liquidation Monitor: True                             
+                             (warn:15.0% / auto-close:3.5%) | 💾 Hybrid Persistence: True (interval: 5.0s)                                      
+                    INFO     DatabaseManager connected to PositionMonitor for reevaluation logging                       position_monitor.py:392
+                    INFO     💾 Supabase client initialized for hybrid persistence                                       position_monitor.py:418
+                    INFO     💾 Restored 8 positions from Supabase                                                       position_monitor.py:514
+                    INFO     💾 Hybrid Persistence: Restored 8 positions from Supabase                                  position_monitor.py:1503
+                    INFO     💾 Persistence task started                                                                position_monitor.py:1513
+                    INFO     ✅ Position monitor started                                                                position_monitor.py:1515
+                    INFO     ✅ Position Monitor started (5s interval) | Auto SL/TP: ✅ | Partial TP: ✅ | Time Exit: ✅ (12h auto_trader.py:233
+                             max)                                                                                                               
+                    INFO     No existing positions to restore from database                                             position_monitor.py:1238
+                    INFO     Position monitoring loop started                                                           position_monitor.py:1541
+                    INFO     💾 Persistence loop started (interval: 5.0s)                                                position_monitor.py:675
+[12/16/25 13:21:16] WARNING  ⏰ TIME EXIT (PROFITABLE): BTC/USDT | Held for 17.2h (max: 12.0h) | P&L: +1.49% | Price:   position_monitor.py:1761
+                             87200.0000                                                                                                         
+DEBUG: place_order for binance - SL=None, TP=None
+DEBUG: place_order for binance params: {}
+Error placing order: binance {"code":-2010,"msg":"This symbol is not permitted for this account."}
+[12/16/25 13:21:17] ERROR    Failed to execute time exit for BTC/USDT: binance {"code":-2010,"msg":"This symbol is not  position_monitor.py:1813
+                             permitted for this account."}                                                                                      
+                    WARNING  🛑 STOP LOSS TRIGGERED: GUN/USDT | Price: 0.0164 | SL: 0.0246 | Entry: 0.0252              position_monitor.py:1690
+[12/16/25 13:21:17] WARNING  🛑 SL triggered for GUN/USDT @ 0.01644                                                          auto_trader.py:1922
+[12/16/25 13:21:21] INFO     📊 Adjusting close quantity from balance: 1711.372650 → 0.372650                           position_monitor.py:2873
+                    WARNING  🧹 DUST POSITION: GUN/USDT qty=0.37265000 below exchange minimum 1.0. Cannot close via     position_monitor.py:2899
+                             order.                                                                                                             
+                    WARNING  🛑 STOP LOSS TRIGGERED: NXPC/USDT | Price: 0.3848 | SL: 0.4049 | Entry: 0.4153             position_monitor.py:1690
+[12/16/25 13:21:21] WARNING  🛑 SL triggered for NXPC/USDT @ 0.3848                                                          auto_trader.py:1922
+[12/16/25 13:21:24] INFO     No positions on binance to sync                                                            position_monitor.py:1277
+[12/16/25 13:21:25] INFO     📊 Adjusting close quantity from balance: 158.243430 → 0.043430                            position_monitor.py:2873
+                    WARNING  🧹 DUST POSITION: NXPC/USDT qty=0.04343000 below exchange minimum 0.1. Cannot close via    position_monitor.py:2899
+                             order.                                                                                                             
+                    WARNING  🛑 STOP LOSS TRIGGERED: SOL/USDC | Price: 128.5700 | SL: 129.4704 | Entry: 132.7902        position_monitor.py:1690
+[12/16/25 13:21:25] WARNING  🛑 SL triggered for SOL/USDC @ 128.57                                                           auto_trader.py:1922
+[12/16/25 13:21:27] INFO     ✅ WebSocket real-time data connected                                                            auto_trader.py:262
+[12/16/25 13:21:27] INFO     📡 Supabase Edge Function URL:                                                      supabase_analysis_service.py:36
+                             https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                                           
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                  auto_trader.py:278
+                    INFO     ✅ Signal Validator initialized (adaptive confidence threshold)                                  auto_trader.py:288
+                    INFO     ✅ Portfolio Manager initialized (portfolio-aware trading)                                       auto_trader.py:306
+                    INFO     No trading settings found for user 43e88b0b..., using defaults                                  auto_trader.py:2350
+                    INFO     ✅ Risk Manager initialized with DEFAULTS | Level: MODERATE (1% risk) | Trailing: ✅ | Dynamic   auto_trader.py:378
+                             SL/TP: ✅ | Kelly: ✅ | Default Leverage: 10x (auto-adjusted)                                                      
+[12/16/25 13:21:27] INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:853
+                    INFO     🔗 Connected Risk Manager to Position Monitor                                                    auto_trader.py:391
+                    INFO     ✅ Market Intelligence initialized (liquidity check, sentiment, dynamic SL/TP)                   auto_trader.py:400
+                    INFO     ✅ Rate Limiter initialized: 3/cycle, 5/hour, 15/day                                             auto_trader.py:413
+                    INFO     ✅ Signal Deduplicator initialized (6h window, prefer newest)                                    auto_trader.py:423
+                    INFO     ✅ Symbol Normalizer initialized (unified format across all components)                          auto_trader.py:437
+                    INFO     ✅ Transaction Manager initialized (atomic DB operations)                                        auto_trader.py:443
+                    INFO     ✅ Position Lock Manager initialized (race condition prevention)                                 auto_trader.py:447
+                    WARNING  Core modules initialization failed: __init__() got an unexpected keyword argument                auto_trader.py:485
+                             'max_daily_loss_pct'                                                                                               
+                    WARNING  DCA Manager initialization failed: 'DCAConfig' object has no attribute 'safety_order_scale'      auto_trader.py:520
+                    INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:853
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+                    INFO     Initialized with 2 strategies on binance                                                         auto_trader.py:582
+                    INFO     Default fallback symbols: ['BTC/USDT', 'ETH/USDT'] (actual symbols from DB signals)              auto_trader.py:583
+                    INFO     Testnet mode: False                                                                              auto_trader.py:584
+                    INFO     WebSocket: enabled                                                                               auto_trader.py:585
+                    INFO     Position Monitor: enabled                                                                        auto_trader.py:586
+                    INFO     Portfolio Manager: enabled                                                                       auto_trader.py:587
+                    INFO     Risk Manager: enabled                                                                            auto_trader.py:588
+                    INFO     DCA Manager: disabled                                                                            auto_trader.py:589
+                    INFO       └─ Risk Level: moderate | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅                         auto_trader.py:593
+                    INFO     Bot started - initial interval: 3600 seconds (adaptive enabled)                                 auto_trader.py:1895
+                    INFO     📅 HIGH-IMPACT ECONOMIC EVENTS THIS WEEK:                                                       auto_trader.py:1876
+                    INFO        🔴 FOMC Interest Rate Decision: 2025-12-17 19:00 UTC                                         auto_trader.py:1878
+                    INFO     Starting trading cycle...                                                                       auto_trader.py:1507
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1541
+[12/16/25 13:21:28] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1559
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1566
+[12/16/25 13:21:29] WARNING  ⚠️ GHOST POSITION: SOL/USDC exists in DB but NOT on exchange. Skipping close order.         position_monitor.py:2881
+                             Position will be cleaned up by reconciliation.                                                                     
+                    WARNING  ⏰ TIME EXIT (PROFITABLE): SOL/USDT | Held for 17.2h (max: 12.0h) | P&L: +2.63% | Price:   position_monitor.py:1761
+                             128.5600                                                                                                           
+[12/16/25 13:21:29] INFO     Using USDC as quote currency (Balance: 376.29)                                                  auto_trader.py:1486
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1574
+[12/16/25 13:21:30] INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:861
+                    INFO     📊 No active signals found in trading_signals table (last 6h)                                    auto_trader.py:882
+                    INFO        Searched trusted sources: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                               auto_trader.py:883
+                    WARNING  ⚠️ No signals in trading_signals table, using default symbols                                    auto_trader.py:1607
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC', 'ETH/USDC']                                 auto_trader.py:1613
+DEBUG: place_order for binance - SL=None, TP=None
+DEBUG: place_order for binance params: {}
+Error placing order: binance {"code":-2010,"msg":"This symbol is not permitted for this account."}
+[12/16/25 13:21:32] ERROR    Failed to execute time exit for SOL/USDT: binance {"code":-2010,"msg":"This symbol is not  position_monitor.py:1813
+                             permitted for this account."}                                                                                      
+                    WARNING  🛑 STOP LOSS TRIGGERED: ETH/USDC | Price: 2954.0100 | SL: 3039.2493 | Entry: 3117.1787     position_monitor.py:1690
+[12/16/25 13:21:32] WARNING  🛑 SL triggered for ETH/USDC @ 2954.01                                                          auto_trader.py:1922
+[12/16/25 13:21:35] INFO     Fetching market data...                                                                         auto_trader.py:1621
+[12/16/25 13:21:36] INFO     📊 Adjusting close quantity from balance: 0.026109 → 0.000084                              position_monitor.py:2873
+                    WARNING  🧹 DUST POSITION: ETH/USDC qty=0.00008385 below exchange minimum 0.0001. Cannot close via  position_monitor.py:2899
+                             order.                                                                                                             
+                    WARNING  🛑 STOP LOSS TRIGGERED: ZEC/USDT | Price: 395.7000 | SL: 402.9607 | Entry: 413.2931        position_monitor.py:1690
+[12/16/25 13:21:36] WARNING  🛑 SL triggered for ZEC/USDT @ 395.7                                                            auto_trader.py:1922
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1635
+[12/16/25 13:21:37] INFO     Running AI market analysis...                                                                   auto_trader.py:1655
+[12/16/25 13:21:38] INFO     💰 Using USDC as quote currency (USDC: 376.28922885, USDT: 0)                                   auto_trader.py:1024
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1032
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:861
+                    INFO     📊 No active signals found in trading_signals table (last 6h)                                    auto_trader.py:882
+                    INFO        Searched trusted sources: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                               auto_trader.py:883
+                    INFO     📊 No actionable signals in trading_signals table - falling back to COUNCIL V2.0 Edge           auto_trader.py:1236
+                             Function...                                                                                                        
+                    INFO        (titan_v3 signals were HOLD/0% confidence or no signals at all)                              auto_trader.py:1237
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3449 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+                    INFO     ✅ Selected top 5 symbols for AI: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT'] auto_trader.py:1243
+                    INFO     📊 Using 2 pre-fetched market data symbols                                                      auto_trader.py:1248
+[12/16/25 13:21:39] INFO     🤖 Requesting AI analysis for 2 symbols...                                                      auto_trader.py:1290
+[12/16/25 13:21:39] INFO     🤖 K3: Calling Edge Function for 2 symbols: ['ETH', 'BTC']                          supabase_analysis_service.py:83
+                    INFO     📡 Edge Function attempt 1/4 (timeout: 200s)                                        supabase_analysis_service.py:94
+[12/16/25 13:21:39] INFO     📊 Adjusting close quantity from balance: 0.213793 → 0.000793                              position_monitor.py:2873
+                    WARNING  🧹 DUST POSITION: ZEC/USDT qty=0.00079280 below exchange minimum 0.001. Cannot close via   position_monitor.py:2899
+                             order.                                                                                                             
+[12/16/25 13:22:38] WARNING  ⚠️ Position validation found 1 issues: 0 unmonitored, 1 orphaned                            position_monitor.py:3222
+                    INFO     🧹 Removed orphaned monitor: USDG/USDC                                                     position_monitor.py:3238
+[12/16/25 13:23:40] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:24:10] INFO     📥 Response status: 504                                                            supabase_analysis_service.py:100
+                    ERROR    ❌ Edge Function failed with status 504:                                           supabase_analysis_service.py:104
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                              supabase_analysis_service.py:108
+                    INFO     ⏳ Retrying in 2s...                                                               supabase_analysis_service.py:119
+[12/16/25 13:24:12] INFO     📡 Edge Function attempt 2/4 (timeout: 200s)                                        supabase_analysis_service.py:94
+[12/16/25 13:24:43] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:25:46] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:26:42] INFO     📥 Response status: 504                                                            supabase_analysis_service.py:100
+                    ERROR    ❌ Edge Function failed with status 504:                                           supabase_analysis_service.py:104
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                              supabase_analysis_service.py:108
+                    INFO     ⏳ Retrying in 4s...                                                               supabase_analysis_service.py:119
+[12/16/25 13:26:46] INFO     📡 Edge Function attempt 3/4 (timeout: 200s)                                        supabase_analysis_service.py:94
+[12/16/25 13:26:49] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:26:52] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1425
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1437
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1484
+[12/16/25 13:27:55] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:29:00] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:29:16] INFO     📥 Response status: 504                                                            supabase_analysis_service.py:100
+                    ERROR    ❌ Edge Function failed with status 504:                                           supabase_analysis_service.py:104
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                              supabase_analysis_service.py:108
+                    INFO     ⏳ Retrying in 8s...                                                               supabase_analysis_service.py:119
+[12/16/25 13:29:24] INFO     📡 Edge Function attempt 4/4 (timeout: 200s)                                        supabase_analysis_service.py:94
+[12/16/25 13:30:03] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:31:06] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:31:54] INFO     📥 Response status: 504                                                            supabase_analysis_service.py:100
+                    ERROR    ❌ Edge Function failed with status 504:                                           supabase_analysis_service.py:104
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                              supabase_analysis_service.py:108
+[12/16/25 13:31:54] INFO     No trading signals from DB or AI                                                                auto_trader.py:1294
+                    INFO        📊 Possible reasons:                                                                         auto_trader.py:1296
+                    INFO        1. titan_v3 returned HOLD/0% confidence (FALLBACK triggered)                                 auto_trader.py:1297
+                    INFO        2. COUNCIL V2.0 Edge Function returned empty signals[]                                       auto_trader.py:1298
+                    INFO        3. Market conditions: Fear & Greed index indicates caution                                   auto_trader.py:1299
+                    INFO        ➡️ Built-in strategies (Momentum/MeanReversion) will be used as last fallback                 auto_trader.py:1300
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1664
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1667
+[12/16/25 13:32:07] INFO     No trading signals generated this cycle                                                         auto_trader.py:1795
+[12/16/25 13:32:09] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:32:10] INFO     Account Balance: 376.29 USDC | Open Positions: 0                                                auto_trader.py:1810
+[12/16/25 13:32:13] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1425
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1437
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1484
+[12/16/25 13:32:13] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1859
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1907
+[12/16/25 13:33:16] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3228
+[12/16/25 13:34:19] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:35:22] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:36:25] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:37:28] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:37:31] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 13:38:34] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:39:37] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:40:40] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:41:43] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:42:13] INFO     Starting trading cycle...       auto_trader.py:1507
+                    INFO     📊 Rate Limiter: 0/15 today,    auto_trader.py:1541
+                             0/5 this hour, positions: 0                        
+[12/16/25 13:42:14] INFO     📈 Market Sentiment: Fear &     auto_trader.py:1559
+                             Greed = 11 (Extreme Fear) |                        
+                             Regime: bear | Safe to trade:                      
+                             ✅                                                 
+                    WARNING    ⚠️ EXTREME FEAR (11) -         auto_trader.py:1566
+                             Consider reduced position sizes                    
+[12/16/25 13:42:15] INFO     Using USDC as quote currency    auto_trader.py:1486
+                             (Balance: 376.29)                                  
+                    INFO     📊 Checking trading_signals     auto_trader.py:1574
+                             table for active signals...                        
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    WARNING  ⚠️ No signals in trading_signals auto_trader.py:1607
+                             table, using default symbols                       
+                    INFO     Active trading symbols for this auto_trader.py:1613
+                             cycle: ['ETH/USDC', 'XRP/USDC',                    
+                             'SOL/USDC', 'BTC/USDC',                            
+                             'USDC/USDC', 'BTC/USDC',                           
+                             'ETH/USDC']                                        
+[12/16/25 13:42:21] INFO     Fetching market data...         auto_trader.py:1621
+Error fetching ticker stats for USDC/USDC: binance does not have market symbol USDC/USDC
+[12/16/25 13:42:23] INFO     Market data fetched for 4       auto_trader.py:1635
+                             symbols                                            
+                    INFO     Running AI market analysis...   auto_trader.py:1655
+[12/16/25 13:42:24] INFO     💰 Using USDC as quote currency auto_trader.py:1024
+                             (USDC: 376.28922885, USDT: 0)                      
+                    INFO     📊 Checking trading_signals     auto_trader.py:1032
+                             table for active BUY/SELL                          
+                             signals...                                         
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    INFO     📊 No actionable signals in     auto_trader.py:1236
+                             trading_signals table - falling                    
+                             back to COUNCIL V2.0 Edge                          
+                             Function...                                        
+                    INFO        (titan_v3 signals were       auto_trader.py:1237
+                             HOLD/0% confidence or no                           
+                             signals at all)                                    
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3449 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+[12/16/25 13:42:25] INFO     ✅ Selected top 5 symbols for   auto_trader.py:1243
+                             AI: ['BTC/USDT', 'ETH/USDT',                       
+                             'USDC/USDT', 'SOL/USDT',                           
+                             'XRP/USDT']                                        
+                    INFO     📊 Using 4 pre-fetched market   auto_trader.py:1248
+                             data symbols                                       
+[12/16/25 13:42:27] INFO     🤖 Requesting AI analysis for 4 auto_trader.py:1290
+                             symbols...                                         
+[12/16/25 13:42:27] INFO     🤖 K3: Calling Edge supabase_analysis_service.py:83
+                             Function for 4                                     
+                             symbols: ['ETH',                                   
+                             'SOL', 'XRP',                                      
+                             'BTC']                                             
+                    INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 1/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 13:42:46] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:42:49] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 13:43:52] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:44:55] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:44:57] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             2s...                                              
+[12/16/25 13:44:59] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 2/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 13:45:58] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:47:02] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:47:29] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             4s...                                              
+[12/16/25 13:47:33] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 3/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 13:48:05] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:48:08] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 13:49:11] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:50:03] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             8s...                                              
+[12/16/25 13:50:11] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 4/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 13:50:14] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:51:17] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:52:19] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:52:42] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+[12/16/25 13:52:42] INFO     No trading signals from DB or   auto_trader.py:1294
+                             AI                                                 
+                    INFO        📊 Possible reasons:         auto_trader.py:1296
+                    INFO        1. titan_v3 returned HOLD/0% auto_trader.py:1297
+                             confidence (FALLBACK triggered)                    
+                    INFO        2. COUNCIL V2.0 Edge         auto_trader.py:1298
+                             Function returned empty                            
+                             signals[]                                          
+                    INFO        3. Market conditions: Fear & auto_trader.py:1299
+                             Greed index indicates caution                      
+                    INFO        ➡️ Built-in strategies        auto_trader.py:1300
+                             (Momentum/MeanReversion) will                      
+                             be used as last fallback                           
+                    INFO     ⚠️ No AI signals - using         auto_trader.py:1664
+                             built-in strategies                                
+                             (Momentum/MeanReversion)                           
+                    INFO     Executing trading strategies... auto_trader.py:1667
+[12/16/25 13:52:47] INFO     No trading signals generated    auto_trader.py:1795
+                             this cycle                                         
+[12/16/25 13:52:50] INFO     Account Balance: 376.29 USDC |  auto_trader.py:1810
+                             Open Positions: 0                                  
+[12/16/25 13:52:54] INFO     📊 Adaptive interval: 600s (no  auto_trader.py:1859
+                             positions, normal conditions)                      
+                    INFO     💤 Next cycle in 600s...        auto_trader.py:1907
+[12/16/25 13:53:22] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:53:26] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 13:54:29] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:55:32] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:56:35] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:57:37] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:58:40] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 13:58:43] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 13:59:47] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:00:50] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:01:52] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:02:54] INFO     Starting trading cycle...       auto_trader.py:1507
+                    INFO     📊 Rate Limiter: 0/15 today,    auto_trader.py:1541
+                             0/5 this hour, positions: 0                        
+[12/16/25 14:02:55] INFO     📈 Market Sentiment: Fear &     auto_trader.py:1559
+                             Greed = 11 (Extreme Fear) |                        
+                             Regime: sideways | Safe to                         
+                             trade: ✅                                          
+                    WARNING    ⚠️ EXTREME FEAR (11) -         auto_trader.py:1566
+                             Consider reduced position sizes                    
+[12/16/25 14:02:55] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:02:56] INFO     Using USDC as quote currency    auto_trader.py:1486
+                             (Balance: 376.29)                                  
+                    INFO     📊 Checking trading_signals     auto_trader.py:1574
+                             table for active signals...                        
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    WARNING  ⚠️ No signals in trading_signals auto_trader.py:1607
+                             table, using default symbols                       
+                    INFO     Active trading symbols for this auto_trader.py:1613
+                             cycle: ['ETH/USDC', 'SOL/USDC',                    
+                             'XRP/USDC', 'SOL/USDC',                            
+                             'USDC/USDC', 'BTC/USDC',                           
+                             'XRP/USDC', 'USDC/USDC',                           
+                             'BTC/USDC', 'ETH/USDC']                            
+[12/16/25 14:03:02] INFO     Fetching market data...         auto_trader.py:1621
+Error fetching ticker stats for USDC/USDC: binance does not have market symbol USDC/USDC
+Error fetching ticker stats for USDC/USDC: binance does not have market symbol USDC/USDC
+[12/16/25 14:03:04] INFO     Market data fetched for 4       auto_trader.py:1635
+                             symbols                                            
+[12/16/25 14:03:05] INFO     Running AI market analysis...   auto_trader.py:1655
+                    INFO     💰 Using USDC as quote currency auto_trader.py:1024
+                             (USDC: 376.28922885, USDT: 0)                      
+                    INFO     📊 Checking trading_signals     auto_trader.py:1032
+                             table for active BUY/SELL                          
+                             signals...                                         
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    INFO     📊 No actionable signals in     auto_trader.py:1236
+                             trading_signals table - falling                    
+                             back to COUNCIL V2.0 Edge                          
+                             Function...                                        
+                    INFO        (titan_v3 signals were       auto_trader.py:1237
+                             HOLD/0% confidence or no                           
+                             signals at all)                                    
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3449 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+[12/16/25 14:03:06] INFO     ✅ Selected top 5 symbols for   auto_trader.py:1243
+                             AI: ['BTC/USDT', 'ETH/USDT',                       
+                             'USDC/USDT', 'SOL/USDT',                           
+                             'XRP/USDT']                                        
+                    INFO     📊 Using 4 pre-fetched market   auto_trader.py:1248
+                             data symbols                                       
+[12/16/25 14:03:08] INFO     🤖 Requesting AI analysis for 4 auto_trader.py:1290
+                             symbols...                                         
+[12/16/25 14:03:08] INFO     🤖 K3: Calling Edge supabase_analysis_service.py:83
+                             Function for 4                                     
+                             symbols: ['ETH',                                   
+                             'SOL', 'XRP',                                      
+                             'BTC']                                             
+                    INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 1/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:03:58] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:04:01] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+[12/16/25 14:04:02] INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:05:05] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:05:38] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             2s...                                              
+[12/16/25 14:05:40] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 2/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:06:08] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:07:11] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:08:10] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             4s...                                              
+[12/16/25 14:08:14] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:08:14] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 3/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:09:17] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:09:20] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:10:23] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:10:45] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             8s...                                              
+[12/16/25 14:10:53] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 4/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:11:26] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:12:29] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:13:23] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+[12/16/25 14:13:23] INFO     No trading signals from DB or   auto_trader.py:1294
+                             AI                                                 
+                    INFO        📊 Possible reasons:         auto_trader.py:1296
+                    INFO        1. titan_v3 returned HOLD/0% auto_trader.py:1297
+                             confidence (FALLBACK triggered)                    
+                    INFO        2. COUNCIL V2.0 Edge         auto_trader.py:1298
+                             Function returned empty                            
+                             signals[]                                          
+                    INFO        3. Market conditions: Fear & auto_trader.py:1299
+                             Greed index indicates caution                      
+                    INFO        ➡️ Built-in strategies        auto_trader.py:1300
+                             (Momentum/MeanReversion) will                      
+                             be used as last fallback                           
+                    INFO     ⚠️ No AI signals - using         auto_trader.py:1664
+                             built-in strategies                                
+                             (Momentum/MeanReversion)                           
+                    INFO     Executing trading strategies... auto_trader.py:1667
+[12/16/25 14:13:28] INFO     No trading signals generated    auto_trader.py:1795
+                             this cycle                                         
+[12/16/25 14:13:31] INFO     Account Balance: 376.29 USDC |  auto_trader.py:1810
+                             Open Positions: 0                                  
+[12/16/25 14:13:32] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:13:34] INFO     📊 Adaptive interval: 600s (no  auto_trader.py:1859
+                             positions, normal conditions)                      
+                    INFO     💤 Next cycle in 600s...        auto_trader.py:1907
+[12/16/25 14:14:35] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:14:38] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:15:41] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:16:44] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:17:47] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:18:50] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:19:53] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:19:56] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:21:00] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:22:03] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:23:06] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:23:34] INFO     Starting trading cycle...       auto_trader.py:1507
+                    INFO     📊 Rate Limiter: 0/15 today,    auto_trader.py:1541
+                             0/5 this hour, positions: 0                        
+[12/16/25 14:23:36] INFO     📈 Market Sentiment: Fear &     auto_trader.py:1559
+                             Greed = 11 (Extreme Fear) |                        
+                             Regime: sideways | Safe to                         
+                             trade: ✅                                          
+                    WARNING    ⚠️ EXTREME FEAR (11) -         auto_trader.py:1566
+                             Consider reduced position sizes                    
+                    INFO     Using USDC as quote currency    auto_trader.py:1486
+                             (Balance: 376.29)                                  
+                    INFO     📊 Checking trading_signals     auto_trader.py:1574
+                             table for active signals...                        
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    WARNING  ⚠️ No signals in trading_signals auto_trader.py:1607
+                             table, using default symbols                       
+                    INFO     Active trading symbols for this auto_trader.py:1613
+                             cycle: ['ETH/USDC', 'SOL/USDC',                    
+                             'XRP/USDC', 'SOL/USDC',                            
+                             'USDC/USDC', 'BTC/USDC',                           
+                             'XRP/USDC', 'USDC/USDC',                           
+                             'BTC/USDC', 'ETH/USDC']                            
+[12/16/25 14:23:42] INFO     Fetching market data...         auto_trader.py:1621
+Error fetching ticker stats for USDC/USDC: binance does not have market symbol USDC/USDC
+Error fetching ticker stats for USDC/USDC: binance does not have market symbol USDC/USDC
+[12/16/25 14:23:45] INFO     Market data fetched for 4       auto_trader.py:1635
+                             symbols                                            
+                    INFO     Running AI market analysis...   auto_trader.py:1655
+[12/16/25 14:23:46] INFO     💰 Using USDC as quote currency auto_trader.py:1024
+                             (USDC: 376.28922885, USDT: 0)                      
+                    INFO     📊 Checking trading_signals     auto_trader.py:1032
+                             table for active BUY/SELL                          
+                             signals...                                         
+                    INFO     📊 No BUY/SELL signals, checking auto_trader.py:861
+                             HOLD signals for monitoring...                     
+                    INFO     📊 No active signals found in    auto_trader.py:882
+                             trading_signals table (last 6h)                    
+                    INFO        Searched trusted sources:     auto_trader.py:883
+                             ['titan_v3',                                       
+                             'COUNCIL_V2.0_FALLBACK']                           
+                    INFO     📊 No actionable signals in     auto_trader.py:1236
+                             trading_signals table - falling                    
+                             back to COUNCIL V2.0 Edge                          
+                             Function...                                        
+                    INFO        (titan_v3 signals were       auto_trader.py:1237
+                             HOLD/0% confidence or no                           
+                             signals at all)                                    
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3449 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+                    INFO     ✅ Selected top 5 symbols for   auto_trader.py:1243
+                             AI: ['BTC/USDT', 'ETH/USDT',                       
+                             'USDC/USDT', 'SOL/USDT',                           
+                             'XRP/USDT']                                        
+                    INFO     📊 Using 4 pre-fetched market   auto_trader.py:1248
+                             data symbols                                       
+[12/16/25 14:23:48] INFO     🤖 Requesting AI analysis for 4 auto_trader.py:1290
+                             symbols...                                         
+[12/16/25 14:23:48] INFO     🤖 K3: Calling Edge supabase_analysis_service.py:83
+                             Function for 4                                     
+                             symbols: ['ETH',                                   
+                             'SOL', 'XRP',                                      
+                             'BTC']                                             
+                    INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 1/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:24:09] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:25:12] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:25:15] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:26:18] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:26:19] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             2s...                                              
+[12/16/25 14:26:21] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 2/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:27:21] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:28:24] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:28:51] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             4s...                                              
+[12/16/25 14:28:55] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 3/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:29:27] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:30:30] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:30:33] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:31:25] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+                    INFO     ⏳ Retrying in     supabase_analysis_service.py:119
+                             8s...                                              
+[12/16/25 14:31:33] INFO     📡 Edge Function    supabase_analysis_service.py:94
+                             attempt 4/4                                        
+                             (timeout: 200s)                                    
+[12/16/25 14:31:37] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:32:40] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:33:43] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:34:03] INFO     📥 Response        supabase_analysis_service.py:100
+                             status: 504                                        
+                    ERROR    ❌ Edge Function   supabase_analysis_service.py:104
+                             failed with status                                 
+                             504:                                               
+                    WARNING  ⏰ Gateway timeout supabase_analysis_service.py:108
+                             - Edge Function                                    
+                             may need more time                                 
+[12/16/25 14:34:03] INFO     No trading signals from DB or   auto_trader.py:1294
+                             AI                                                 
+                    INFO        📊 Possible reasons:         auto_trader.py:1296
+                    INFO        1. titan_v3 returned HOLD/0% auto_trader.py:1297
+                             confidence (FALLBACK triggered)                    
+                    INFO        2. COUNCIL V2.0 Edge         auto_trader.py:1298
+                             Function returned empty                            
+                             signals[]                                          
+                    INFO        3. Market conditions: Fear & auto_trader.py:1299
+                             Greed index indicates caution                      
+                    INFO        ➡️ Built-in strategies        auto_trader.py:1300
+                             (Momentum/MeanReversion) will                      
+                             be used as last fallback                           
+                    INFO     ⚠️ No AI signals - using         auto_trader.py:1664
+                             built-in strategies                                
+                             (Momentum/MeanReversion)                           
+                    INFO     Executing trading strategies... auto_trader.py:1667
+[12/16/25 14:34:09] INFO     No trading signals generated    auto_trader.py:1795
+                             this cycle                                         
+[12/16/25 14:34:12] INFO     Account Balance: 376.29 USDC |  auto_trader.py:1810
+                             Open Positions: 0                                  
+[12/16/25 14:34:15] INFO     📊 Adaptive interval: 600s (no  auto_trader.py:1859
+                             positions, normal conditions)                      
+                    INFO     💤 Next cycle in 600s...        auto_trader.py:1907
+[12/16/25 14:34:46] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:35:49] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:35:52] INFO     🔍 Reconciliation:         position_monitor.py:1425
+                             Exchange has 8 active                              
+                             positions/balances                                 
+                    INFO     🔍 Reconciliation:         position_monitor.py:1437
+                             Database has 0 OPEN                                
+                             positions                                          
+                    INFO     ✅ Reconciliation          position_monitor.py:1484
+                             complete: No ghost                                 
+                             positions found                                    
+[12/16/25 14:36:55] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:37:58] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          
+[12/16/25 14:39:01] INFO     ✅ Position validation OK: position_monitor.py:3228
+                             0 positions on exchange, 0                         
+                             monitored                                          

@@ -1,0 +1,11 @@
+nohup: zignorowane dane wejściowe
+🧪 ASE-Bot Local Test Server
+=============================
+📍 Port: 5000
+🌐 URL: http://localhost:5000
+🔍 Admin: http://localhost:5000/admin/
+⏰ Started at: 2025-09-26 20:11:25.134751
+🔧 Environment: Local Development
+--------------------------------------------------
+❌ Port 5000 is already in use
+Try using a different port or stop the existing service

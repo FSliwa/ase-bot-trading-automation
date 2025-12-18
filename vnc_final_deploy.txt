@@ -1,0 +1,70 @@
+# 🚀 VNC Final Deployment Commands
+
+## Dokończ wdrożenie PostgreSQL + Email w VNC
+
+### 1. Połącz się z serwerem VNC
+```
+Server: 185.70.196.214:5901
+Password: [VNC password]
+```
+
+### 2. Otwórz terminal w VNC i wykonaj:
+```bash
+# Przejdź do katalogu domowego
+cd ~
+
+# Sprawdź pliki
+ls -la deploy_postgresql_email.sh postgresql_database.py
+
+# Uruchom pełne wdrożenie (BEZ sudo!)
+./deploy_postgresql_email.sh
+```
+
+### 3. Gdy pojawi się nano z .env.db:
+```bash
+# Znajdź te linie i zmień na swoje dane:
+SMTP_USERNAME=your_gmail@gmail.com     # <- Twój email Gmail
+SMTP_PASSWORD=your_app_password        # <- Hasło aplikacji Gmail
+
+# Zapisz i wyjdź:
+Ctrl+X, Y, Enter
+```
+
+### 4. Po zakończeniu skryptu:
+```bash
+# Sprawdź status
+sudo systemctl status trading-bot
+
+# Test rejestracji
+curl -X POST http://localhost:8009/api/register \
+  -H "Content-Type: application/json" \
+  -d '{"username":"test123","password":"test12345","email":"test@test.com"}'
+```
+
+### 5. Test w przeglądarce:
+- **Rejestracja**: http://185.70.196.214:8009/register
+- **Login**: http://185.70.196.214:8009/login
+
+---
+
+## ✅ Sukces gdy widzisz:
+```
+🐘 PostgreSQL installation completed!
+✅ Database connection test successful!
+📧 Email system: Ready (needs SMTP configuration)
+🎉 PostgreSQL + Email Integration Deployment Completed!
+```
+
+## 🛠️ Jeśli coś nie działa:
+```bash
+# Sprawdź logi
+sudo journalctl -u trading-bot -f
+
+# Restart serwisu
+sudo systemctl restart trading-bot
+
+# Sprawdź pliki
+ls -la /opt/trading-bot/postgresql_database.py
+```
+
+**System będzie miał PostgreSQL + Email integration! 🎉**

@@ -1,0 +1,20 @@
+Generated new encryption key: YmfDmhlbFzkXBRw3HE26CepCfay8ehsyQ2r_8Ogp-M8=
+Save this key securely in your .env file as ENCRYPTION_KEY
+Fetching keys for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken...
+Keys decrypted successfully.
+Connecting to kraken...
+API Key length: 56
+API Key start: GJ3J...
+API Secret length: 88
+Server time: 1764316439000
+Using microseconds nonce: 1764316439057037
+Fetching balance...
+Connection verified. Total Balance: 290.0776 USDT, Free: 290.0776 USDT
+Fetching ticker for XRP/USDT...
+Current XRP/USDT price: 2.20029
+Placing BUY order for 130.52 XRP (~287.18 USDT)...
+SL: 2.09, TP: 2.5
+Order placed successfully: OPXVQZ-MXBDR-FFHHOF
+Status: None
+Order info: {'id': 'OPXVQZ-MXBDR-FFHHOF', 'clientOrderId': None, 'info': {'txid': ['OPXVQZ-MXBDR-FFHHOF'], 'descr': {'order': 'buy 130.51771 XRPUSDT @ market'}}, 'timestamp': None, 'datetime': None, 'lastTradeTimestamp': None, 'status': None, 'symbol': 'XRP/USDT', 'type': 'market', 'timeInForce': 'IOC', 'postOnly': False, 'side': 'buy', 'price': None, 'triggerPrice': None, 'takeProfitPrice': None, 'stopLossPrice': None, 'cost': None, 'amount': 130.51771, 'filled': None, 'average': None, 'remaining': None, 'reduceOnly': None, 'fee': None, 'trades': [], 'fees': [], 'lastUpdateTimestamp': None, 'stopPrice': None}
+Trade execution complete.

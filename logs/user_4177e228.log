@@ -1,0 +1,392 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Generated new encryption key: R2rd-NZq5FqnI5CI-yPXT5Bjj6ZjLaoUhKYKUdHQ4Xw=
+Save this key securely in your .env file as ENCRYPTION_KEY
+[12/16/25 06:49:12] INFO     🤖 Starting bot for user: 4177e228-e38e-4a64-b34a-2005a959fcf2                               run_single_user.py:102
+                    INFO     🔍 Looking up API keys for user 4177e228-e38e-4a64-b34a-2005a959fcf2...                       run_single_user.py:42
+                    INFO     🚀 Starting bot for user 4177e228-e38e-4a64-b34a-2005a959fcf2 on kraken (testnet=False)...    run_single_user.py:62
+[12/16/25 06:49:12] INFO     Initializing Automated Trading Bot...                                                            auto_trader.py:146
+[12/16/25 06:49:14] INFO     📊 Position Monitor SL/TP: SL=250.0% | TP=350.0%                                                 auto_trader.py:211
+[12/16/25 06:49:14] INFO     ✅ Position lock manager initialized for PositionMonitor                                    position_monitor.py:348
+                    INFO     ✅ Close operation RateLimiter initialized for PositionMonitor                              position_monitor.py:374
+                    INFO     PositionMonitorService initialized (interval: 5.0s) | Trailing: True | Dynamic SL/TP: True  position_monitor.py:376
+                             | Partial TP: True | Time Exit: True | Auto SL/TP: True | 🚨 Liquidation Monitor: True                             
+                             (warn:15.0% / auto-close:3.5%) | 💾 Hybrid Persistence: True (interval: 5.0s)                                      
+                    INFO     DatabaseManager connected to PositionMonitor for reevaluation logging                       position_monitor.py:389
+                    WARNING  💾 Supabase credentials not configured - persistence disabled                               position_monitor.py:410
+                    WARNING  💾 Hybrid Persistence: Supabase not available - using RAM only                             position_monitor.py:1473
+                    INFO     ✅ Position monitor started                                                                position_monitor.py:1483
+                    INFO     ✅ Position Monitor started (5s interval) | Auto SL/TP: ✅ | Partial TP: ✅ | Time Exit: ✅ (12h auto_trader.py:233
+                             max)                                                                                                               
+                    INFO     No existing positions to restore from database                                             position_monitor.py:1206
+                    INFO     Position monitoring loop started                                                           position_monitor.py:1509
+[12/16/25 06:49:25] INFO     No positions on kraken to sync                                                             position_monitor.py:1245
+[12/16/25 06:49:28] INFO     ✅ WebSocket real-time data connected                                                            auto_trader.py:262
+[12/16/25 06:49:28] INFO     📡 Supabase Edge Function URL:                                                      supabase_analysis_service.py:36
+                             https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                                           
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                  auto_trader.py:278
+                    INFO     ✅ Signal Validator initialized (adaptive confidence threshold)                                  auto_trader.py:288
+                    INFO     ✅ Portfolio Manager initialized (portfolio-aware trading)                                       auto_trader.py:306
+                    INFO     📋 Loaded user risk settings for 4177e228... | Risk Level: 5/5 | Risk Per Trade: 2.0% | Max     auto_trader.py:2338
+                             Position: $1000 | SL: 2.0% | TP: 10.0%                                                                             
+                    INFO     ✅ Risk Manager initialized with USER SETTINGS | User: 4177e228... | Risk Level: 5/5 (2.0% risk) auto_trader.py:367
+                             | Max Position: $1000 | SL: 2.0% | TP: 10.0% | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅ |                      
+                             Leverage: 10x                                                                                                      
+[12/16/25 06:49:28] INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+                    INFO     🔗 Connected Risk Manager to Position Monitor                                                    auto_trader.py:389
+                    INFO     ✅ Market Intelligence initialized (liquidity check, sentiment, dynamic SL/TP)                   auto_trader.py:398
+                    INFO     ✅ Rate Limiter initialized: 3/cycle, 5/hour, 15/day                                             auto_trader.py:411
+                    INFO     ✅ Signal Deduplicator initialized (6h window, prefer newest)                                    auto_trader.py:421
+                    INFO     ✅ Symbol Normalizer initialized (unified format across all components)                          auto_trader.py:435
+                    INFO     ✅ Transaction Manager initialized (atomic DB operations)                                        auto_trader.py:441
+                    INFO     ✅ Position Lock Manager initialized (race condition prevention)                                 auto_trader.py:445
+                    WARNING  Core modules initialization failed: __init__() got an unexpected keyword argument                auto_trader.py:483
+                             'max_daily_loss_pct'                                                                                               
+                    WARNING  DCA Manager initialization failed: 'DCAManager' object has no attribute 'get_user_dca_settings'  auto_trader.py:518
+                    INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+                    INFO     Initialized with 2 strategies on kraken                                                          auto_trader.py:580
+                    INFO     Default fallback symbols: ['BTC/USDT', 'ETH/USDT'] (actual symbols from DB signals)              auto_trader.py:581
+                    INFO     Testnet mode: False                                                                              auto_trader.py:582
+                    INFO     WebSocket: enabled                                                                               auto_trader.py:583
+                    INFO     Position Monitor: enabled                                                                        auto_trader.py:584
+                    INFO     Portfolio Manager: enabled                                                                       auto_trader.py:585
+                    INFO     Risk Manager: enabled                                                                            auto_trader.py:586
+                    INFO     DCA Manager: disabled                                                                            auto_trader.py:587
+                    INFO       └─ Risk Level: aggressive | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅                       auto_trader.py:591
+                    INFO     Bot started - initial interval: 3600 seconds (adaptive enabled)                                 auto_trader.py:1893
+                    INFO     📅 HIGH-IMPACT ECONOMIC EVENTS THIS WEEK:                                                       auto_trader.py:1874
+                    INFO        🔴 FOMC Interest Rate Decision: 2025-12-17 19:00 UTC                                         auto_trader.py:1876
+                    INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 06:49:32] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 06:49:36] INFO     Using USDC as quote currency (Balance: 162.44)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     ⏭️ Skipping LUNA/USDC - not available on kraken                                                   auto_trader.py:974
+                    INFO     📊 Filtered signals: 4 → 3 (removed 1 incompatible with kraken)                                  auto_trader.py:980
+                    INFO     📊 Found 3 active signals from trading_signals: ['VOXEL/USDC', 'FIS/USDC', 'ACE/USDC']           auto_trader.py:987
+                    INFO     🔍 Deduplication: 0 duplicates removed, 3 stale removed, 0 upgraded | 0 signals remaining       auto_trader.py:1591
+                    WARNING  ⚠️ No signals in trading_signals table, using default symbols                                    auto_trader.py:1605
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC', 'ETH/USDC']                                 auto_trader.py:1611
+[12/16/25 06:49:47] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 06:49:51] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 06:49:53] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 06:49:54] INFO     💰 Using USDC as quote currency (USDC: 162.4403216, USDT: 0)                                    auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 06:49:55] INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     ⏭️ Skipping LUNA/USDC - not available on kraken                                                   auto_trader.py:974
+                    INFO     📊 Filtered signals: 4 → 3 (removed 1 incompatible with kraken)                                  auto_trader.py:980
+                    INFO     📊 Found 3 active signals from trading_signals: ['VOXEL/USDC', 'FIS/USDC', 'ACE/USDC']           auto_trader.py:987
+                    WARNING  ⚠️ Found 3 signals but ALL are HOLD/0% confidence - treating as no signals for FALLBACK          auto_trader.py:1053
+                    INFO     📊 No actionable signals in trading_signals table - falling back to COUNCIL V2.0 Edge           auto_trader.py:1234
+                             Function...                                                                                                        
+                    INFO        (titan_v3 signals were HOLD/0% confidence or no signals at all)                              auto_trader.py:1235
+DEBUG: Loading markets for kraken...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 1583 tickers
+DEBUG: Found 43 USDT tickers
+DEBUG: Top symbols: ['USDC/USDT', 'BTC/USDT', 'SOL/USDT', 'ETH/USDT', 'XMR/USDT']
+[12/16/25 06:49:58] INFO     ✅ Selected top 5 symbols for AI: ['USDC/USDT', 'BTC/USDT', 'SOL/USDT', 'ETH/USDT', 'XMR/USDT'] auto_trader.py:1241
+                    INFO     📊 Using 2 pre-fetched market data symbols                                                      auto_trader.py:1246
+[12/16/25 06:50:00] INFO     🤖 Requesting AI analysis for 2 symbols...                                                      auto_trader.py:1288
+[12/16/25 06:50:00] INFO     🤖 K3: Calling Edge Function for 2 symbols: ['BTC', 'ETH']                          supabase_analysis_service.py:74
+                    INFO     📡 Edge Function attempt 1/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+[12/16/25 06:50:10] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:51:13] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:52:16] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:52:31] INFO     📥 Response status: 504                                                             supabase_analysis_service.py:91
+                    ERROR    ❌ Edge Function failed with status 504:                                            supabase_analysis_service.py:95
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                               supabase_analysis_service.py:99
+                    INFO     ⏳ Retrying in 2s...                                                               supabase_analysis_service.py:110
+[12/16/25 06:52:33] INFO     📡 Edge Function attempt 2/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+[12/16/25 06:53:20] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:54:23] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:54:29] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 06:54:39] INFO     📥 Response status: 200                                                             supabase_analysis_service.py:91
+                    INFO     📥 Response data keys: ['success', 'signals', 'isDemo', 'timestamp', 'modelsUsed', supabase_analysis_service.py:127
+                             'toolsUsed']                                                                                                       
+                    INFO     ✅ K3: Received 2 signals from Edge Function                                       supabase_analysis_service.py:156
+                    INFO        📊 ETH: HOLD (78%)                                                              supabase_analysis_service.py:196
+                    INFO        📊 BTC: BUY (82%)                                                               supabase_analysis_service.py:196
+                    INFO     ✅ K3: Mapped 2 actionable signals                                                 supabase_analysis_service.py:202
+[12/16/25 06:54:39] INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for ETH/USDT: HOLD - [COUNCIL] Unanimous consensus across CIO (92% strategy fit),   auto_trader.py:1311
+                             Execution Algo (75%), Head of Research (65% long-term), Senior Risk Manager (75%), and Proposal                    
+                             (75%) supports HOLD. Bearish micro signals (CVD -625, price -8% VWAP, Z-score -0.85, Ichimoku                      
+                             bearish) override macro tailwinds (DXY weakness); high VaR (12.47%), poor Sharpe (-0.42), 0%                       
+                             win rate enforce 'no-edge, no-trade' discipline. Audit fully passed; portfolio protected from                      
+                             drawdown/liquidity risks. Monitor CVD reversal/$3050 break for next triggers.                                      
+                    INFO     📊 Signal Validation for ETH/USDT: execute=False, consensus=1.00, reasons=('HOLD signal - no    auto_trader.py:1317
+                             action required',)                                                                                                 
+                    INFO     💾 Saved NEW signal for ETH to DB (TP=2834.0005, SL=3067.7325)                                  auto_trader.py:1446
+                    INFO     ⏭️ Signal for ETH/USDT skipped: ('HOLD signal - no action required',)                            auto_trader.py:1455
+                    INFO     AI Analysis for BTC/USDT: BUY - [COUNCIL] Unanimous consensus across CIO (92 alignment, macro   auto_trader.py:1311
+                             override), Execution (TWAP live, low slippage), Research (high LT value, catalysts), Risk (pass                    
+                             all limits, low tail risk), and Audit (full pass). Oversold dip (-0.59 Z-Score) in risk-on                         
+                             regime primes bounce to $92k; 1:3 R:R viable within 5% VaR. Proceed 2% notional.                                   
+                    INFO     📊 Signal Validation for BTC/USDT: execute=False, consensus=0.00, reasons=('Opposing signals    auto_trader.py:1317
+                             (1) > matching (0)',)                                                                                              
+[12/16/25 06:54:40] INFO     💾 Saved NEW signal for BTC to DB (TP=88635.6612, SL=81751.33799999999)                         auto_trader.py:1446
+                    INFO     ⏭️ Signal for BTC/USDT skipped: ('Opposing signals (1) > matching (0)',)                         auto_trader.py:1455
+                    INFO     ✅ 0/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 06:54:52] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 06:54:57] INFO     Account Balance: 162.44 USDC | Open Positions: 0                                                auto_trader.py:1808
+[12/16/25 06:55:00] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 06:55:33] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:56:36] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:57:39] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:58:43] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:59:46] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 06:59:52] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:00:56] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:01:59] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:03:02] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:04:05] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:05:00] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:05:04] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:05:08] INFO     Using USDC as quote currency (Balance: 162.44)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols from DB: ['BTC/USDC']                                          auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC']                                             auto_trader.py:1611
+[12/16/25 07:05:11] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:05:23] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:05:26] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:05:29] INFO     Market data fetched for 1 symbols                                                               auto_trader.py:1633
+[12/16/25 07:05:32] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:05:33] INFO     💰 Using USDC as quote currency (USDC: 162.4403216, USDT: 0)                                    auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols: ['BTC/USDC']                                                  auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDC']                                        auto_trader.py:1065
+[12/16/25 07:05:36] INFO     📊 User TP/SL settings from trading_settings: TP=10.0%, SL=2.0%                                  auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 2.0%), TP=4.0% (was 10.0%) | Regime:    auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 1 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 1 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: BUY - [COUNCIL] Unanimous consensus across CIO (92 alignment, macro   auto_trader.py:1311
+                             override), Execution (TWAP live, low slippage), Research (high LT value, catalysts), Risk (pass                    
+                             all limits, low tail risk), and Audit (full pass). Oversold dip (-0.59 Z-Score) in risk-on                         
+                             regime primes bounce to $92k; 1:3 R:R viable within 5% VaR. Proceed 2% notional.                                   
+                    INFO     📊 Signal Validation for BTC/USDC: execute=False, consensus=0.15, reasons=('Opposing signals    auto_trader.py:1317
+                             (2) > matching (1)',)                                                                                              
+[12/16/25 07:05:37] INFO     ⏭️ Signal for BTC/USDC skipped: ('Opposing signals (2) > matching (1)',)                         auto_trader.py:1455
+                    INFO     ✅ 0/1 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:05:47] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:05:51] INFO     Account Balance: 162.44 USDC | Open Positions: 0                                                auto_trader.py:1808
+[12/16/25 07:05:55] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:06:27] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:07:30] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:08:33] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:09:36] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:10:40] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:10:46] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:11:49] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:12:53] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:13:56] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:14:59] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:15:55] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:15:59] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:16:03] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:16:06] INFO     Using USDC as quote currency (Balance: 162.44)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols from DB: ['BTC/USDC']                                          auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC']                                             auto_trader.py:1611
+[12/16/25 07:16:15] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:16:21] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:16:24] INFO     Market data fetched for 1 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:16:25] INFO     💰 Using USDC as quote currency (USDC: 162.4403216, USDT: 0)                                    auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols: ['BTC/USDC']                                                  auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDC']                                        auto_trader.py:1065
+[12/16/25 07:16:29] INFO     📊 User TP/SL settings from trading_settings: TP=10.0%, SL=2.0%                                  auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 2.0%), TP=4.0% (was 10.0%) | Regime:    auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 1 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 1 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: BUY - [COUNCIL] Unanimous consensus across CIO (92 alignment, macro   auto_trader.py:1311
+                             override), Execution (TWAP live, low slippage), Research (high LT value, catalysts), Risk (pass                    
+                             all limits, low tail risk), and Audit (full pass). Oversold dip (-0.59 Z-Score) in risk-on                         
+                             regime primes bounce to $92k; 1:3 R:R viable within 5% VaR. Proceed 2% notional.                                   
+                    INFO     📊 Signal Validation for BTC/USDC: execute=False, consensus=0.15, reasons=('Opposing signals    auto_trader.py:1317
+                             (2) > matching (1)',)                                                                                              
+                    INFO     ⏭️ Signal for BTC/USDC skipped: ('Opposing signals (2) > matching (1)',)                         auto_trader.py:1455
+                    INFO     ✅ 0/1 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:16:40] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:16:44] INFO     Account Balance: 162.44 USDC | Open Positions: 0                                                auto_trader.py:1808
+[12/16/25 07:16:47] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:17:18] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:18:22] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:19:25] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:20:28] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:21:31] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:21:38] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:22:41] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:23:44] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:24:47] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:25:51] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:26:47] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:26:51] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:26:52] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:27:01] INFO     Using USDC as quote currency (Balance: 162.42)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols from DB: ['BTC/USDC']                                          auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC']                                             auto_trader.py:1611
+[12/16/25 07:27:04] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:27:14] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:27:17] INFO     Market data fetched for 1 symbols                                                               auto_trader.py:1633
+[12/16/25 07:27:20] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:27:21] INFO     💰 Using USDC as quote currency (USDC: 162.4195466, USDT: 0)                                    auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols: ['BTC/USDC']                                                  auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDC']                                        auto_trader.py:1065
+[12/16/25 07:27:24] INFO     📊 User TP/SL settings from trading_settings: TP=10.0%, SL=2.0%                                  auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 2.0%), TP=4.0% (was 10.0%) | Regime:    auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 1 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 1 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: BUY - [COUNCIL] Unanimous consensus across CIO (92 alignment, macro   auto_trader.py:1311
+                             override), Execution (TWAP live, low slippage), Research (high LT value, catalysts), Risk (pass                    
+                             all limits, low tail risk), and Audit (full pass). Oversold dip (-0.59 Z-Score) in risk-on                         
+                             regime primes bounce to $92k; 1:3 R:R viable within 5% VaR. Proceed 2% notional.                                   
+[12/16/25 07:27:25] INFO     📊 Signal Validation for BTC/USDC: execute=False, consensus=0.12, reasons=('Opposing signals    auto_trader.py:1317
+                             (3) > matching (1)',)                                                                                              
+                    INFO     ⏭️ Signal for BTC/USDC skipped: ('Opposing signals (3) > matching (1)',)                         auto_trader.py:1455
+                    INFO     ✅ 0/1 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:27:35] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:27:39] INFO     Account Balance: 162.42 USDC | Open Positions: 0                                                auto_trader.py:1808
+[12/16/25 07:27:42] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:28:08] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:29:11] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:30:14] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:31:18] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:32:21] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:32:27] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:33:31] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:34:34] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:35:37] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:36:40] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:37:42] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:37:44] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:37:47] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:37:54] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:37:57] INFO     Using USDC as quote currency (Balance: 162.40)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols from DB: ['BTC/USDC']                                          auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC']                                             auto_trader.py:1611
+[12/16/25 07:38:07] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:38:10] INFO     Market data fetched for 1 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:38:11] INFO     💰 Using USDC as quote currency (USDC: 162.3779586, USDT: 0)                                    auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 07:38:12] INFO     📊 Found 1 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 1}                            auto_trader.py:894
+                    INFO        (0 user-specific, 1 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 1 active signals from trading_signals: ['BTC/USDC']                                     auto_trader.py:987
+                    INFO     ✅ Found 1 signals for 1 symbols: ['BTC/USDC']                                                  auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDC']                                        auto_trader.py:1065
+[12/16/25 07:38:15] INFO     📊 User TP/SL settings from trading_settings: TP=10.0%, SL=2.0%                                  auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 2.0%), TP=4.0% (was 10.0%) | Regime:    auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 1 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 1 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: BUY - [COUNCIL] Unanimous consensus across CIO (92 alignment, macro   auto_trader.py:1311
+                             override), Execution (TWAP live, low slippage), Research (high LT value, catalysts), Risk (pass                    
+                             all limits, low tail risk), and Audit (full pass). Oversold dip (-0.59 Z-Score) in risk-on                         
+                             regime primes bounce to $92k; 1:3 R:R viable within 5% VaR. Proceed 2% notional.                                   
+                    INFO     📊 Signal Validation for BTC/USDC: execute=False, consensus=0.12, reasons=('Opposing signals    auto_trader.py:1317
+                             (3) > matching (1)',)                                                                                              
+                    INFO     ⏭️ Signal for BTC/USDC skipped: ('Opposing signals (3) > matching (1)',)                         auto_trader.py:1455
+                    INFO     ✅ 0/1 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ⚠️ No AI signals - using built-in strategies (Momentum/MeanReversion)                            auto_trader.py:1662
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:38:26] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:38:30] INFO     Account Balance: 162.38 USDC | Open Positions: 0                                                auto_trader.py:1808
+[12/16/25 07:38:33] INFO     📊 Adaptive interval: 600s (no positions, normal conditions)                                    auto_trader.py:1857
+                    INFO     💤 Next cycle in 600s...                                                                        auto_trader.py:1905
+[12/16/25 07:38:57] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:40:00] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:41:04] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:42:07] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:43:10] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:43:16] INFO     🔍 Reconciliation: Exchange has 0 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:44:19] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:45:23] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159
+[12/16/25 07:46:26] INFO     ✅ Position validation OK: 0 positions on exchange, 0 monitored                            position_monitor.py:3159

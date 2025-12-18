@@ -1,0 +1,529 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Generated new encryption key: 71VZZs48gjWO1LwBQSCfA7NEJea0RjOMX-67UAJkyg0=
+Save this key securely in your .env file as ENCRYPTION_KEY
+[12/16/25 06:49:31] INFO     🤖 Starting bot for user: 1aa87e38-f100-49d1-85dc-292bc58e25f1                               run_single_user.py:102
+                    INFO     🔍 Looking up API keys for user 1aa87e38-f100-49d1-85dc-292bc58e25f1...                       run_single_user.py:42
+[12/16/25 06:49:32] INFO     🚀 Starting bot for user 1aa87e38-f100-49d1-85dc-292bc58e25f1 on kraken (testnet=False)...    run_single_user.py:62
+[12/16/25 06:49:32] INFO     Initializing Automated Trading Bot...                                                            auto_trader.py:146
+[12/16/25 06:49:33] INFO     📊 Position Monitor SL/TP: SL=250.0% | TP=350.0%                                                 auto_trader.py:211
+[12/16/25 06:49:33] INFO     ✅ Position lock manager initialized for PositionMonitor                                    position_monitor.py:348
+                    INFO     ✅ Close operation RateLimiter initialized for PositionMonitor                              position_monitor.py:374
+                    INFO     PositionMonitorService initialized (interval: 5.0s) | Trailing: True | Dynamic SL/TP: True  position_monitor.py:376
+                             | Partial TP: True | Time Exit: True | Auto SL/TP: True | 🚨 Liquidation Monitor: True                             
+                             (warn:15.0% / auto-close:3.5%) | 💾 Hybrid Persistence: True (interval: 5.0s)                                      
+                    INFO     DatabaseManager connected to PositionMonitor for reevaluation logging                       position_monitor.py:389
+                    WARNING  💾 Supabase credentials not configured - persistence disabled                               position_monitor.py:410
+                    WARNING  💾 Hybrid Persistence: Supabase not available - using RAM only                             position_monitor.py:1473
+                    INFO     ✅ Position monitor started                                                                position_monitor.py:1483
+                    INFO     ✅ Position Monitor started (5s interval) | Auto SL/TP: ✅ | Partial TP: ✅ | Time Exit: ✅ (12h auto_trader.py:233
+                             max)                                                                                                               
+                    INFO     No existing positions to restore from database                                             position_monitor.py:1206
+                    INFO     Position monitoring loop started                                                           position_monitor.py:1509
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 06:50:35] INFO     📊 sync_from_exchange: Found 1 positions to sync                                           position_monitor.py:1248
+[12/16/25 06:50:42] INFO     🛡️ AUTO-SET SL/TP for USDG/USDC (1.0x leverage): SL=-1.5000 (250.00% price = 250.0% capital) position_monitor.py:991
+                             | TP=4.5000 (350.00% price = 350.0% capital)                                                                       
+                    INFO     📍 Monitoring position: USDG/USDC | LONG @ 1.0 | SL=-1.5 TP=4.5 | Trailing=True |          position_monitor.py:1050
+                             Dynamic=True | MaxHold=12.0h | BreakEven@1.0%                                                                      
+                    INFO     🔄 Synced exchange position: USDG/USDC | SL=-1.5 TP=4.5                                    position_monitor.py:1337
+                    INFO     ✅ Synchronized 1 positions from exchange                                                  position_monitor.py:1343
+[12/16/25 06:50:42] INFO     ✅ Restored position monitoring: 0 from DB, 1 from exchange                                      auto_trader.py:244
+[12/16/25 06:50:45] INFO     ✅ WebSocket real-time data connected                                                            auto_trader.py:262
+[12/16/25 06:50:45] INFO     📡 Supabase Edge Function URL:                                                      supabase_analysis_service.py:36
+                             https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                                           
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                  auto_trader.py:278
+                    INFO     ✅ Signal Validator initialized (adaptive confidence threshold)                                  auto_trader.py:288
+                    INFO     ✅ Portfolio Manager initialized (portfolio-aware trading)                                       auto_trader.py:306
+                    INFO     📋 Loaded user risk settings for 1aa87e38... | Risk Level: 4/5 | Risk Per Trade: 1.5% | Max     auto_trader.py:2338
+                             Position: $300 | SL: 5.0% | TP: 3.0%                                                                               
+                    INFO     ✅ Risk Manager initialized with USER SETTINGS | User: 1aa87e38... | Risk Level: 4/5 (1.5% risk) auto_trader.py:367
+                             | Max Position: $300 | SL: 5.0% | TP: 3.0% | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅ |                        
+                             Leverage: 10x                                                                                                      
+[12/16/25 06:50:45] INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+                    INFO     🔗 Connected Risk Manager to Position Monitor                                                    auto_trader.py:389
+                    INFO     ✅ Market Intelligence initialized (liquidity check, sentiment, dynamic SL/TP)                   auto_trader.py:398
+                    INFO     ✅ Rate Limiter initialized: 3/cycle, 5/hour, 15/day                                             auto_trader.py:411
+                    INFO     ✅ Signal Deduplicator initialized (6h window, prefer newest)                                    auto_trader.py:421
+                    INFO     ✅ Symbol Normalizer initialized (unified format across all components)                          auto_trader.py:435
+                    INFO     ✅ Transaction Manager initialized (atomic DB operations)                                        auto_trader.py:441
+                    INFO     ✅ Position Lock Manager initialized (race condition prevention)                                 auto_trader.py:445
+                    WARNING  Core modules initialization failed: __init__() got an unexpected keyword argument                auto_trader.py:483
+                             'max_daily_loss_pct'                                                                                               
+                    WARNING  DCA Manager initialization failed: 'DCAManager' object has no attribute 'get_user_dca_settings'  auto_trader.py:518
+                    INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+                    INFO     Initialized with 2 strategies on kraken                                                          auto_trader.py:580
+                    INFO     Default fallback symbols: ['BTC/USDT', 'ETH/USDT'] (actual symbols from DB signals)              auto_trader.py:581
+                    INFO     Testnet mode: False                                                                              auto_trader.py:582
+                    INFO     WebSocket: enabled                                                                               auto_trader.py:583
+                    INFO     Position Monitor: enabled                                                                        auto_trader.py:584
+                    INFO     Portfolio Manager: enabled                                                                       auto_trader.py:585
+                    INFO     Risk Manager: enabled                                                                            auto_trader.py:586
+                    INFO     DCA Manager: disabled                                                                            auto_trader.py:587
+                    INFO       └─ Risk Level: aggressive | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅                       auto_trader.py:591
+                    INFO     Bot started - initial interval: 3600 seconds (adaptive enabled)                                 auto_trader.py:1893
+                    INFO     📅 HIGH-IMPACT ECONOMIC EVENTS THIS WEEK:                                                       auto_trader.py:1874
+                    INFO        🔴 FOMC Interest Rate Decision: 2025-12-17 19:00 UTC                                         auto_trader.py:1876
+                    INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+No trades found for BABY, using current market price as entry
+[12/16/25 06:50:56] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 06:50:57] INFO     Using USDT as quote currency (Balance: 2111.14)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+[12/16/25 06:50:58] INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     ⏭️ Skipping LUNA/USDT - not available on kraken                                                   auto_trader.py:974
+                    INFO     📊 Filtered signals: 4 → 3 (removed 1 incompatible with kraken)                                  auto_trader.py:980
+                    INFO     📊 Found 3 active signals from trading_signals: ['VOXEL/USDT', 'FIS/USDT', 'ACE/USDT']           auto_trader.py:987
+                    INFO     🔍 Deduplication: 0 duplicates removed, 3 stale removed, 0 upgraded | 0 signals remaining       auto_trader.py:1591
+                    WARNING  ⚠️ No signals in trading_signals table, using default symbols                                    auto_trader.py:1605
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for USDG, using current market price as entry
+No trades found for BABY, using current market price as entry
+[12/16/25 06:52:00] INFO     ✅ Position validation OK: 1 positions on exchange, 0 monitored                            position_monitor.py:3159
+No trades found for USDG, using current market price as entry
+[12/16/25 06:52:39] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 06:52:41] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 06:52:42] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.14181017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 06:52:43] INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     ⏭️ Skipping LUNA/USDT - not available on kraken                                                   auto_trader.py:974
+                    INFO     📊 Filtered signals: 4 → 3 (removed 1 incompatible with kraken)                                  auto_trader.py:980
+                    INFO     📊 Found 3 active signals from trading_signals: ['VOXEL/USDT', 'FIS/USDT', 'ACE/USDT']           auto_trader.py:987
+                    WARNING  ⚠️ Found 3 signals but ALL are HOLD/0% confidence - treating as no signals for FALLBACK          auto_trader.py:1053
+                    INFO     📊 No actionable signals in trading_signals table - falling back to COUNCIL V2.0 Edge           auto_trader.py:1234
+                             Function...                                                                                                        
+                    INFO        (titan_v3 signals were HOLD/0% confidence or no signals at all)                              auto_trader.py:1235
+DEBUG: Loading markets for kraken...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 1583 tickers
+DEBUG: Found 43 USDT tickers
+DEBUG: Top symbols: ['USDC/USDT', 'BTC/USDT', 'SOL/USDT', 'ETH/USDT', 'XMR/USDT']
+[12/16/25 06:52:46] INFO     ✅ Selected top 5 symbols for AI: ['USDC/USDT', 'BTC/USDT', 'SOL/USDT', 'ETH/USDT', 'XMR/USDT'] auto_trader.py:1241
+                    INFO     📊 Using 2 pre-fetched market data symbols                                                      auto_trader.py:1246
+[12/16/25 06:52:49] INFO     🤖 Requesting AI analysis for 2 symbols...                                                      auto_trader.py:1288
+[12/16/25 06:52:49] INFO     🤖 K3: Calling Edge Function for 2 symbols: ['BTC', 'ETH']                          supabase_analysis_service.py:74
+                    INFO     📡 Edge Function attempt 1/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+[12/16/25 06:53:36] INFO     🎯 Dynamic SL adjustment for USDG/USDC: -1.5000 → 0.9900 | Reason: Tightening SL based on  position_monitor.py:2517
+                             volatility: -1.5000 → 0.9900 | Adjusting TP: 4.5000 → 1.0007                                                       
+                    INFO     🎯 Dynamic TP adjustment for USDG/USDC: 4.5000 → 1.0007                                    position_monitor.py:2528
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 06:54:32] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:55:19] INFO     📥 Response status: 504                                                             supabase_analysis_service.py:91
+                    ERROR    ❌ Edge Function failed with status 504:                                            supabase_analysis_service.py:95
+                    WARNING  ⏰ Gateway timeout - Edge Function may need more time                               supabase_analysis_service.py:99
+                    INFO     ⏳ Retrying in 2s...                                                               supabase_analysis_service.py:110
+[12/16/25 06:55:21] INFO     📡 Edge Function attempt 2/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 06:56:42] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:57:46] INFO     📥 Response status: 200                                                             supabase_analysis_service.py:91
+                    INFO     📥 Response data keys: ['success', 'signals', 'isDemo', 'timestamp', 'modelsUsed', supabase_analysis_service.py:127
+                             'toolsUsed']                                                                                                       
+                    INFO     ✅ K3: Received 2 signals from Edge Function                                       supabase_analysis_service.py:156
+                    INFO        📊 ETH: SELL (90%)                                                              supabase_analysis_service.py:196
+                    INFO        📊 BTC: SELL (85%)                                                              supabase_analysis_service.py:196
+                    INFO     ✅ K3: Mapped 2 actionable signals                                                 supabase_analysis_service.py:202
+[12/16/25 06:57:46] INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             1/3 signals match SELL', 'High confidence signal (0.90)')                                                          
+[12/16/25 06:57:47] INFO     💾 Saved NEW signal for ETH to DB (TP=2834.3885, SL=3068.1525)                                  auto_trader.py:1446
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             1/3 signals match SELL', 'High confidence signal (0.85)')                                                          
+                    INFO     💾 Saved NEW signal for BTC to DB (TP=83416.0327, SL=90295.70550000001)                         auto_trader.py:1446
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 06:58:56] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:59:04] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:00:09] INFO     Account Balance: 2111.14 USDT | Open Positions: 1                                               auto_trader.py:1808
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:01:10] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:02:07] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:03:05] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:04:10] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:04:13] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:04:14] INFO     Using USDT as quote currency (Balance: 2111.14)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['BTC/USDT', 'ETH/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:06:15] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:06:16] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:06:17] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.14181017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['BTC/USDT', 'ETH/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDT', 'ETH/USDT']                            auto_trader.py:1065
+[12/16/25 07:06:22] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDT: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDT: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+[12/16/25 07:06:23] INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.89)')                                                          
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.93)')                                                          
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:07:33] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:09:26] INFO     Account Balance: 2111.14 USDT | Open Positions: 1                                               auto_trader.py:1808
+[12/16/25 07:09:27] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:10:28] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:12:06] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:13:28] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+No trades found for BABY, using current market price as entry
+[12/16/25 07:13:38] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:13:44] INFO     Using USDT as quote currency (Balance: 2111.14)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+[12/16/25 07:13:45] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['BTC/USDT', 'ETH/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for USDG, using current market price as entry
+No trades found for BABY, using current market price as entry
+[12/16/25 07:14:47] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for USDG, using current market price as entry
+[12/16/25 07:15:25] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 07:15:27] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:15:28] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.14181017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 07:15:29] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['BTC/USDT', 'ETH/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDT', 'ETH/USDT']                            auto_trader.py:1065
+[12/16/25 07:15:34] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDT: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDT: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.89)')                                                          
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.93)')                                                          
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for BABY, using current market price as entry
+[12/16/25 07:17:07] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+No trades found for USDG, using current market price as entry
+[12/16/25 07:17:45] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:19:06] INFO     Account Balance: 2111.14 USDT | Open Positions: 1                                               auto_trader.py:1808
+No trades found for USDG, using current market price as entry
+No trades found for BABY, using current market price as entry
+[12/16/25 07:19:42] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+No trades found for USDG, using current market price as entry
+[12/16/25 07:20:21] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:22:12] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:23:21] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:23:23] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:23:25] INFO     Using USDT as quote currency (Balance: 2111.14)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['BTC/USDT', 'ETH/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:25:23] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:25:25] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:25:26] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.14181017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['BTC/USDT', 'ETH/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDT', 'ETH/USDT']                            auto_trader.py:1065
+[12/16/25 07:25:32] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDT: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDT: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.89)')                                                          
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'High confidence signal (0.93)')                                                          
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:26:45] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:28:27] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for USDG, using current market price as entry
+[12/16/25 07:28:36] INFO     Account Balance: 2111.14 USDT | Open Positions: 1                                               auto_trader.py:1808
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:29:37] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:31:09] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:32:37] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+No trades found for BABY, using current market price as entry
+[12/16/25 07:32:46] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:32:53] INFO     Using USDT as quote currency (Balance: 2111.14)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['BTC/USDT', 'ETH/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for USDG, using current market price as entry
+[12/16/25 07:33:44] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:35:05] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+No trades found for USDG, using current market price as entry
+[12/16/25 07:35:19] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:35:21] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.14181017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['BTC/USDT', 'ETH/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDT', 'ETH/USDT']                            auto_trader.py:1065
+[12/16/25 07:35:26] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:35:30] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDT: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDT: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'High confidence signal (0.89)')                                                          
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'High confidence signal (0.93)')                                                          
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:36:39] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:38:31] INFO     Account Balance: 2111.13 USDT | Open Positions: 1                                               auto_trader.py:1808
+[12/16/25 07:38:36] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:39:34] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:41:19] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:42:34] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:42:43] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:42:49] INFO     Using USDT as quote currency (Balance: 2111.13)                                                 auto_trader.py:1478
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['BTC/USDT', 'ETH/USDT']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['BTC/USDT', 'ETH/USDT']                                 auto_trader.py:1611
+No trades found for BABY, using current market price as entry
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+[12/16/25 07:44:06] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+No trades found for USDG, using current market price as entry
+[12/16/25 07:44:36] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:44:37] INFO     💰 Using USDT as quote currency (USDC: 13.83485148, USDT: 2111.12581017)                        auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDT', 'ETH/USDT']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['BTC/USDT', 'ETH/USDT']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['BTC/USDT', 'ETH/USDT']                            auto_trader.py:1065
+[12/16/25 07:44:43] INFO     📊 User TP/SL settings from trading_settings: TP=3.0%, SL=5.0%                                   auto_trader.py:735
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDT: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDT: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (92 alignment,        auto_trader.py:1311
+                             APPROVED), Execution Algo (82 conf, AUDIT PASS), Head of Research (LT bullish but tactical SELL                    
+                             OK, 92 conf), Risk Manager (APPROVE, all limits PASS), and Proposal/Audit (78 conf, full PASS).                    
+                             Macro risk-off (DXY>103), technical bearish (below VWAP/Ichimoku/Fib), negative CVD/order flow                     
+                             confirm downside to $84k POC. Bounce risk mitigated; tactical trim fits portfolio (reduces                         
+                             beta/VaR). Execute per TWAP params.                                                                                
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'High confidence signal (0.89)')                                                          
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous consensus across CIO (94 alignment),       auto_trader.py:1311
+                             Execution Algo (APPROVED_LIVE), Head of Research (no veto, tactical trim approved), Senior Risk                    
+                             Manager (91 conf, all checks PASS), Proposal (82 conf), and Audit (full PASS). Bearish macro                       
+                             (DXY>105, yields, liquidity drain), seller-dominated flow (Net Taker -43.6M), technical                            
+                             markdown to $2850, VaR aligned, Sharpe enhancement. LT fundamentals strong but overridden by                       
+                             short-term risk-off regime.                                                                                        
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'High confidence signal (0.93)')                                                          
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+No trades found for BABY, using current market price as entry
+No trades found for USDG, using current market price as entry
+No trades found for BABY, using current market price as entry
+[12/16/25 07:46:15] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793

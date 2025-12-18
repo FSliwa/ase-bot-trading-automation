@@ -1,0 +1,37 @@
+2025-11-18 20:45:03,321 - bot.security - WARNING - Generated new encryption key: aItG1wgGmj-rkU3ikcNr7-U-84thLU6ARSuvXoBOJKI=
+2025-11-18 20:45:03,321 - bot.security - WARNING - Save this key securely in your .env file as ENCRYPTION_KEY
+2025-11-18 20:45:03,321 - commercial_bot - INFO - 🤖 Initializing Commercial Trading Bot for filipsliwa
+2025-11-18 20:45:03,321 - commercial_bot - INFO - 📊 Loading configuration for user fd21db06-2278-4109-a6d0-0468e72272cf
+2025-11-18 20:45:03,697 - httpx - INFO - HTTP Request: GET https://iqqmbzznwpheqiihnjhz.supabase.co/rest/v1/api_keys?select=%2A&user_id=eq.fd21db06-2278-4109-a6d0-0468e72272cf&is_active=eq.True "HTTP/2 401 Unauthorized"
+2025-11-18 20:45:03,701 - commercial_bot - ERROR - ❌ Initialization failed: {'message': 'JSON could not be generated', 'code': 401, 'hint': 'Refer to full message for details', 'details': 'b\'{"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}\''}
+2025-11-18 20:45:03,706 - commercial_bot - ERROR - Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/venv/lib/python3.12/site-packages/postgrest/_sync/request_builder.py", line 52, in execute
+    json_obj = model_validate_json(APIErrorFromJSON, r.content)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/venv/lib/python3.12/site-packages/postgrest/utils.py", line 56, in model_validate_json
+    return model.model_validate_json(contents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/venv/lib/python3.12/site-packages/pydantic/main.py", line 766, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for APIErrorFromJSON
+code
+  Field required [type=missing, input_value={'message': 'Invalid API ...service_role` API key.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+details
+  Field required [type=missing, input_value={'message': 'Invalid API ...service_role` API key.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/commercial_trading_bot.py", line 85, in initialize
+    await self._load_user_config()
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/commercial_trading_bot.py", line 113, in _load_user_config
+    .execute()
+     ^^^^^^^^^
+  File "/home/filip-liwa/Pulpit/ase-bot v1.2/Automatyczny Stock Market 1 (2).0-20250924T005044Z-1-001/Automatyczny Stock Market 1.0/Algorytm Uczenia Kwantowego LLM/venv/lib/python3.12/site-packages/postgrest/_sync/request_builder.py", line 55, in execute
+    raise APIError(generate_default_error_message(r))
+postgrest.exceptions.APIError: {'message': 'JSON could not be generated', 'code': 401, 'hint': 'Refer to full message for details', 'details': 'b\'{"message":"Invalid API key","hint":"Double check your Supabase `anon` or `service_role` API key."}\''}
+
+2025-11-18 20:45:03,706 - commercial_bot - ERROR - ❌ Bot initialization failed

@@ -1,0 +1,48 @@
+# 🚀 KOMENDY VNC - NOWY PANEL REJESTRACJI + EMAIL
+# Skopiuj i wklej każdą komendę w VNC (Command+V)
+
+# 1. Skopiuj nowe pliki do katalogu produkcyjnego:
+sudo cp ~/register.html ~/user_database.py /opt/trading-bot/
+
+# 2. Ustaw właściwe uprawnienia:
+sudo chown www-data:www-data /opt/trading-bot/register.html /opt/trading-bot/user_database.py
+
+# 3. Restart serwisu trading-bot:
+sudo systemctl restart trading-bot
+
+# 4. Sprawdź status serwisu:
+sudo systemctl status trading-bot
+
+# 5. Test nowego panelu rejestracji lokalnie:
+curl -s http://localhost:8009/register | grep "Utwórz nowe konto"
+
+# 6. Test API rejestracji:
+curl -X POST http://localhost:8009/api/register -H "Content-Type: application/json" -d '{"username":"test2","password":"testpass123","email":"test2@example.com","firstName":"Test","lastName":"User"}'
+
+# ===== OPCJONALNE - KONFIGURACJA EMAIL POWIADOMIEŃ =====
+# Jeśli chcesz włączyć email powiadomienia:
+
+# export SMTP_SERVER="smtp.gmail.com"
+# export SMTP_PORT="587"
+# export SMTP_USERNAME="your-email@gmail.com"
+# export SMTP_PASSWORD="your-app-password"
+# sudo systemctl restart trading-bot
+
+# ===== OCZEKIWANY REZULTAT =====
+# ✅ Nowy nowoczesny panel rejestracji
+# ✅ Dopasowany design do panelu logowania
+# ✅ Walidacja hasła z paskiem siły
+# ✅ Przyciski OAuth Google/GitHub
+# ✅ Formularz połączony z backend API
+# ✅ Email powiadomienia gotowe (wymaga konfiguracji SMTP)
+
+# 🌐 Test w przeglądarce: http://185.70.196.214/register
+
+# ===== INFORMACJE O BAZIE DANYCH =====
+# 📁 Lokalizacja: /opt/trading-bot/users.json
+# 📊 Format: JSON z SHA-256 + salt
+# 📧 Email: Funkcja zaimplementowana, wymaga SMTP config
+# 🔐 Bezpieczeństwo: Token-based sessions
+
+# Sprawdź statystyki użytkowników:
+# cd /opt/trading-bot && python3 -c "from user_database import UserDatabase; db = UserDatabase(); print(db.get_user_stats())"

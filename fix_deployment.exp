@@ -1,0 +1,166 @@
+#!/usr/bin/expect
+set timeout 120
+
+# Configuration
+set server_ip "185.70.196.214"
+set server_user "admin"
+
+puts "🚀 Re-uploading and fixing FastAPI deployment..."
+puts "Enter SSH password for admin@185.70.196.214:"
+stty -echo
+gets stdin ssh_pass
+stty echo
+puts ""
+
+puts "Enter sudo password:"
+stty -echo  
+gets stdin sudo_pass
+stty echo
+puts ""
+
+# Upload fastapi_app.py directly
+puts "📤 Uploading fastapi_app.py..."
+spawn scp -o StrictHostKeyChecking=no fastapi_app.py $server_user@$server_ip:/tmp/
+expect "password:"
+send "$ssh_pass\r"
+expect eof
+
+# Upload other essential files
+puts "📤 Uploading additional files..."
+spawn scp -o StrictHostKeyChecking=no simple_openai_client.py web_search_tool.py requirements.txt $server_user@$server_ip:/tmp/
+expect "password:"
+send "$ssh_pass\r"
+expect eof
+
+# Connect and set up
+spawn ssh -o StrictHostKeyChecking=no $server_user@$server_ip
+expect "password:"
+send "$ssh_pass\r"
+expect "$ "
+
+# Copy files to proper location
+puts "📁 Moving files to /opt/trading-bot..."
+send "echo '$sudo_pass' | sudo -S cp /tmp/fastapi_app.py /opt/trading-bot/\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S cp /tmp/simple_openai_client.py /opt/trading-bot/\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S cp /tmp/web_search_tool.py /opt/trading-bot/\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S cp /tmp/requirements.txt /opt/trading-bot/\r"
+expect "$ "
+
+# Set permissions
+send "echo '$sudo_pass' | sudo -S chown -R admin:admin /opt/trading-bot/\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S chmod +x /opt/trading-bot/*.py\r"
+expect "$ "
+
+# Install Python packages with --break-system-packages flag
+puts "📦 Installing Python packages..."
+send "echo '$sudo_pass' | sudo -S pip3 install --break-system-packages fastapi uvicorn python-multipart aiofiles jinja2 python-jose cryptography prometheus-client\r"
+expect "$ "
+
+# Verify fastapi_app.py exists
+puts "✅ Verifying files..."
+send "ls -la /opt/trading-bot/fastapi_app.py\r"
+expect "$ "
+
+# Test import
+puts "🧪 Testing import..."
+send "cd /opt/trading-bot && python3 -c \"import fastapi_app; print('✅ FastAPI app imports successfully')\"\r"
+expect "$ "
+
+# Stop existing service
+puts "🛑 Stopping service..."
+send "echo '$sudo_pass' | sudo -S systemctl stop trading-bot\r"
+expect "$ "
+
+# Update systemd service
+puts "⚙️ Updating systemd service..."
+send "echo '$sudo_pass' | sudo -S tee /etc/systemd/system/trading-bot.service > /dev/null << 'EOF'\r"
+expect "> "
+send "\[Unit\]\r"
+expect "> "
+send "Description=Trading Bot FastAPI Application\r"
+expect "> "
+send "After=network.target\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Service\]\r"
+expect "> "
+send "Type=simple\r"
+expect "> "
+send "User=admin\r"
+expect "> "
+send "Group=admin\r"
+expect "> "
+send "WorkingDirectory=/opt/trading-bot\r"
+expect "> "
+send "Environment=PYTHONPATH=/opt/trading-bot\r"
+expect "> "
+send "Environment=OPENAI_API_KEY=your-key-here\r"
+expect "> "
+send "ExecStart=/usr/bin/python3 -m uvicorn fastapi_app:app --host 0.0.0.0 --port 8009 --log-level info\r"
+expect "> "
+send "Restart=always\r"
+expect "> "
+send "RestartSec=5\r"
+expect "> "
+send "StandardOutput=journal\r"
+expect "> "
+send "StandardError=journal\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Install\]\r"
+expect "> "
+send "WantedBy=multi-user.target\r"
+expect "> "
+send "EOF\r"
+expect "$ "
+
+# Reload and start
+puts "🔄 Reloading systemd..."
+send "echo '$sudo_pass' | sudo -S systemctl daemon-reload\r"
+expect "$ "
+
+puts "🚀 Starting service..."
+send "echo '$sudo_pass' | sudo -S systemctl enable trading-bot\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S systemctl start trading-bot\r"
+expect "$ "
+
+# Wait and check
+puts "⏳ Waiting for startup..."
+send "sleep 10\r"
+expect "$ "
+
+puts "📊 Service status:"
+send "echo '$sudo_pass' | sudo -S systemctl status trading-bot --no-pager\r"
+expect "$ "
+
+# Check logs
+puts "📋 Recent logs:"
+send "echo '$sudo_pass' | sudo -S journalctl -u trading-bot --no-pager -n 10\r"
+expect "$ "
+
+# Test endpoints
+puts "🧪 Testing endpoints..."
+send "curl -s -w 'Health: %{http_code}\\n' http://localhost:8009/healthz\r"
+expect "$ "
+
+send "curl -s -w 'Ready: %{http_code}\\n' http://localhost:8009/readyz\r"
+expect "$ "
+
+send "curl -s -w 'Docs: %{http_code}\\n' http://localhost:8009/docs\r"
+expect "$ "
+
+puts "✅ Deployment completed!"
+send "exit\r"
+expect eof

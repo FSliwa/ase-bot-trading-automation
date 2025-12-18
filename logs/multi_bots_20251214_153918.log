@@ -1,0 +1,573 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+============================================================
+🤖 ASE Bot Multi-User Launcher
+📅 2025-12-14 15:39:18
+👥 Starting 5 bot instances...
+============================================================
+[94m🚀 Starting bot for user 4177e228...[0m
+[12/14/25 15:39:19] INFO     Initializing        auto_trader.py:146
+                             Automated Trading                     
+                             Bot...                                
+[12/14/25 15:39:21] INFO     Loading API keys    auto_trader.py:155
+                             from database for                     
+                             user 4177e228...                      
+Generated new encryption key: E6vdQ28TgfNCF4HRP1xNRUTHv8GoP03qISagLKHHiXo=
+Save this key securely in your .env file as ENCRYPTION_KEY
+                    INFO     🔍 Querying        auto_trader.py:2062
+                             api_keys for                          
+                             user_id=4177e228-e                    
+                             38e-4a64-b34a-2005                    
+                             a959fcf2                              
+                    INFO        No exchange     auto_trader.py:2080
+                             filter, querying                      
+                             first active key                      
+                             for user                              
+[12/14/25 15:39:22] INFO        Query result:   auto_trader.py:2090
+                             FOUND                                 
+                    INFO     ✅ Loaded API keys auto_trader.py:2109
+                             for user                              
+                             4177e228... |                         
+                             Exchange: kraken |                    
+                             Testnet: False                        
+                    INFO     🔑 Validating API  auto_trader.py:2135
+                             keys for kraken...                    
+[92m🚀 Starting bot for user e4f7f9e4...[0m
+                    INFO     Initializing        auto_trader.py:146
+                             Automated Trading                     
+                             Bot...                                
+                    INFO     Loading API keys    auto_trader.py:155
+                             from database for                     
+                             user e4f7f9e4...                      
+Generated new encryption key: Et0GetE5DS-pSY_3JO4L-zOY1GENdv8VF3FUjI5epLw=
+Save this key securely in your .env file as ENCRYPTION_KEY
+                    INFO     🔍 Querying        auto_trader.py:2062
+                             api_keys for                          
+                             user_id=e4f7f9e4-1                    
+                             664-4419-aaa2-592f                    
+                             12dc2f2a                              
+[12/14/25 15:39:23] INFO        No exchange     auto_trader.py:2080
+                             filter, querying                      
+                             first active key                      
+                             for user                              
+                    INFO        Query result:   auto_trader.py:2090
+                             FOUND                                 
+                    INFO     📊 Binance: Using  auto_trader.py:2105
+                             MARGIN mode                           
+                             (--margin flag                        
+                             enabled)                              
+                    INFO     ✅ Loaded API keys auto_trader.py:2109
+                             for user                              
+                             e4f7f9e4... |                         
+                             Exchange: binance                     
+                             | Testnet: False                      
+                    INFO     🔑 Validating API  auto_trader.py:2135
+                             keys for                              
+                             binance...                            
+[93m🚀 Starting bot for user b812b608...[0m
+[12/14/25 15:39:24] INFO     Initializing        auto_trader.py:146
+                             Automated Trading                     
+                             Bot...                                
+                    INFO     Loading API keys    auto_trader.py:155
+                             from database for                     
+                             user b812b608...                      
+Generated new encryption key: KMz3jTG6WbMGzdDqd5vOYu79aPsvFrZczZiRIAY1KYo=
+Save this key securely in your .env file as ENCRYPTION_KEY
+                    INFO     🔍 Querying        auto_trader.py:2062
+                             api_keys for                          
+                             user_id=b812b608-3                    
+                             bdc-4afe-9dbd-9857                    
+                             e65a3bfe                              
+[12/14/25 15:39:25] INFO        No exchange     auto_trader.py:2080
+                             filter, querying                      
+                             first active key                      
+                             for user                              
+                    INFO        Query result:   auto_trader.py:2090
+                             FOUND                                 
+                    INFO     ✅ Loaded API keys auto_trader.py:2109
+                             for user                              
+                             b812b608... |                         
+                             Exchange: kraken |                    
+                             Testnet: False                        
+                    INFO     🔑 Validating API  auto_trader.py:2135
+                             keys for kraken...                    
+[12/14/25 15:39:27] INFO     ✅ API keys VALID  auto_trader.py:2158
+                             for kraken | User:                    
+                             4177e228... |                         
+                             Balance: 2                            
+                             currencies (total:                    
+                             270.88)                               
+                    INFO     ✅ API keys VALID  auto_trader.py:2158
+                             for binance |                         
+                             User: e4f7f9e4...                     
+                             | Balance: 4                          
+                             currencies (total:                    
+                             201.97)                               
+                    INFO     After loading:      auto_trader.py:157
+                             api_key=SET,                          
+                             exchange=kraken                       
+                    WARNING  Position Monitor    auto_trader.py:221
+                             initialization                        
+                             failed: invalid                       
+                             syntax                                
+                             (position_monitor.p                   
+                             y, line 447)                          
+[12/14/25 15:39:28] INFO     After loading:      auto_trader.py:157
+                             api_key=SET,                          
+                             exchange=binance                      
+                    WARNING  Position Monitor    auto_trader.py:221
+                             initialization                        
+                             failed: invalid                       
+                             syntax                                
+                             (position_monitor.p                   
+                             y, line 447)                          
+[12/14/25 15:39:29] INFO     ✅ API keys VALID  auto_trader.py:2158
+                             for kraken | User:                    
+                             b812b608... |                         
+                             Balance: 4                            
+                             currencies (total:                    
+                             777.44)                               
+                    INFO     After loading:      auto_trader.py:157
+                             api_key=SET,                          
+                             exchange=kraken                       
+                    WARNING  Position Monitor    auto_trader.py:221
+                             initialization                        
+                             failed: invalid                       
+                             syntax                                
+                             (position_monitor.p                   
+                             y, line 447)                          
+[12/14/25 15:39:30] INFO     ✅ WebSocket        auto_trader.py:234
+                             real-time data                        
+                             connected                             
+[12/14/25 15:39:30] INFO     📡     supabase_analysis_service.py:34
+                             Supaba                                
+                             se                                    
+                             Edge                                  
+                             Functi                                
+                             on                                    
+                             URL:                                  
+                             https:                                
+                             //iqqm                                
+                             bzznwp                                
+                             heqiih                                
+                             njhz.s                                
+                             upabas                                
+                             e.co/f                                
+                             unctio                                
+                             ns/v1/                                
+                             ai-tra                                
+                             ding-s                                
+                             ignals                                
+                    INFO     ✅ Supabase AI      auto_trader.py:250
+                             Market Analysis                       
+                             Service initialized                   
+                             successfully                          
+                    INFO     ✅ Signal Validator auto_trader.py:260
+                             initialized                           
+                             (adaptive                             
+                             confidence                            
+                             threshold)                            
+                    INFO     ✅ Portfolio        auto_trader.py:278
+                             Manager initialized                   
+                             (portfolio-aware                      
+                             trading)                              
+                    INFO     📋 Loaded user     auto_trader.py:2282
+                             risk settings for                     
+                             4177e228... | Risk                    
+                             Level: 5/5 | Risk                     
+                             Per Trade: 2.0% |                     
+                             Max Position:                         
+                             $1000 | SL: 2.0% |                    
+                             TP: 10.0%                             
+                    INFO     ✅ Risk Manager     auto_trader.py:339
+                             initialized with                      
+                             USER SETTINGS |                       
+                             User: 4177e228... |                   
+                             Risk Level: 5/5                       
+                             (2.0% risk) | Max                     
+                             Position: $1000 |                     
+                             SL: 2.0% | TP:                        
+                             10.0% | Trailing:                     
+                             ✅ | Dynamic SL/TP:                   
+                             ✅ | Kelly: ✅ |                      
+                             Leverage: 10x                         
+                    INFO     ✅ Market           auto_trader.py:370
+                             Intelligence                          
+                             initialized                           
+                             (liquidity check,                     
+                             sentiment, dynamic                    
+                             SL/TP)                                
+                    INFO     ✅ Rate Limiter     auto_trader.py:383
+                             initialized:                          
+                             3/cycle, 5/hour,                      
+                             15/day                                
+                    INFO     ✅ Signal           auto_trader.py:393
+                             Deduplicator                          
+                             initialized (6h                       
+                             window, prefer                        
+                             newest)                               
+                    INFO     ✅ Symbol           auto_trader.py:407
+                             Normalizer                            
+                             initialized                           
+                             (unified format                       
+                             across all                            
+                             components)                           
+                    WARNING  Core modules        auto_trader.py:455
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    WARNING  DCA Manager         auto_trader.py:491
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    INFO     Initialized with 2  auto_trader.py:553
+                             strategies on                         
+                             kraken                                
+                    INFO     Default fallback    auto_trader.py:554
+                             symbols:                              
+                             ['BTC/USDT',                          
+                             'ETH/USDT'] (actual                   
+                             symbols from DB                       
+                             signals)                              
+                    INFO     Testnet mode: False auto_trader.py:555
+                    INFO     WebSocket: enabled  auto_trader.py:556
+                    INFO     Position Monitor:   auto_trader.py:557
+                             disabled                              
+                    INFO     Portfolio Manager:  auto_trader.py:558
+                             enabled                               
+                    INFO     Risk Manager:       auto_trader.py:559
+                             enabled                               
+                    INFO     DCA Manager:        auto_trader.py:560
+                             disabled                              
+                    INFO       └─ Risk Level:    auto_trader.py:564
+                             aggressive |                          
+                             Trailing: ✅ |                        
+                             Dynamic SL/TP: ✅ |                   
+                             Kelly: ✅                             
+[94m✅ Bot initialized for user 4177e228[0m
+                    INFO     Bot started -      auto_trader.py:1840
+                             initial interval:                     
+                             3600 seconds                          
+                             (adaptive enabled)                    
+                    INFO     Starting trading   auto_trader.py:1477
+                             cycle...                              
+                    INFO     📊 Rate Limiter:   auto_trader.py:1511
+                             0/15 today, 0/5                       
+                             this hour,                            
+                             positions: 0                          
+[12/14/25 15:39:31] INFO     ✅ WebSocket        auto_trader.py:234
+                             real-time data                        
+                             connected                             
+[12/14/25 15:39:31] INFO     📡     supabase_analysis_service.py:34
+                             Supaba                                
+                             se                                    
+                             Edge                                  
+                             Functi                                
+                             on                                    
+                             URL:                                  
+                             https:                                
+                             //iqqm                                
+                             bzznwp                                
+                             heqiih                                
+                             njhz.s                                
+                             upabas                                
+                             e.co/f                                
+                             unctio                                
+                             ns/v1/                                
+                             ai-tra                                
+                             ding-s                                
+                             ignals                                
+                    INFO     ✅ Supabase AI      auto_trader.py:250
+                             Market Analysis                       
+                             Service initialized                   
+                             successfully                          
+                    INFO     ✅ Signal Validator auto_trader.py:260
+                             initialized                           
+                             (adaptive                             
+                             confidence                            
+                             threshold)                            
+                    INFO     ✅ Portfolio        auto_trader.py:278
+                             Manager initialized                   
+                             (portfolio-aware                      
+                             trading)                              
+                    INFO     📋 Loaded user     auto_trader.py:2282
+                             risk settings for                     
+                             e4f7f9e4... | Risk                    
+                             Level: 4/5 | Risk                     
+                             Per Trade: 1.5% |                     
+                             Max Position: $35                     
+                             | SL: 5.0% | TP:                      
+                             3.0%                                  
+                    INFO     ✅ Risk Manager     auto_trader.py:339
+                             initialized with                      
+                             USER SETTINGS |                       
+                             User: e4f7f9e4... |                   
+                             Risk Level: 4/5                       
+                             (1.5% risk) | Max                     
+                             Position: $35 | SL:                   
+                             5.0% | TP: 3.0% |                     
+                             Trailing: ✅ |                        
+                             Dynamic SL/TP: ✅ |                   
+                             Kelly: ✅ |                           
+                             Leverage: 10x                         
+                    INFO     ✅ Market           auto_trader.py:370
+                             Intelligence                          
+                             initialized                           
+                             (liquidity check,                     
+                             sentiment, dynamic                    
+                             SL/TP)                                
+                    INFO     ✅ Rate Limiter     auto_trader.py:383
+                             initialized:                          
+                             3/cycle, 5/hour,                      
+                             15/day                                
+                    INFO     ✅ Signal           auto_trader.py:393
+                             Deduplicator                          
+                             initialized (6h                       
+                             window, prefer                        
+                             newest)                               
+                    INFO     ✅ Symbol           auto_trader.py:407
+                             Normalizer                            
+                             initialized                           
+                             (unified format                       
+                             across all                            
+                             components)                           
+                    WARNING  Core modules        auto_trader.py:455
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    WARNING  DCA Manager         auto_trader.py:491
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    INFO     Initialized with 2  auto_trader.py:553
+                             strategies on                         
+                             binance                               
+                    INFO     Default fallback    auto_trader.py:554
+                             symbols:                              
+                             ['BTC/USDT',                          
+                             'ETH/USDT'] (actual                   
+                             symbols from DB                       
+                             signals)                              
+                    INFO     Testnet mode: False auto_trader.py:555
+                    INFO     WebSocket: enabled  auto_trader.py:556
+                    INFO     Position Monitor:   auto_trader.py:557
+                             disabled                              
+                    INFO     Portfolio Manager:  auto_trader.py:558
+                             enabled                               
+                    INFO     Risk Manager:       auto_trader.py:559
+                             enabled                               
+                    INFO     DCA Manager:        auto_trader.py:560
+                             disabled                              
+                    INFO       └─ Risk Level:    auto_trader.py:564
+                             aggressive |                          
+                             Trailing: ✅ |                        
+                             Dynamic SL/TP: ✅ |                   
+                             Kelly: ✅                             
+[92m✅ Bot initialized for user e4f7f9e4[0m
+                    INFO     Bot started -      auto_trader.py:1840
+                             initial interval:                     
+                             3600 seconds                          
+                             (adaptive enabled)                    
+                    INFO     Starting trading   auto_trader.py:1477
+                             cycle...                              
+                    INFO     📊 Rate Limiter:   auto_trader.py:1511
+                             0/15 today, 0/5                       
+                             this hour,                            
+                             positions: 0                          
+                    INFO     ✅ WebSocket        auto_trader.py:234
+                             real-time data                        
+                             connected                             
+                    INFO     📡     supabase_analysis_service.py:34
+                             Supaba                                
+                             se                                    
+                             Edge                                  
+                             Functi                                
+                             on                                    
+                             URL:                                  
+                             https:                                
+                             //iqqm                                
+                             bzznwp                                
+                             heqiih                                
+                             njhz.s                                
+                             upabas                                
+                             e.co/f                                
+                             unctio                                
+                             ns/v1/                                
+                             ai-tra                                
+                             ding-s                                
+                             ignals                                
+                    INFO     ✅ Supabase AI      auto_trader.py:250
+                             Market Analysis                       
+                             Service initialized                   
+                             successfully                          
+                    INFO     ✅ Signal Validator auto_trader.py:260
+                             initialized                           
+                             (adaptive                             
+                             confidence                            
+                             threshold)                            
+                    INFO     ✅ Portfolio        auto_trader.py:278
+                             Manager initialized                   
+                             (portfolio-aware                      
+                             trading)                              
+                    INFO     📋 Loaded user     auto_trader.py:2282
+                             risk settings for                     
+                             b812b608... | Risk                    
+                             Level: 3/5 | Risk                     
+                             Per Trade: 1.0% |                     
+                             Max Position:                         
+                             $1000 | SL: 5.0% |                    
+                             TP: 11.0%                             
+                    INFO     ✅ Risk Manager     auto_trader.py:339
+                             initialized with                      
+                             USER SETTINGS |                       
+                             User: b812b608... |                   
+                             Risk Level: 3/5                       
+                             (1.0% risk) | Max                     
+                             Position: $1000 |                     
+                             SL: 5.0% | TP:                        
+                             11.0% | Trailing:                     
+                             ✅ | Dynamic SL/TP:                   
+                             ✅ | Kelly: ✅ |                      
+                             Leverage: 10x                         
+                    INFO     ✅ Market           auto_trader.py:370
+                             Intelligence                          
+                             initialized                           
+                             (liquidity check,                     
+                             sentiment, dynamic                    
+                             SL/TP)                                
+                    INFO     ✅ Rate Limiter     auto_trader.py:383
+                             initialized:                          
+                             3/cycle, 5/hour,                      
+                             15/day                                
+                    INFO     ✅ Signal           auto_trader.py:393
+                             Deduplicator                          
+                             initialized (6h                       
+                             window, prefer                        
+                             newest)                               
+                    INFO     ✅ Symbol           auto_trader.py:407
+                             Normalizer                            
+                             initialized                           
+                             (unified format                       
+                             across all                            
+                             components)                           
+                    WARNING  Core modules        auto_trader.py:455
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    WARNING  DCA Manager         auto_trader.py:491
+                             initialization                        
+                             failed: cannot                        
+                             import name                           
+                             'get_session' from                    
+                             'bot.db'                              
+                             (/Users/filipsliwa/                   
+                             Desktop/ASE BOT/ASE                   
+                             BOT - bot                             
+                             tradingowy/Automaty                   
+                             czny Stock Market                     
+                             1.0/Algorytm                          
+                             Uczenia Kwantowego                    
+                             LLM/bot/db.py)                        
+                    INFO     Initialized with 2  auto_trader.py:553
+                             strategies on                         
+                             kraken                                
+                    INFO     Default fallback    auto_trader.py:554
+                             symbols:                              
+                             ['BTC/USDT',                          
+                             'ETH/USDT'] (actual                   
+                             symbols from DB                       
+                             signals)                              
+                    INFO     Testnet mode: False auto_trader.py:555
+                    INFO     WebSocket: enabled  auto_trader.py:556
+                    INFO     Position Monitor:   auto_trader.py:557
+                             disabled                              
+                    INFO     Portfolio Manager:  auto_trader.py:558
+                             enabled                               
+                    INFO     Risk Manager:       auto_trader.py:559
+                             enabled                               
+                    INFO     DCA Manager:        auto_trader.py:560
+                             disabled                              
+                    INFO       └─ Risk Level:    auto_trader.py:564
+                             moderate |                            
+                             Trailing: ✅ |                        
+                             Dynamic SL/TP: ✅ |                   
+                             Kelly: ✅                             
+[93m✅ Bot initialized for user b812b608[0m
+                    INFO     Bot started -      auto_trader.py:1840
+                             initial interval:                     
+                             3600 seconds                          
+                             (adaptive enabled)                    
+                    INFO     Starting trading   auto_trader.py:1477
+                             cycle...                              
+                    INFO     📊 Rate Limiter:   auto_trader.py:1511
+                             0/15 today, 0/5                       
+                             this hour,                            
+                             positions: 0                          
+[12/14/25 15:39:34] INFO     📈 Market          auto_trader.py:1529
+                             Sentiment: Fear &                     
+                             Greed = 21                            
+                             (Extreme Fear) |                      
+                             Regime: sideways |                    
+                             Safe to trade: ✅                     
+                    INFO     📈 Market          auto_trader.py:1529
+                             Sentiment: Fear &                     
+                             Greed = 21                            
+                             (Extreme Fear) |                      
+                             Regime: sideways |                    
+                             Safe to trade: ✅                     
+[12/14/25 15:39:35] INFO     📈 Market          auto_trader.py:1529
+                             Sentiment: Fear &                     
+                             Greed = 21                            
+                             (Extreme Fear) |                      
+                             Regime: sideways |                    
+                             Safe to trade: ✅                     

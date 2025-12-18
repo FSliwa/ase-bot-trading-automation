@@ -1,0 +1,1034 @@
+/Users/filipsliwa/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Generated new encryption key: Z9m3_1w6svkFiBN971co1p4Kgp8xXl45ux5G5kpqf1g=
+Save this key securely in your .env file as ENCRYPTION_KEY
+[12/16/25 06:49:47] INFO     🤖 Starting bot for user: 43e88b0b-d34f-4795-8efa-5507f40426e8                               run_single_user.py:102
+                    INFO     🔍 Looking up API keys for user 43e88b0b-d34f-4795-8efa-5507f40426e8...                       run_single_user.py:42
+[12/16/25 06:49:48] INFO     🚀 Starting bot for user 43e88b0b-d34f-4795-8efa-5507f40426e8 on binance (testnet=False)...   run_single_user.py:62
+[12/16/25 06:49:48] INFO     Initializing Automated Trading Bot...                                                            auto_trader.py:146
+[12/16/25 06:49:49] INFO     📊 Position Monitor SL/TP: SL=250.0% | TP=350.0%                                                 auto_trader.py:211
+[12/16/25 06:49:49] INFO     ✅ Position lock manager initialized for PositionMonitor                                    position_monitor.py:348
+                    INFO     ✅ Close operation RateLimiter initialized for PositionMonitor                              position_monitor.py:374
+                    INFO     PositionMonitorService initialized (interval: 5.0s) | Trailing: True | Dynamic SL/TP: True  position_monitor.py:376
+                             | Partial TP: True | Time Exit: True | Auto SL/TP: True | 🚨 Liquidation Monitor: True                             
+                             (warn:15.0% / auto-close:3.5%) | 💾 Hybrid Persistence: True (interval: 5.0s)                                      
+                    INFO     DatabaseManager connected to PositionMonitor for reevaluation logging                       position_monitor.py:389
+                    WARNING  💾 Supabase credentials not configured - persistence disabled                               position_monitor.py:410
+                    WARNING  💾 Hybrid Persistence: Supabase not available - using RAM only                             position_monitor.py:1473
+                    INFO     ✅ Position monitor started                                                                position_monitor.py:1483
+                    INFO     ✅ Position Monitor started (5s interval) | Auto SL/TP: ✅ | Partial TP: ✅ | Time Exit: ✅ (12h auto_trader.py:233
+                             max)                                                                                                               
+                    INFO     No existing positions to restore from database                                             position_monitor.py:1206
+                    INFO     Position monitoring loop started                                                           position_monitor.py:1509
+[12/16/25 06:49:54] INFO     📊 sync_from_exchange: Found 1 positions to sync                                           position_monitor.py:1248
+[12/16/25 06:49:55] INFO     🛡️ AUTO-SET SL/TP for ZEC/USDT (1.0x leverage): SL=-619.9396 (250.00% price = 250.0%         position_monitor.py:991
+                             capital) | TP=1859.8188 (350.00% price = 350.0% capital)                                                           
+                    INFO     📍 Monitoring position: ZEC/USDT | LONG @ 413.29307232048967 | SL=-619.9396084807345       position_monitor.py:1050
+                             TP=1859.8188254422034 | Trailing=True | Dynamic=True | MaxHold=12.0h | BreakEven@1.0%                              
+                    INFO     🔄 Synced exchange position: ZEC/USDT | SL=-619.9396084807345 TP=1859.8188254422034        position_monitor.py:1337
+                    INFO     ✅ Synchronized 1 positions from exchange                                                  position_monitor.py:1343
+[12/16/25 06:49:55] INFO     ✅ Restored position monitoring: 0 from DB, 1 from exchange                                      auto_trader.py:244
+[12/16/25 06:49:58] INFO     ✅ WebSocket real-time data connected                                                            auto_trader.py:262
+[12/16/25 06:49:58] INFO     📡 Supabase Edge Function URL:                                                      supabase_analysis_service.py:36
+                             https://iqqmbzznwpheqiihnjhz.supabase.co/functions/v1/ai-trading-signals                                           
+                    INFO     ✅ Supabase AI Market Analysis Service initialized successfully                                  auto_trader.py:278
+                    INFO     ✅ Signal Validator initialized (adaptive confidence threshold)                                  auto_trader.py:288
+                    INFO     ✅ Portfolio Manager initialized (portfolio-aware trading)                                       auto_trader.py:306
+                    INFO     No trading settings found for user 43e88b0b..., using defaults                                  auto_trader.py:2348
+                    INFO     ✅ Risk Manager initialized with DEFAULTS | Level: MODERATE (1% risk) | Trailing: ✅ | Dynamic   auto_trader.py:376
+                             SL/TP: ✅ | Kelly: ✅ | Default Leverage: 10x (auto-adjusted)                                                      
+[12/16/25 06:49:58] INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+                    INFO     🔗 Connected Risk Manager to Position Monitor                                                    auto_trader.py:389
+                    INFO     ✅ Market Intelligence initialized (liquidity check, sentiment, dynamic SL/TP)                   auto_trader.py:398
+                    INFO     ✅ Rate Limiter initialized: 3/cycle, 5/hour, 15/day                                             auto_trader.py:411
+                    INFO     ✅ Signal Deduplicator initialized (6h window, prefer newest)                                    auto_trader.py:421
+                    INFO     ✅ Symbol Normalizer initialized (unified format across all components)                          auto_trader.py:435
+                    INFO     ✅ Transaction Manager initialized (atomic DB operations)                                        auto_trader.py:441
+                    INFO     ✅ Position Lock Manager initialized (race condition prevention)                                 auto_trader.py:445
+                    WARNING  Core modules initialization failed: __init__() got an unexpected keyword argument                auto_trader.py:483
+                             'max_daily_loss_pct'                                                                                               
+                    WARNING  DCA Manager initialization failed: 'DCAManager' object has no attribute 'get_user_dca_settings'  auto_trader.py:518
+                    INFO     RiskManager connected to PositionMonitor                                                    position_monitor.py:821
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+Failed to load user settings for strategy: 'DatabaseManager' object has no attribute 'get_user_settings'
+                    INFO     Initialized with 2 strategies on binance                                                         auto_trader.py:580
+                    INFO     Default fallback symbols: ['BTC/USDT', 'ETH/USDT'] (actual symbols from DB signals)              auto_trader.py:581
+                    INFO     Testnet mode: False                                                                              auto_trader.py:582
+                    INFO     WebSocket: enabled                                                                               auto_trader.py:583
+                    INFO     Position Monitor: enabled                                                                        auto_trader.py:584
+                    INFO     Portfolio Manager: enabled                                                                       auto_trader.py:585
+                    INFO     Risk Manager: enabled                                                                            auto_trader.py:586
+                    INFO     DCA Manager: disabled                                                                            auto_trader.py:587
+                    INFO       └─ Risk Level: moderate | Trailing: ✅ | Dynamic SL/TP: ✅ | Kelly: ✅                         auto_trader.py:591
+                    INFO     Bot started - initial interval: 3600 seconds (adaptive enabled)                                 auto_trader.py:1893
+                    INFO     📅 HIGH-IMPACT ECONOMIC EVENTS THIS WEEK:                                                       auto_trader.py:1874
+                    INFO        🔴 FOMC Interest Rate Decision: 2025-12-17 19:00 UTC                                         auto_trader.py:1876
+                    INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 06:49:59] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 06:50:00] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 4 active signals from trading_signals: ['VOXEL/USDC', 'LUNA/USDC', 'FIS/USDC',          auto_trader.py:987
+                             'ACE/USDC']                                                                                                        
+                    INFO     🔍 Deduplication: 0 duplicates removed, 4 stale removed, 0 upgraded | 0 signals remaining       auto_trader.py:1591
+                    WARNING  ⚠️ No signals in trading_signals table, using default symbols                                    auto_trader.py:1605
+                    INFO     Active trading symbols for this cycle: ['BTC/USDC', 'ETH/USDC']                                 auto_trader.py:1611
+[12/16/25 06:50:06] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 06:50:07] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 06:50:08] INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 No BUY/SELL signals, checking HOLD signals for monitoring...                                  auto_trader.py:859
+                    INFO     📊 Found 4 signals from TRUSTED sources: {'titan_v3': 4}                                         auto_trader.py:894
+                    INFO        (0 user-specific, 4 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 4 active signals from trading_signals: ['VOXEL/USDC', 'LUNA/USDC', 'FIS/USDC',          auto_trader.py:987
+                             'ACE/USDC']                                                                                                        
+                    WARNING  ⚠️ Found 4 signals but ALL are HOLD/0% confidence - treating as no signals for FALLBACK          auto_trader.py:1053
+                    INFO     📊 No actionable signals in trading_signals table - falling back to COUNCIL V2.0 Edge           auto_trader.py:1234
+                             Function...                                                                                                        
+                    INFO        (titan_v3 signals were HOLD/0% confidence or no signals at all)                              auto_trader.py:1235
+DEBUG: Loading markets for binance...
+DEBUG: Fetching tickers...
+DEBUG: Fetched 3445 tickers
+DEBUG: Found 576 USDT tickers
+DEBUG: Top symbols: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT']
+                    INFO     ✅ Selected top 5 symbols for AI: ['BTC/USDT', 'ETH/USDT', 'USDC/USDT', 'SOL/USDT', 'XRP/USDT'] auto_trader.py:1241
+                    INFO     📊 Using 2 pre-fetched market data symbols                                                      auto_trader.py:1246
+[12/16/25 06:50:10] INFO     🤖 Requesting AI analysis for 2 symbols...                                                      auto_trader.py:1288
+[12/16/25 06:50:10] INFO     🤖 K3: Calling Edge Function for 2 symbols: ['BTC', 'ETH']                          supabase_analysis_service.py:74
+                    INFO     📡 Edge Function attempt 1/4 (timeout: 200s)                                        supabase_analysis_service.py:85
+[12/16/25 06:50:51] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:51:01] INFO     🎯 Dynamic SL adjustment for ZEC/USDT: -619.9396 → 392.6284 | Reason: Tightening SL based  position_monitor.py:2517
+                             on volatility: -619.9396 → 392.6284 | Adjusting TP: 1859.8188 → 445.5602                                           
+[12/16/25 06:51:02] INFO     🎯 Dynamic TP adjustment for ZEC/USDT: 1859.8188 → 445.5602                                position_monitor.py:2528
+[12/16/25 06:51:58] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:52:40] INFO     📥 Response status: 200                                                             supabase_analysis_service.py:91
+                    INFO     📥 Response data keys: ['success', 'signals', 'isDemo', 'timestamp', 'modelsUsed', supabase_analysis_service.py:127
+                             'toolsUsed']                                                                                                       
+                    INFO     ✅ K3: Received 2 signals from Edge Function                                       supabase_analysis_service.py:156
+                    INFO        📊 ETH: SELL (93%)                                                              supabase_analysis_service.py:196
+                    INFO        📊 BTC: SELL (82%)                                                              supabase_analysis_service.py:196
+                    INFO     ✅ K3: Mapped 2 actionable signals                                                 supabase_analysis_service.py:202
+[12/16/25 06:52:40] INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for ETH/USDT: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDT: execute=True, consensus=0.00, reasons=('Insufficient history auto_trader.py:1317
+                             (1 signals), using signal confidence only', 'High confidence signal (0.93)')                                       
+                    INFO     💾 Saved NEW signal for ETH to DB (TP=2832.8656, SL=3066.5040000000004)                         auto_trader.py:1446
+                    INFO     AI Analysis for BTC/USDT: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDT: execute=True, consensus=0.00, reasons=('Insufficient history auto_trader.py:1317
+                             (1 signals), using signal confidence only', 'High confidence signal (0.82)')                                       
+                    INFO     💾 Saved NEW signal for BTC to DB (TP=83512.3731, SL=90399.9915)                                auto_trader.py:1446
+[12/16/25 06:52:41] INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 06:52:48] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 06:52:52] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 06:52:55] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 06:53:05] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:54:11] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:55:17] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:55:20] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+[12/16/25 06:55:21] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 06:55:55] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 06:55:56] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 06:55:57] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+[12/16/25 06:55:58] INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 06:56:03] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 06:56:04] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 06:56:05] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 06:56:06] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             1/3 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             1/3 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 06:56:11] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 06:56:14] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 06:56:17] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 06:56:32] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:57:40] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:58:48] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 06:59:17] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 06:59:18] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+                    INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+[12/16/25 06:59:19] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 06:59:24] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 06:59:25] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 06:59:26] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 06:59:27] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 06:59:32] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 06:59:35] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 06:59:38] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 06:59:57] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:01:03] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:01:06] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+[12/16/25 07:01:07] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:02:13] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:02:38] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:02:42] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:02:43] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:02:49] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:02:50] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:02:51] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+[12/16/25 07:02:52] INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:02:57] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:03:00] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:03:03] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:03:20] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:04:27] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:05:34] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:05:44] INFO     🎯 Dynamic SL adjustment for ZEC/USDT: 392.6284 → 392.8631 | Reason: Tightening SL based   position_monitor.py:2517
+                             on volatility: 392.6284 → 392.8631                                                                                 
+[12/16/25 07:06:03] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:06:04] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:06:10] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:06:11] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 07:06:12] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:06:13] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:06:18] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:06:22] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:06:24] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:06:42] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:06:45] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:07:52] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:08:59] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:09:24] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:09:26] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:09:27] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:09:32] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:09:33] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:09:34] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 07:09:35] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:09:41] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:09:45] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:09:48] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:10:06] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:11:13] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:12:21] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:12:24] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:12:48] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:12:49] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:12:55] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:12:56] INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:12:57] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+[12/16/25 07:12:58] INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:13:03] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:13:06] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:13:09] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:13:32] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:14:39] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:15:46] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:16:09] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:16:10] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:16:11] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:16:17] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:16:18] INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:16:19] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+[12/16/25 07:16:20] INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:16:25] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:16:28] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:16:31] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:16:54] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:18:02] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:18:05] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:19:13] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:19:31] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:19:32] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:19:39] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:19:40] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:19:41] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 07:19:42] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:19:47] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:19:51] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:19:54] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:20:21] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:21:28] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:22:35] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:22:54] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:22:55] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:22:57] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:23:03] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+[12/16/25 07:23:04] INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:23:05] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+[12/16/25 07:23:06] INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:23:12] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:23:17] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:23:20] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:23:43] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:23:46] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:24:53] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:26:00] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:26:20] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:26:21] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:26:27] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+[12/16/25 07:26:28] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:26:29] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             2/4 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:26:34] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:26:38] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:26:41] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:27:10] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:28:17] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:29:23] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:29:26] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+[12/16/25 07:29:27] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:29:41] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:29:42] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:29:43] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:29:49] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:29:50] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:29:51] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 07:29:52] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:29:58] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:30:01] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:30:04] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:30:35] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:31:42] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:32:49] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:33:04] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:33:05] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:33:11] INFO     Fetching market data...                                                                         auto_trader.py:1619
+                    INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:33:12] INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:33:13] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+[12/16/25 07:33:14] INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:33:20] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:33:23] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:33:26] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:33:57] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:35:03] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:35:06] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+[12/16/25 07:35:07] INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:36:14] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:36:26] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:36:27] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:36:28] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:36:34] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:36:35] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:36:36] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+[12/16/25 07:36:37] INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:36:42] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:36:45] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:36:48] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:37:21] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:38:28] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:39:34] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:39:48] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+                    INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+[12/16/25 07:39:49] INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+[12/16/25 07:39:50] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:39:56] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:39:57] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+[12/16/25 07:39:58] INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:39:59] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+                    INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:40:05] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:40:09] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:40:13] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:40:42] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:40:45] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452
+[12/16/25 07:41:52] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:42:59] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:43:13] INFO     Starting trading cycle...                                                                       auto_trader.py:1505
+                    INFO     📊 Rate Limiter: 0/15 today, 0/5 this hour, positions: 0                                        auto_trader.py:1539
+[12/16/25 07:43:14] INFO     📈 Market Sentiment: Fear & Greed = 11 (Extreme Fear) | Regime: bear | Safe to trade: ✅        auto_trader.py:1557
+                    WARNING    ⚠️ EXTREME FEAR (11) - Consider reduced position sizes                                         auto_trader.py:1564
+                    INFO     Using USDC as quote currency (Balance: 293.41)                                                  auto_trader.py:1484
+                    INFO     📊 Checking trading_signals table for active signals...                                         auto_trader.py:1572
+[12/16/25 07:43:15] INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols from DB: ['ETH/USDC', 'BTC/USDC']                              auto_trader.py:1601
+                    INFO     Active trading symbols for this cycle: ['ETH/USDC', 'BTC/USDC']                                 auto_trader.py:1611
+[12/16/25 07:43:20] INFO     Fetching market data...                                                                         auto_trader.py:1619
+[12/16/25 07:43:21] INFO     Market data fetched for 2 symbols                                                               auto_trader.py:1633
+                    INFO     Running AI market analysis...                                                                   auto_trader.py:1653
+                    INFO     💰 Using USDC as quote currency (USDC: 293.411038, USDT: 0)                                     auto_trader.py:1022
+                    INFO     📊 Checking trading_signals table for active BUY/SELL signals...                                auto_trader.py:1030
+                    INFO     📊 Found 2 signals from TRUSTED sources: {'COUNCIL_V2.0_FALLBACK': 2}                            auto_trader.py:894
+                    INFO        (0 user-specific, 2 global)                                                                   auto_trader.py:895
+                    INFO        Trusted sources filter: ['titan_v3', 'COUNCIL_V2.0_FALLBACK']                                 auto_trader.py:896
+                    INFO     📊 Found 2 active signals from trading_signals: ['BTC/USDC', 'ETH/USDC']                         auto_trader.py:987
+                    INFO     ✅ Found 2 signals for 2 symbols: ['ETH/USDC', 'BTC/USDC']                                      auto_trader.py:1059
+                    INFO     📈 Fetching market data for signal symbols: ['ETH/USDC', 'BTC/USDC']                            auto_trader.py:1065
+[12/16/25 07:43:22] INFO     📊 No TP/SL settings found for user 43e88b0b-d34f-4795-8efa-5507f40426e8, using defaults:        auto_trader.py:755
+                             TP=3.0%, SL=5.0%                                                                                                   
+                    INFO     📊 Volatility-adjusted SL/TP for BTC/USDC: SL=3.6% (was 5.0%), TP=4.0% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     📊 Volatility-adjusted SL/TP for ETH/USDC: SL=4.8% (was 5.0%), TP=4.8% (was 3.0%) | Regime:     auto_trader.py:1128
+                             bear                                                                                                               
+                    INFO     ✅ Using 2 signals from trading_signals table                                                   auto_trader.py:1162
+                    INFO     ✅ Processing 2 signals                                                                         auto_trader.py:1301
+                    INFO     AI Analysis for BTC/USDC: SELL - [COUNCIL] Strong short-term bearish confluence from CIO (Q4    auto_trader.py:1311
+                             alpha alignment, macro-technical edge), Execution Algo (VWAP deploy-ready, thin bids favor                         
+                             downside), Risk Manager (APPROVE, drawdown controlled), and Proposal (70% conf macro/tech                          
+                             consensus). Head of Research long-term bullish catalysts noted but overridden by tactical R:R                      
+                             (2:1+ to $84-85k), portfolio overweight reduction (45%->35% BTC), and DXY risk-off                                 
+                             confirmation. Neutral on-chain tempers but does not veto. Audit PASS across board. Execute                         
+                             partial tactical short; monitor DXY>105.8.                                                                         
+                    INFO     📊 Signal Validation for BTC/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.74 meets threshold')                                                    
+[12/16/25 07:43:23] INFO     AI Analysis for ETH/USDC: SELL - [COUNCIL] Unanimous short-term bearish consensus (CIO 91%,     auto_trader.py:1311
+                             Execution 95%, Proposal 92%, HoR short-term SELL valid, Risk APPROVE). Partial trim + new short                    
+                             aligns portfolio (net ETH +7.5%, VaR -2.2% within caps, beta-neutral). Macro risk-off                              
+                             (DXY>105), technical markdown, order flow distro confirmed (audit PASS). Execute at $3000-3025                     
+                             targeting $2850; monitor DXY<104.50 for reassess. Long-term hold intact per HoR.                                   
+                    INFO     📊 Signal Validation for ETH/USDC: execute=True, consensus=1.00, reasons=('Consensus achieved:  auto_trader.py:1317
+                             3/5 signals match SELL', 'Combined score 0.79 meets threshold')                                                    
+                    INFO     ✅ 2/2 signals passed validation                                                                auto_trader.py:1457
+                    INFO     ✅ AI analysis completed - 2 actionable signals                                                 auto_trader.py:1656
+                    INFO     Executing trading strategies...                                                                 auto_trader.py:1665
+[12/16/25 07:43:28] INFO     No trading signals generated this cycle                                                         auto_trader.py:1793
+[12/16/25 07:43:31] INFO     Account Balance: 293.41 USDC | Open Positions: 1                                                auto_trader.py:1808
+[12/16/25 07:43:34] INFO     📊 Adaptive interval: 180s (1 open positions)                                                   auto_trader.py:1857
+                    INFO     💤 Next cycle in 180s...                                                                        auto_trader.py:1905
+[12/16/25 07:44:07] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:45:14] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:46:20] INFO     ✅ Position validation OK: 1 positions on exchange, 1 monitored                            position_monitor.py:3159
+[12/16/25 07:46:24] INFO     🔍 Reconciliation: Exchange has 8 active positions/balances                                position_monitor.py:1393
+                    INFO     🔍 Reconciliation: Database has 0 OPEN positions                                           position_monitor.py:1405
+                    INFO     ✅ Reconciliation complete: No ghost positions found                                       position_monitor.py:1452

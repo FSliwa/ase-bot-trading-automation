@@ -1,0 +1,171 @@
+#!/usr/bin/expect
+set timeout 120
+
+# Configuration
+set server_ip "185.70.196.214"
+set server_user "admin"
+
+puts "🔍 Debugging and fixing FastAPI service..."
+puts "Enter SSH password for admin@185.70.196.214:"
+stty -echo
+gets stdin ssh_pass
+stty echo
+puts ""
+
+puts "Enter sudo password:"
+stty -echo  
+gets stdin sudo_pass
+stty echo
+puts ""
+
+# Connect to server
+spawn ssh -o StrictHostKeyChecking=no $server_user@$server_ip
+expect "password:"
+send "$ssh_pass\r"
+expect "$ "
+
+# Check current state
+puts "📊 Current service status..."
+send "echo '$sudo_pass' | sudo -S systemctl status trading-bot --no-pager\r"
+expect "$ "
+
+# Check if fastapi_app.py exists and is valid
+puts "📄 Checking fastapi_app.py..."
+send "ls -la /opt/trading-bot/fastapi_app.py\r"
+expect "$ "
+
+send "head -20 /opt/trading-bot/fastapi_app.py\r"
+expect "$ "
+
+# Install required packages with system pip
+puts "📦 Installing FastAPI and Uvicorn globally..."
+send "echo '$sudo_pass' | sudo -S pip3 install fastapi uvicorn python-multipart aiofiles jinja2 python-jose cryptography\r"
+expect "$ "
+
+# Test if FastAPI app can be imported
+puts "🧪 Testing FastAPI app import..."
+send "cd /opt/trading-bot && python3 -c \"import fastapi_app; print('FastAPI app imports successfully')\"\r"
+expect "$ "
+
+# Create a minimal working systemd service
+puts "⚙️ Creating working systemd service..."
+send "echo '$sudo_pass' | sudo -S tee /etc/systemd/system/trading-bot.service > /dev/null << 'EOF'\r"
+expect "> "
+send "\[Unit\]\r"
+expect "> "
+send "Description=Trading Bot FastAPI Application\r"
+expect "> "
+send "After=network.target\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Service\]\r"
+expect "> "
+send "Type=simple\r"
+expect "> "
+send "User=admin\r"
+expect "> "
+send "Group=admin\r"
+expect "> "
+send "WorkingDirectory=/opt/trading-bot\r"
+expect "> "
+send "Environment=PYTHONPATH=/opt/trading-bot\r"
+expect "> "
+send "Environment=OPENAI_API_KEY=your-key-here\r"
+expect "> "
+send "ExecStart=/usr/bin/python3 -m uvicorn fastapi_app:app --host 0.0.0.0 --port 8009\r"
+expect "> "
+send "Restart=always\r"
+expect "> "
+send "RestartSec=5\r"
+expect "> "
+send "StandardOutput=journal\r"
+expect "> "
+send "StandardError=journal\r"
+expect "> "
+send "\r"
+expect "> "
+send "\[Install\]\r"
+expect "> "
+send "WantedBy=multi-user.target\r"
+expect "> "
+send "EOF\r"
+expect "$ "
+
+# Set proper permissions
+puts "🔐 Setting permissions..."
+send "echo '$sudo_pass' | sudo -S chown -R admin:admin /opt/trading-bot/\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S chmod +x /opt/trading-bot/fastapi_app.py\r"
+expect "$ "
+
+# Stop any existing service
+puts "🛑 Stopping existing service..."
+send "echo '$sudo_pass' | sudo -S systemctl stop trading-bot\r"
+expect "$ "
+
+# Reload systemd
+puts "🔄 Reloading systemd..."
+send "echo '$sudo_pass' | sudo -S systemctl daemon-reload\r"
+expect "$ "
+
+# Enable and start service
+puts "🚀 Starting FastAPI service..."
+send "echo '$sudo_pass' | sudo -S systemctl enable trading-bot\r"
+expect "$ "
+
+send "echo '$sudo_pass' | sudo -S systemctl start trading-bot\r"
+expect "$ "
+
+# Wait for startup
+puts "⏳ Waiting for service startup..."
+send "sleep 8\r"
+expect "$ "
+
+# Check service status
+puts "📊 Checking service status..."
+send "echo '$sudo_pass' | sudo -S systemctl status trading-bot --no-pager\r"
+expect "$ "
+
+# Check if port is listening
+puts "🔍 Checking if port 8009 is listening..."
+send "ss -tlnp | grep 8009\r"
+expect "$ "
+
+# Check recent logs
+puts "📋 Recent service logs..."
+send "echo '$sudo_pass' | sudo -S journalctl -u trading-bot --no-pager -n 15\r"
+expect "$ "
+
+# Test endpoints locally
+puts "🧪 Testing endpoints locally..."
+send "curl -s -w 'Health: %{http_code}\\n' http://localhost:8009/healthz || echo 'Health endpoint failed'\r"
+expect "$ "
+
+send "curl -s -w 'Ready: %{http_code}\\n' http://localhost:8009/readyz || echo 'Ready endpoint failed'\r"
+expect "$ "
+
+send "curl -s -w 'Docs: %{http_code}\\n' http://localhost:8009/docs || echo 'Docs endpoint failed'\r"
+expect "$ "
+
+# If service still fails, try manual start
+puts "🔧 If service failed, trying manual start..."
+send "pkill -f uvicorn || true\r"
+expect "$ "
+
+send "cd /opt/trading-bot && nohup python3 -m uvicorn fastapi_app:app --host 0.0.0.0 --port 8009 > /tmp/fastapi.log 2>&1 &\r"
+expect "$ "
+
+send "sleep 3\r"
+expect "$ "
+
+send "ps aux | grep uvicorn\r"
+expect "$ "
+
+send "curl -s -w 'Manual start test: %{http_code}\\n' http://localhost:8009/healthz || echo 'Manual start failed'\r"
+expect "$ "
+
+puts "✅ Debug completed!"
+send "exit\r"
+expect eof
